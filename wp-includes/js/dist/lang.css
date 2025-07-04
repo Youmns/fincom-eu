@@ -1,0 +1,183 @@
+/* Language Modal Styles */
+body {
+  overflow-x: hidden;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+.language-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.language-modal-content {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-20px);
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+.language-modal-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 20px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.language-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.language-options li {
+  margin: 8px 0;
+}
+
+.language-options a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.language-options a:hover {
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.language-options img {
+  width: 28px;
+  height: 18px;
+  margin-right: 12px;
+  border-radius: 2px;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-modal-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: #666;
+  transition: fill 0.2s;
+}
+
+.close-modal-btn:hover svg {
+  fill: #333;
+}
+
+.language-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+}
+
+.language-btn:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.language-btn svg {
+  width: 32px;
+  height: 32px;
+}
+
+.header__utility-item {
+  display: flex;
+  align-items: center;
+}
+
+.svg-color {
+  fill: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .language-modal-content {
+    max-width: 90%;
+    padding: 16px;
+  }
+
+  .language-modal-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .language-options a {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+}
+
+.svg-color path {
+  fill: white;
+}
+#language-modal {
+  width: 100%;
+}
