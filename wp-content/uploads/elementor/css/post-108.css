@@ -1,0 +1,1164 @@
+.elementor-108 .elementor-element.elementor-element-4b4aea2 {
+  --display: flex;
+  --flex-direction: row;
+  --container-widget-width: calc(
+    (1 - var(--container-widget-flex-grow)) * 100%
+  );
+  --container-widget-height: 100%;
+  --container-widget-flex-grow: 1;
+  --container-widget-align-self: stretch;
+  --flex-wrap-mobile: wrap;
+  --align-items: center;
+  --gap: 10px 10px;
+  --row-gap: 10px;
+  --column-gap: 10px;
+  --padding-top: 40px;
+  --padding-bottom: 40px;
+  --padding-left: 0px;
+  --padding-right: 0px;
+  overflow: visible;
+}
+.elementor-108 .elementor-element.elementor-element-ee37ef5 {
+  --display: flex;
+  --padding-top: 0px;
+  --padding-bottom: 0px;
+  --padding-left: 0px;
+  --padding-right: 30px;
+  overflow: visible;
+}
+.elementor-widget-text-editor {
+  font-family: var(--e-global-typography-text-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-text-font-weight);
+  color: var(--e-global-color-text);
+}
+.elementor-widget-text-editor.elementor-drop-cap-view-stacked
+  .elementor-drop-cap {
+  background-color: var(--e-global-color-primary);
+}
+.elementor-widget-text-editor.elementor-drop-cap-view-framed
+  .elementor-drop-cap,
+.elementor-widget-text-editor.elementor-drop-cap-view-default
+  .elementor-drop-cap {
+  color: var(--e-global-color-primary);
+  border-color: var(--e-global-color-primary);
+}
+.elementor-108 .elementor-element.elementor-element-e5f1908 {
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-09cc280 {
+  --display: flex;
+  --gap: 20px 20px;
+  --row-gap: 20px;
+  --column-gap: 20px;
+  --padding-top: 0px;
+  --padding-bottom: 0px;
+  --padding-left: 30px;
+  --padding-right: 0px;
+  overflow: visible;
+}
+.elementor-widget-heading .elementor-heading-title {
+  font-family: var(--e-global-typography-primary-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-primary-font-weight);
+  color: var(--e-global-color-primary);
+}
+.elementor-108
+  .elementor-element.elementor-element-af90b88
+  > .elementor-widget-container {
+  margin: 0px 0px 15px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.elementor-108 .elementor-element.elementor-element-af90b88 {
+  text-align: left;
+}
+.elementor-108
+  .elementor-element.elementor-element-af90b88
+  .elementor-heading-title {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+}
+.elementor-108
+  .elementor-element.elementor-element-3e2dd13
+  > .elementor-widget-container {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.elementor-108 .elementor-element.elementor-element-3e2dd13 {
+  color: #000000;
+}
+.elementor-widget-button .elementor-button {
+  background-color: var(--e-global-color-accent);
+  font-family: var(--e-global-typography-accent-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-accent-font-weight);
+}
+.elementor-108 .elementor-element.elementor-element-b1f6664 .elementor-button {
+  background-color: #045266;
+  font-weight: 400;
+  fill: #ffffff;
+  color: #ffffff;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.3);
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #045266;
+  border-radius: 3px 3px 3px 3px;
+  padding: 12px 40px 12px 40px;
+}
+.elementor-108
+  .elementor-element.elementor-element-b1f6664
+  .elementor-button:hover,
+.elementor-108
+  .elementor-element.elementor-element-b1f6664
+  .elementor-button:focus {
+  background-color: rgba(255, 255, 255, 0);
+  color: #000000;
+}
+.elementor-108
+  .elementor-element.elementor-element-b1f6664
+  > .elementor-widget-container {
+  margin: -15px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.elementor-108
+  .elementor-element.elementor-element-b1f6664
+  .elementor-button:hover
+  svg,
+.elementor-108
+  .elementor-element.elementor-element-b1f6664
+  .elementor-button:focus
+  svg {
+  fill: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-0ad66df {
+  --display: flex;
+  --flex-direction: row;
+  --container-widget-width: calc(
+    (1 - var(--container-widget-flex-grow)) * 100%
+  );
+  --container-widget-height: 100%;
+  --container-widget-flex-grow: 1;
+  --container-widget-align-self: stretch;
+  --flex-wrap-mobile: wrap;
+  --align-items: stretch;
+  --gap: 10px 10px;
+  --row-gap: 10px;
+  --column-gap: 10px;
+  --padding-top: 40px;
+  --padding-bottom: 40px;
+  --padding-left: 0px;
+  --padding-right: 0px;
+  overflow: visible;
+}
+.elementor-108
+  .elementor-element.elementor-element-0ad66df:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-108
+  .elementor-element.elementor-element-0ad66df
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-color: #f4f8f8;
+}
+.elementor-108 .elementor-element.elementor-element-7b3e626 {
+  --display: flex;
+  overflow: visible;
+}
+.elementor-108
+  .elementor-element.elementor-element-d500bd4
+  > .elementor-widget-container {
+  margin: 0px 0px 5px 0px;
+}
+.elementor-108 .elementor-element.elementor-element-d500bd4 {
+  text-align: center;
+}
+.elementor-108
+  .elementor-element.elementor-element-d500bd4
+  .elementor-heading-title {
+  font-size: 26px;
+  font-weight: 500;
+  color: #000000;
+}
+.elementor-108
+  .elementor-element.elementor-element-d09dfaf
+  > .elementor-widget-container {
+  margin: 0px 0px 0px 0px;
+  padding: 0% 13% 0% 13%;
+}
+.elementor-108 .elementor-element.elementor-element-d09dfaf {
+  text-align: center;
+  line-height: 1.4em;
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-afe7515 {
+  --display: flex;
+  --flex-direction: row;
+  --container-widget-width: calc(
+    (1 - var(--container-widget-flex-grow)) * 100%
+  );
+  --container-widget-height: 100%;
+  --container-widget-flex-grow: 1;
+  --container-widget-align-self: stretch;
+  --flex-wrap-mobile: wrap;
+  --align-items: stretch;
+  --gap: 10px 10px;
+  --row-gap: 10px;
+  --column-gap: 10px;
+  --margin-top: 0px;
+  --margin-bottom: 15px;
+  --margin-left: 0px;
+  --margin-right: 0px;
+  --padding-top: 0px;
+  --padding-bottom: 0px;
+  --padding-left: 30px;
+  --padding-right: 30px;
+  overflow: visible;
+}
+.elementor-108 .elementor-element.elementor-element-e34e173 {
+  --display: flex;
+  --justify-content: center;
+  --gap: 0px 0px;
+  --row-gap: 0px;
+  --column-gap: 0px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  --padding-left: 70px;
+  --padding-right: 0px;
+  overflow: visible;
+}
+.elementor-108
+  .elementor-element.elementor-element-e34e173:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-108
+  .elementor-element.elementor-element-e34e173
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-image: url("https://financialcommission.org/wp-content/uploads/2020/07/png-circle-transparent-2.png");
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: 52px auto;
+}
+.elementor-108
+  .elementor-element.elementor-element-ae42f5c
+  > .elementor-widget-container {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.elementor-108 .elementor-element.elementor-element-ae42f5c {
+  text-align: left;
+  line-height: 1.35em;
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-51c0183 {
+  --display: flex;
+  --justify-content: center;
+  --gap: 0px 0px;
+  --row-gap: 0px;
+  --column-gap: 0px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  --padding-left: 70px;
+  --padding-right: 20px;
+  overflow: visible;
+}
+.elementor-108
+  .elementor-element.elementor-element-51c0183:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-108
+  .elementor-element.elementor-element-51c0183
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-image: url("https://financialcommission.org/wp-content/uploads/2020/07/png-circle-transparent-1.png");
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: 52px auto;
+}
+.elementor-108
+  .elementor-element.elementor-element-902e92d
+  > .elementor-widget-container {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.elementor-108 .elementor-element.elementor-element-902e92d {
+  text-align: left;
+  line-height: 1.35em;
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-0ed9699 {
+  --display: flex;
+  --justify-content: center;
+  --gap: 0px 0px;
+  --row-gap: 0px;
+  --column-gap: 0px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  --padding-left: 70px;
+  --padding-right: 0px;
+  overflow: visible;
+}
+.elementor-108
+  .elementor-element.elementor-element-0ed9699:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-108
+  .elementor-element.elementor-element-0ed9699
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-image: url("https://financialcommission.org/wp-content/uploads/2020/07/png-circle-transparent-3.png");
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: 52px auto;
+}
+.elementor-108
+  .elementor-element.elementor-element-9e2b140
+  > .elementor-widget-container {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.elementor-108 .elementor-element.elementor-element-9e2b140 {
+  text-align: left;
+  line-height: 1.35em;
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-d11fc48 {
+  --display: flex;
+  --flex-direction: row;
+  --container-widget-width: calc(
+    (1 - var(--container-widget-flex-grow)) * 100%
+  );
+  --container-widget-height: 100%;
+  --container-widget-flex-grow: 1;
+  --container-widget-align-self: stretch;
+  --flex-wrap-mobile: wrap;
+  --align-items: stretch;
+  --gap: 10px 10px;
+  --row-gap: 10px;
+  --column-gap: 10px;
+  --margin-top: 0px;
+  --margin-bottom: 0px;
+  --margin-left: 0px;
+  --margin-right: 0px;
+  --padding-top: 0px;
+  --padding-bottom: 0px;
+  --padding-left: 30px;
+  --padding-right: 30px;
+  overflow: visible;
+}
+.elementor-108 .elementor-element.elementor-element-a7c155d {
+  --display: flex;
+  --justify-content: center;
+  --gap: 0px 0px;
+  --row-gap: 0px;
+  --column-gap: 0px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  --padding-left: 70px;
+  --padding-right: 0px;
+  overflow: visible;
+}
+.elementor-108
+  .elementor-element.elementor-element-a7c155d:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-108
+  .elementor-element.elementor-element-a7c155d
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-image: url("https://financialcommission.org/wp-content/uploads/2020/07/png-circle-transparent-4.png");
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: 52px auto;
+}
+.elementor-108
+  .elementor-element.elementor-element-6ca1d63
+  > .elementor-widget-container {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.elementor-108 .elementor-element.elementor-element-6ca1d63 {
+  text-align: left;
+  line-height: 1.35em;
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-283ad1c {
+  --display: flex;
+  --justify-content: center;
+  --gap: 0px 0px;
+  --row-gap: 0px;
+  --column-gap: 0px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  --padding-left: 70px;
+  --padding-right: 20px;
+  overflow: visible;
+}
+.elementor-108
+  .elementor-element.elementor-element-283ad1c:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-108
+  .elementor-element.elementor-element-283ad1c
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-image: url("https://financialcommission.org/wp-content/uploads/2020/07/png-circle-transparent-5.png");
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: 52px auto;
+}
+.elementor-108
+  .elementor-element.elementor-element-ec8cd95
+  > .elementor-widget-container {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.elementor-108 .elementor-element.elementor-element-ec8cd95 {
+  text-align: left;
+  line-height: 1.35em;
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-4dc8c71 {
+  --display: flex;
+  --justify-content: center;
+  --gap: 0px 0px;
+  --row-gap: 0px;
+  --column-gap: 0px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  --padding-left: 70px;
+  --padding-right: 0px;
+  overflow: visible;
+}
+.elementor-108
+  .elementor-element.elementor-element-4dc8c71:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-108
+  .elementor-element.elementor-element-4dc8c71
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-image: url("https://financialcommission.org/wp-content/uploads/2020/07/png-circle-transparent-6.png");
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: 52px auto;
+}
+.elementor-108
+  .elementor-element.elementor-element-5991fbf
+  > .elementor-widget-container {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.elementor-108 .elementor-element.elementor-element-5991fbf {
+  text-align: left;
+  line-height: 1.35em;
+  color: #000000;
+}
+.elementor-108
+  .elementor-element.elementor-element-819d672
+  > .elementor-widget-container {
+  margin: 30px 0px 0px 0px;
+}
+.elementor-108 .elementor-element.elementor-element-819d672 {
+  text-align: center;
+  font-weight: 500;
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-2b3147e {
+  --display: flex;
+  --flex-direction: row;
+  --container-widget-width: calc(
+    (1 - var(--container-widget-flex-grow)) * 100%
+  );
+  --container-widget-height: 100%;
+  --container-widget-flex-grow: 1;
+  --container-widget-align-self: stretch;
+  --flex-wrap-mobile: wrap;
+  --align-items: stretch;
+  --gap: 10px 10px;
+  --row-gap: 10px;
+  --column-gap: 10px;
+  --margin-top: 0px;
+  --margin-bottom: 0px;
+  --margin-left: 0px;
+  --margin-right: 0px;
+  overflow: visible;
+}
+.elementor-108 .elementor-element.elementor-element-48d0dfc {
+  --display: flex;
+  overflow: visible;
+}
+.elementor-108 .elementor-element.elementor-element-d41f1f6 .elementor-button {
+  background-color: #045266;
+  font-weight: 400;
+  fill: #ffffff;
+  color: #ffffff;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.3);
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #045266;
+  border-radius: 3px 3px 3px 3px;
+  padding: 12px 30px 12px 30px;
+}
+.elementor-108
+  .elementor-element.elementor-element-d41f1f6
+  .elementor-button:hover,
+.elementor-108
+  .elementor-element.elementor-element-d41f1f6
+  .elementor-button:focus {
+  background-color: rgba(255, 255, 255, 0);
+  color: #000000;
+}
+.elementor-108
+  .elementor-element.elementor-element-d41f1f6
+  > .elementor-widget-container {
+  padding: 15px 0px 0px 0px;
+}
+.elementor-108
+  .elementor-element.elementor-element-d41f1f6
+  .elementor-button:hover
+  svg,
+.elementor-108
+  .elementor-element.elementor-element-d41f1f6
+  .elementor-button:focus
+  svg {
+  fill: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-53738f9 {
+  --display: flex;
+  --flex-direction: row;
+  --container-widget-width: calc(
+    (1 - var(--container-widget-flex-grow)) * 100%
+  );
+  --container-widget-height: 100%;
+  --container-widget-flex-grow: 1;
+  --container-widget-align-self: stretch;
+  --flex-wrap-mobile: wrap;
+  --align-items: stretch;
+  --gap: 10px 10px;
+  --row-gap: 10px;
+  --column-gap: 10px;
+  --margin-top: 40px;
+  --margin-bottom: 0px;
+  --margin-left: 0px;
+  --margin-right: 0px;
+  overflow: visible;
+}
+.elementor-108 .elementor-element.elementor-element-751641e {
+  --display: flex;
+  overflow: visible;
+}
+.elementor-widget-media-carousel .elementor-carousel-image-overlay {
+  font-family: var(--e-global-typography-accent-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-accent-font-weight);
+}
+.elementor-108
+  .elementor-element.elementor-element-b7a9e0d.elementor-skin-slideshow
+  .elementor-main-swiper:not(.elementor-thumbnails-swiper) {
+  margin-bottom: 40px;
+}
+.elementor-108
+  .elementor-element.elementor-element-b7a9e0d
+  > .elementor-widget-container {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.elementor-108
+  .elementor-element.elementor-element-b7a9e0d
+  .elementor-main-swiper {
+  height: 100px;
+}
+.elementor-108
+  .elementor-element.elementor-element-b7a9e0d
+  .elementor-swiper-button {
+  font-size: 10px;
+}
+.elementor-108
+  .elementor-element.elementor-element-b7a9e0d
+  .elementor-main-swiper:not(.elementor-thumbnails-swiper)
+  .elementor-carousel-image {
+  background-size: contain;
+}
+.elementor-108 .elementor-element.elementor-element-468db01 {
+  --display: flex;
+  --flex-direction: row;
+  --container-widget-width: calc(
+    (1 - var(--container-widget-flex-grow)) * 100%
+  );
+  --container-widget-height: 100%;
+  --container-widget-flex-grow: 1;
+  --container-widget-align-self: stretch;
+  --flex-wrap-mobile: wrap;
+  --align-items: stretch;
+  --gap: 10px 10px;
+  --row-gap: 10px;
+  --column-gap: 10px;
+  overflow: visible;
+}
+.elementor-108 .elementor-element.elementor-element-4cd54b7 {
+  --display: flex;
+  overflow: visible;
+}
+.elementor-108
+  .elementor-element.elementor-element-fc51e7e
+  > .elementor-widget-container {
+  margin: 60px 0px 0px 0px;
+  padding: 0px 0px 7px 0px;
+}
+.elementor-108 .elementor-element.elementor-element-fc51e7e {
+  text-align: center;
+}
+.elementor-108
+  .elementor-element.elementor-element-fc51e7e
+  .elementor-heading-title {
+  font-size: 26px;
+  font-weight: 500;
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-a81a883 {
+  --display: flex;
+  --flex-direction: row;
+  --container-widget-width: calc(
+    (1 - var(--container-widget-flex-grow)) * 100%
+  );
+  --container-widget-height: 100%;
+  --container-widget-flex-grow: 1;
+  --container-widget-align-self: stretch;
+  --flex-wrap-mobile: wrap;
+  --align-items: stretch;
+  --gap: 10px 10px;
+  --row-gap: 10px;
+  --column-gap: 10px;
+  --margin-top: 20px;
+  --margin-bottom: 0px;
+  --margin-left: 0px;
+  --margin-right: 0px;
+  overflow: visible;
+}
+.elementor-108 .elementor-element.elementor-element-dc35c51 {
+  --display: flex;
+  overflow: visible;
+}
+.elementor-108 .elementor-element.elementor-element-8790f3e {
+  line-height: 1.4em;
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-68ee006 {
+  --display: flex;
+  --flex-direction: row;
+  --container-widget-width: calc(
+    (1 - var(--container-widget-flex-grow)) * 100%
+  );
+  --container-widget-height: 100%;
+  --container-widget-flex-grow: 1;
+  --container-widget-align-self: stretch;
+  --flex-wrap-mobile: wrap;
+  --align-items: stretch;
+  --gap: 10px 10px;
+  --row-gap: 10px;
+  --column-gap: 10px;
+  overflow: visible;
+}
+.elementor-108 .elementor-element.elementor-element-ab70d28 {
+  --display: flex;
+  overflow: visible;
+}
+.elementor-108
+  .elementor-element.elementor-element-e805665
+  > .elementor-widget-container {
+  margin: 60px 0px 0px 0px;
+  padding: 0px 0px 7px 0px;
+}
+.elementor-108 .elementor-element.elementor-element-e805665 {
+  text-align: center;
+}
+.elementor-108
+  .elementor-element.elementor-element-e805665
+  .elementor-heading-title {
+  font-size: 26px;
+  font-weight: 500;
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-8db2ed9 {
+  --display: flex;
+  --flex-direction: row;
+  --container-widget-width: calc(
+    (1 - var(--container-widget-flex-grow)) * 100%
+  );
+  --container-widget-height: 100%;
+  --container-widget-flex-grow: 1;
+  --container-widget-align-self: stretch;
+  --flex-wrap-mobile: wrap;
+  --align-items: stretch;
+  --gap: 10px 10px;
+  --row-gap: 10px;
+  --column-gap: 10px;
+  --overlay-opacity: 0.5;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-left: 0px;
+  --padding-right: 0px;
+  overflow: visible;
+}
+.elementor-108 .elementor-element.elementor-element-8db2ed9::before,
+.elementor-108
+  .elementor-element.elementor-element-8db2ed9
+  > .elementor-background-video-container::before,
+.elementor-108
+  .elementor-element.elementor-element-8db2ed9
+  > .e-con-inner
+  > .elementor-background-video-container::before,
+.elementor-108
+  .elementor-element.elementor-element-8db2ed9
+  > .elementor-background-slideshow::before,
+.elementor-108
+  .elementor-element.elementor-element-8db2ed9
+  > .e-con-inner
+  > .elementor-background-slideshow::before,
+.elementor-108
+  .elementor-element.elementor-element-8db2ed9
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer::before {
+  background-color: #f0f5f6;
+  --background-overlay: "";
+}
+.elementor-108 .elementor-element.elementor-element-ab6f859 {
+  --display: flex;
+  --padding-top: 90px;
+  --padding-bottom: 0px;
+  --padding-left: 5px;
+  --padding-right: 5px;
+  overflow: visible;
+}
+.elementor-108
+  .elementor-element.elementor-element-ab6f859:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-108
+  .elementor-element.elementor-element-ab6f859
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-image: url("https://financialcommission.org/wp-content/uploads/2020/07/icon-1.png");
+  background-position: 50% 20px;
+  background-repeat: no-repeat;
+  background-size: 48px auto;
+}
+.elementor-108 .elementor-element.elementor-element-60d8de8 {
+  line-height: 1.2em;
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-bbc648e {
+  --display: flex;
+  --padding-top: 90px;
+  --padding-bottom: 0px;
+  --padding-left: 5px;
+  --padding-right: 5px;
+  overflow: visible;
+}
+.elementor-108
+  .elementor-element.elementor-element-bbc648e:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-108
+  .elementor-element.elementor-element-bbc648e
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-image: url("https://financialcommission.org/wp-content/uploads/2020/07/icon-2.png");
+  background-position: 50% 22px;
+  background-repeat: no-repeat;
+  background-size: 54px auto;
+}
+.elementor-108 .elementor-element.elementor-element-e249d27 {
+  line-height: 1.2em;
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-2e0588e {
+  --display: flex;
+  --padding-top: 90px;
+  --padding-bottom: 0px;
+  --padding-left: 5px;
+  --padding-right: 5px;
+  overflow: visible;
+}
+.elementor-108
+  .elementor-element.elementor-element-2e0588e:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-108
+  .elementor-element.elementor-element-2e0588e
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-image: url("https://financialcommission.org/wp-content/uploads/2020/07/icon-3.png");
+  background-position: 50% 22px;
+  background-repeat: no-repeat;
+  background-size: 52px auto;
+}
+.elementor-108 .elementor-element.elementor-element-80e0769 {
+  line-height: 1.2em;
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-949ada7 {
+  --display: flex;
+  --padding-top: 90px;
+  --padding-bottom: 0px;
+  --padding-left: 5px;
+  --padding-right: 5px;
+  overflow: visible;
+}
+.elementor-108
+  .elementor-element.elementor-element-949ada7:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-108
+  .elementor-element.elementor-element-949ada7
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-image: url("https://financialcommission.org/wp-content/uploads/2020/08/icon-4.png");
+  background-position: 50% 24px;
+  background-repeat: no-repeat;
+  background-size: 56px auto;
+}
+.elementor-108 .elementor-element.elementor-element-cf3af9b {
+  line-height: 1.2em;
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-ef6bf56 {
+  --display: flex;
+  --padding-top: 90px;
+  --padding-bottom: 0px;
+  --padding-left: 5px;
+  --padding-right: 5px;
+  overflow: visible;
+}
+.elementor-108
+  .elementor-element.elementor-element-ef6bf56:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-108
+  .elementor-element.elementor-element-ef6bf56
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-image: url("https://financialcommission.org/wp-content/uploads/2020/07/icon-5.png");
+  background-position: 50% 23px;
+  background-repeat: no-repeat;
+  background-size: 48px auto;
+}
+.elementor-108 .elementor-element.elementor-element-9d2a757 {
+  line-height: 1.2em;
+  color: #000000;
+}
+.elementor-108 .elementor-element.elementor-element-4e39a07 {
+  --display: flex;
+  --flex-direction: row;
+  --container-widget-width: calc(
+    (1 - var(--container-widget-flex-grow)) * 100%
+  );
+  --container-widget-height: 100%;
+  --container-widget-flex-grow: 1;
+  --container-widget-align-self: stretch;
+  --flex-wrap-mobile: wrap;
+  --align-items: stretch;
+  --gap: 10px 10px;
+  --row-gap: 10px;
+  --column-gap: 10px;
+  --margin-top: 0px;
+  --margin-bottom: 0px;
+  --margin-left: 0px;
+  --margin-right: 0px;
+  overflow: visible;
+}
+.elementor-108 .elementor-element.elementor-element-ff365e5 {
+  --display: flex;
+  overflow: visible;
+}
+.elementor-108 .elementor-element.elementor-element-da7130d .elementor-button {
+  background-color: #045266;
+  font-weight: 400;
+  fill: #ffffff;
+  color: #ffffff;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.3);
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #045266;
+  border-radius: 3px 3px 3px 3px;
+  padding: 12px 40px 12px 40px;
+}
+.elementor-108
+  .elementor-element.elementor-element-da7130d
+  .elementor-button:hover,
+.elementor-108
+  .elementor-element.elementor-element-da7130d
+  .elementor-button:focus {
+  background-color: rgba(255, 255, 255, 0);
+  color: #000000;
+}
+.elementor-108
+  .elementor-element.elementor-element-da7130d
+  > .elementor-widget-container {
+  padding: 15px 0px 0px 0px;
+}
+.elementor-108
+  .elementor-element.elementor-element-da7130d
+  .elementor-button:hover
+  svg,
+.elementor-108
+  .elementor-element.elementor-element-da7130d
+  .elementor-button:focus
+  svg {
+  fill: #000000;
+}
+@media (max-width: 1024px) {
+  .elementor-108 .elementor-element.elementor-element-ee37ef5 {
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-left: 0px;
+    --padding-right: 10px;
+  }
+  .elementor-108 .elementor-element.elementor-element-09cc280 {
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-left: 10px;
+    --padding-right: 0px;
+  }
+  .elementor-108
+    .elementor-element.elementor-element-b7a9e0d.elementor-skin-slideshow
+    .elementor-main-swiper:not(.elementor-thumbnails-swiper) {
+    margin-bottom: 10px;
+  }
+  .elementor-108
+    .elementor-element.elementor-element-ab6f859:not(
+      .elementor-motion-effects-element-type-background
+    ),
+  .elementor-108
+    .elementor-element.elementor-element-ab6f859
+    > .elementor-motion-effects-container
+    > .elementor-motion-effects-layer {
+    background-position: 0px 0px;
+  }
+  .elementor-108 .elementor-element.elementor-element-60d8de8 {
+    font-size: 14px;
+  }
+  .elementor-108
+    .elementor-element.elementor-element-bbc648e:not(
+      .elementor-motion-effects-element-type-background
+    ),
+  .elementor-108
+    .elementor-element.elementor-element-bbc648e
+    > .elementor-motion-effects-container
+    > .elementor-motion-effects-layer {
+    background-position: 0px 0px;
+  }
+  .elementor-108 .elementor-element.elementor-element-e249d27 {
+    font-size: 14px;
+  }
+  .elementor-108
+    .elementor-element.elementor-element-2e0588e:not(
+      .elementor-motion-effects-element-type-background
+    ),
+  .elementor-108
+    .elementor-element.elementor-element-2e0588e
+    > .elementor-motion-effects-container
+    > .elementor-motion-effects-layer {
+    background-position: 0px 0px;
+  }
+  .elementor-108 .elementor-element.elementor-element-80e0769 {
+    font-size: 14px;
+  }
+  .elementor-108
+    .elementor-element.elementor-element-949ada7:not(
+      .elementor-motion-effects-element-type-background
+    ),
+  .elementor-108
+    .elementor-element.elementor-element-949ada7
+    > .elementor-motion-effects-container
+    > .elementor-motion-effects-layer {
+    background-position: 0px 0px;
+  }
+  .elementor-108 .elementor-element.elementor-element-cf3af9b {
+    font-size: 14px;
+  }
+  .elementor-108
+    .elementor-element.elementor-element-ef6bf56:not(
+      .elementor-motion-effects-element-type-background
+    ),
+  .elementor-108
+    .elementor-element.elementor-element-ef6bf56
+    > .elementor-motion-effects-container
+    > .elementor-motion-effects-layer {
+    background-position: 0px 0px;
+  }
+  .elementor-108 .elementor-element.elementor-element-9d2a757 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .elementor-108 .elementor-element.elementor-element-ee37ef5 {
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-left: 15px;
+    --padding-right: 15px;
+  }
+  .elementor-108 .elementor-element.elementor-element-09cc280 {
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-left: 15px;
+    --padding-right: 15px;
+  }
+  .elementor-108
+    .elementor-element.elementor-element-d09dfaf
+    > .elementor-widget-container {
+    padding: 0px 0px 0px 0px;
+  }
+  .elementor-108 .elementor-element.elementor-element-afe7515 {
+    --margin-top: 0px;
+    --margin-bottom: 0px;
+    --margin-left: 0px;
+    --margin-right: 0px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-left: 0px;
+    --padding-right: 0px;
+  }
+  .elementor-108 .elementor-element.elementor-element-d11fc48 {
+    --margin-top: 0px;
+    --margin-bottom: 0px;
+    --margin-left: 0px;
+    --margin-right: 0px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-left: 0px;
+    --padding-right: 0px;
+  }
+  .elementor-108
+    .elementor-element.elementor-element-b7a9e0d.elementor-skin-slideshow
+    .elementor-main-swiper:not(.elementor-thumbnails-swiper) {
+    margin-bottom: 11px;
+  }
+  .elementor-108
+    .elementor-element.elementor-element-b7a9e0d
+    .elementor-main-swiper {
+    width: 50%;
+  }
+  .elementor-108 .elementor-element.elementor-element-dc35c51 {
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-left: 15px;
+    --padding-right: 15px;
+  }
+  .elementor-108 .elementor-element.elementor-element-8db2ed9 {
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-left: 10px;
+    --padding-right: 10px;
+  }
+  .elementor-108
+    .elementor-element.elementor-element-ab6f859:not(
+      .elementor-motion-effects-element-type-background
+    ),
+  .elementor-108
+    .elementor-element.elementor-element-ab6f859
+    > .elementor-motion-effects-container
+    > .elementor-motion-effects-layer {
+    background-position: 0px 0px;
+  }
+  .elementor-108 .elementor-element.elementor-element-ab6f859 {
+    --padding-top: 10px;
+    --padding-bottom: 0px;
+    --padding-left: 60px;
+    --padding-right: 0px;
+  }
+  .elementor-108
+    .elementor-element.elementor-element-bbc648e:not(
+      .elementor-motion-effects-element-type-background
+    ),
+  .elementor-108
+    .elementor-element.elementor-element-bbc648e
+    > .elementor-motion-effects-container
+    > .elementor-motion-effects-layer {
+    background-position: 0px 0px;
+  }
+  .elementor-108 .elementor-element.elementor-element-bbc648e {
+    --padding-top: 10px;
+    --padding-bottom: 0px;
+    --padding-left: 60px;
+    --padding-right: 0px;
+  }
+  .elementor-108
+    .elementor-element.elementor-element-2e0588e:not(
+      .elementor-motion-effects-element-type-background
+    ),
+  .elementor-108
+    .elementor-element.elementor-element-2e0588e
+    > .elementor-motion-effects-container
+    > .elementor-motion-effects-layer {
+    background-position: 0px 0px;
+  }
+  .elementor-108 .elementor-element.elementor-element-2e0588e {
+    --padding-top: 10px;
+    --padding-bottom: 0px;
+    --padding-left: 60px;
+    --padding-right: 0px;
+  }
+  .elementor-108
+    .elementor-element.elementor-element-949ada7:not(
+      .elementor-motion-effects-element-type-background
+    ),
+  .elementor-108
+    .elementor-element.elementor-element-949ada7
+    > .elementor-motion-effects-container
+    > .elementor-motion-effects-layer {
+    background-position: 0px 0px;
+  }
+  .elementor-108 .elementor-element.elementor-element-949ada7 {
+    --padding-top: 10px;
+    --padding-bottom: 0px;
+    --padding-left: 60px;
+    --padding-right: 0px;
+  }
+  .elementor-108
+    .elementor-element.elementor-element-ef6bf56:not(
+      .elementor-motion-effects-element-type-background
+    ),
+  .elementor-108
+    .elementor-element.elementor-element-ef6bf56
+    > .elementor-motion-effects-container
+    > .elementor-motion-effects-layer {
+    background-position: 0px 0px;
+  }
+  .elementor-108 .elementor-element.elementor-element-ef6bf56 {
+    --padding-top: 10px;
+    --padding-bottom: 0px;
+    --padding-left: 60px;
+    --padding-right: 0px;
+  }
+} /* Start custom CSS for heading, class: .elementor-element-af90b88 */
+.fc-wwd-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 1px;
+  background: #137276; /* End custom CSS */
+  /* Start custom CSS for container, class: .elementor-element-afe7515 */
+  .fc-wwd-mn p {
+    margin-bottom: 0;
+  } /* End custom CSS */
+  /* Start custom CSS for container, class: .elementor-element-d11fc48 */
+  .fc-wwd-mn p {
+    margin-bottom: 0;
+  } /* End custom CSS */
+  /* Start custom CSS for text-editor, class: .elementor-element-819d672 */
+  .elementor-element-5e23901 a,
+  .fc-page-content p a {
+    word-break: break-word;
+  }
+  /* Start custom CSS for heading, class: .elementor-element-e805665 */
+  .fc-wwd-title2:after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    background: #000;
+    bottom: -8px;
+    left: calc(50% - 20px);
+  }
+}

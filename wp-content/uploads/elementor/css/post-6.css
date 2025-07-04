@@ -1,0 +1,90 @@
+.elementor-kit-6 {
+  --e-global-color-primary: #045266;
+  --e-global-color-secondary: #004050;
+  --e-global-color-text: #000000;
+  --e-global-color-accent: #dff9eb;
+  --e-global-color-light: #f4f4f4;
+  --e-global-color-25d9227: #ffffff;
+  --e-global-typography-primary-font-family: "Manrope";
+  --e-global-typography-primary-font-weight: 700;
+  --e-global-typography-secondary-font-family: "Manrope";
+  --e-global-typography-secondary-font-weight: 600;
+  --e-global-typography-text-font-family: "Manrope";
+  --e-global-typography-text-font-weight: 400;
+  --e-global-typography-accent-font-family: "Manrope";
+  --e-global-typography-accent-font-weight: 600;
+  --color-text: #545454;
+  --font-size-default: 16px;
+  --keydesign-h2-font-size: 48px;
+  --line-height-paragraph: 1.6em;
+}
+.elementor-kit-6 e-page-transition {
+  background-color: #ffbc7d;
+}
+.elementor-kit-6 h2 {
+  font-size: 48px;
+}
+.elementor-kit-6 p {
+  line-height: 1.6em;
+}
+.elementor-kit-6 button,
+.elementor-kit-6 input[type="button"],
+.elementor-kit-6 input[type="submit"],
+.elementor-kit-6 .elementor-button,
+.elementor-kit-6 .ekit-wid-con .elementskit-btn,
+.elementor-kit-6
+  .ekit-wid-con
+  .elementskit-single-pricing
+  .elementskit-pricing-btn {
+  padding: 15px 20px 15px 20px;
+}
+.elementor-section.elementor-section-boxed > .elementor-container {
+  max-width: 1240px;
+}
+.e-con {
+  --container-max-width: 1240px;
+}
+.elementor-widget:not(:last-child) {
+  margin-block-end: 20px;
+}
+.elementor-element {
+  --widgets-spacing: 20px 20px;
+  --widgets-spacing-row: 20px;
+  --widgets-spacing-column: 20px;
+}
+h1.entry-title {
+  display: var(--page-title-display);
+}
+body {
+  --global-border-radius: 8px 8px 8px 8px;
+  --button-border-radius: 8px 8px 8px 8px;
+}
+@media (max-width: 1024px) {
+  .elementor-kit-6 h2 {
+    font-size: 34px;
+  }
+  .elementor-kit-6 {
+    --keydesign-h2-font-size: 34px;
+  }
+  .elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 1024px;
+  }
+  .e-con {
+    --container-max-width: 1024px;
+  }
+}
+@media (max-width: 767px) {
+  .elementor-kit-6 {
+    --font-size-default: 14px;
+    --keydesign-h2-font-size: 26px;
+  }
+  .elementor-kit-6 h2 {
+    font-size: 26px;
+  }
+  .elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 767px;
+  }
+  .e-con {
+    --container-max-width: 767px;
+  }
+}

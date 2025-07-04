@@ -1,0 +1,136 @@
+.elementor-122058 .elementor-element.elementor-element-d8d0259 {
+  overflow: visible;
+}
+.elementor-widget-posts .elementor-button {
+  background-color: var(--e-global-color-accent);
+  font-family: var(--e-global-typography-accent-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-accent-font-weight);
+}
+.elementor-widget-posts .elementor-post__title,
+.elementor-widget-posts .elementor-post__title a {
+  color: var(--e-global-color-secondary);
+  font-family: var(--e-global-typography-primary-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-primary-font-weight);
+}
+.elementor-widget-posts .elementor-post__meta-data {
+  font-family: var(--e-global-typography-secondary-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-secondary-font-weight);
+}
+.elementor-widget-posts .elementor-post__excerpt p {
+  font-family: var(--e-global-typography-text-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-text-font-weight);
+}
+.elementor-widget-posts .elementor-post__read-more {
+  color: var(--e-global-color-accent);
+}
+.elementor-widget-posts a.elementor-post__read-more {
+  font-family: var(--e-global-typography-accent-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-accent-font-weight);
+}
+.elementor-widget-posts .elementor-post__card .elementor-post__badge {
+  background-color: var(--e-global-color-accent);
+  font-family: var(--e-global-typography-accent-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-accent-font-weight);
+}
+.elementor-widget-posts .elementor-pagination {
+  font-family: var(--e-global-typography-secondary-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-secondary-font-weight);
+}
+.elementor-widget-posts .e-load-more-message {
+  font-family: var(--e-global-typography-secondary-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-secondary-font-weight);
+}
+.elementor-122058 .elementor-element.elementor-element-e05fb11 {
+  --grid-row-gap: 35px;
+  --grid-column-gap: 30px;
+}
+.elementor-122058
+  .elementor-element.elementor-element-e05fb11
+  .elementor-posts-container
+  .elementor-post__thumbnail {
+  padding-bottom: calc(0.66 * 100%);
+}
+.elementor-122058 .elementor-element.elementor-element-e05fb11:after {
+  content: "0.66";
+}
+.elementor-122058
+  .elementor-element.elementor-element-e05fb11
+  .elementor-post__thumbnail__link {
+  width: 100%;
+}
+.elementor-122058
+  .elementor-element.elementor-element-e05fb11.elementor-posts--thumbnail-left
+  .elementor-post__thumbnail__link {
+  margin-right: 20px;
+}
+.elementor-122058
+  .elementor-element.elementor-element-e05fb11.elementor-posts--thumbnail-right
+  .elementor-post__thumbnail__link {
+  margin-left: 20px;
+}
+.elementor-122058
+  .elementor-element.elementor-element-e05fb11.elementor-posts--thumbnail-top
+  .elementor-post__thumbnail__link {
+  margin-bottom: 20px;
+}
+.elementor-122058
+  .elementor-element.elementor-element-e05fb11
+  .elementor-post__read-more {
+  color: #227784;
+}
+.elementor-122058
+  .elementor-element.elementor-element-e05fb11
+  a.elementor-post__read-more {
+  font-family: "Roboto", Sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+.elementor-122058
+  .elementor-element.elementor-element-e05fb11
+  .elementor-pagination {
+  text-align: center;
+}
+body:not(.rtl)
+  .elementor-122058
+  .elementor-element.elementor-element-e05fb11
+  .elementor-pagination
+  .page-numbers:not(:first-child) {
+  margin-left: calc(10px / 2);
+}
+body:not(.rtl)
+  .elementor-122058
+  .elementor-element.elementor-element-e05fb11
+  .elementor-pagination
+  .page-numbers:not(:last-child) {
+  margin-right: calc(10px / 2);
+}
+body.rtl
+  .elementor-122058
+  .elementor-element.elementor-element-e05fb11
+  .elementor-pagination
+  .page-numbers:not(:first-child) {
+  margin-right: calc(10px / 2);
+}
+body.rtl
+  .elementor-122058
+  .elementor-element.elementor-element-e05fb11
+  .elementor-pagination
+  .page-numbers:not(:last-child) {
+  margin-left: calc(10px / 2);
+}
+@media (max-width: 767px) {
+  .elementor-122058
+    .elementor-element.elementor-element-e05fb11
+    .elementor-posts-container
+    .elementor-post__thumbnail {
+    padding-bottom: calc(0.5 * 100%);
+  }
+  .elementor-122058 .elementor-element.elementor-element-e05fb11:after {
+    content: "0.5";
+  }
+  .elementor-122058
+    .elementor-element.elementor-element-e05fb11
+    .elementor-post__thumbnail__link {
+    width: 100%;
+  }
+}

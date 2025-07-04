@@ -1,0 +1,75 @@
+.elementor-65475 .elementor-element.elementor-element-d137868 {
+  --display: flex;
+  --flex-direction: column;
+  --container-widget-width: 100%;
+  --container-widget-height: initial;
+  --container-widget-flex-grow: 0;
+  --container-widget-align-self: initial;
+  --flex-wrap-mobile: wrap;
+  --padding-top: 20px;
+  --padding-bottom: 40px;
+  --padding-left: 0px;
+  --padding-right: 0px;
+  overflow: visible;
+}
+.elementor-widget-loop-grid .elementor-button {
+  background-color: var(--e-global-color-accent);
+  font-family: var(--e-global-typography-accent-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-accent-font-weight);
+}
+.elementor-widget-loop-grid .elementor-pagination {
+  font-family: var(--e-global-typography-secondary-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-secondary-font-weight);
+}
+.elementor-widget-loop-grid .e-load-more-message {
+  font-family: var(--e-global-typography-secondary-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-secondary-font-weight);
+}
+.elementor-65475 .elementor-element.elementor-element-7d3a57d {
+  --grid-columns: 3;
+  --auto-scroll-offset: 0px;
+}
+.elementor-65475
+  .elementor-element.elementor-element-7d3a57d
+  .elementor-pagination {
+  text-align: left;
+  margin-top: 20px;
+}
+body:not(.rtl)
+  .elementor-65475
+  .elementor-element.elementor-element-7d3a57d
+  .elementor-pagination
+  .page-numbers:not(:first-child) {
+  margin-left: calc(10px / 2);
+}
+body:not(.rtl)
+  .elementor-65475
+  .elementor-element.elementor-element-7d3a57d
+  .elementor-pagination
+  .page-numbers:not(:last-child) {
+  margin-right: calc(10px / 2);
+}
+body.rtl
+  .elementor-65475
+  .elementor-element.elementor-element-7d3a57d
+  .elementor-pagination
+  .page-numbers:not(:first-child) {
+  margin-right: calc(10px / 2);
+}
+body.rtl
+  .elementor-65475
+  .elementor-element.elementor-element-7d3a57d
+  .elementor-pagination
+  .page-numbers:not(:last-child) {
+  margin-left: calc(10px / 2);
+}
+@media (max-width: 1024px) {
+  .elementor-65475 .elementor-element.elementor-element-7d3a57d {
+    --grid-columns: 2;
+  }
+}
+@media (max-width: 767px) {
+  .elementor-65475 .elementor-element.elementor-element-7d3a57d {
+    --grid-columns: 1;
+  }
+}
