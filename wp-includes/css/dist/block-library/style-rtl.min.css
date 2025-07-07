@@ -1032,15 +1032,15 @@ section.wp-block-cover-image > h2 {
 body:not(.editor-styles-wrapper)
   .wp-block-cover:not(
     .wp-block-cover:has(
-        .wp-block-cover__background + .wp-block-cover__inner-container
-      )
+      .wp-block-cover__background + .wp-block-cover__inner-container
+    )
   )
   .wp-block-cover__image-background,
 body:not(.editor-styles-wrapper)
   .wp-block-cover:not(
     .wp-block-cover:has(
-        .wp-block-cover__background + .wp-block-cover__inner-container
-      )
+      .wp-block-cover__background + .wp-block-cover__inner-container
+    )
   )
   .wp-block-cover__video-background {
   z-index: 0;
@@ -1048,29 +1048,29 @@ body:not(.editor-styles-wrapper)
 body:not(.editor-styles-wrapper)
   .wp-block-cover:not(
     .wp-block-cover:has(
-        .wp-block-cover__background + .wp-block-cover__inner-container
-      )
+      .wp-block-cover__background + .wp-block-cover__inner-container
+    )
   )
   .wp-block-cover__background,
 body:not(.editor-styles-wrapper)
   .wp-block-cover:not(
     .wp-block-cover:has(
-        .wp-block-cover__background + .wp-block-cover__inner-container
-      )
+      .wp-block-cover__background + .wp-block-cover__inner-container
+    )
   )
   .wp-block-cover__gradient-background,
 body:not(.editor-styles-wrapper)
   .wp-block-cover:not(
     .wp-block-cover:has(
-        .wp-block-cover__background + .wp-block-cover__inner-container
-      )
+      .wp-block-cover__background + .wp-block-cover__inner-container
+    )
   )
   .wp-block-cover__inner-container,
 body:not(.editor-styles-wrapper)
   .wp-block-cover:not(
     .wp-block-cover:has(
-        .wp-block-cover__background + .wp-block-cover__inner-container
-      )
+      .wp-block-cover__background + .wp-block-cover__inner-container
+    )
   ).has-background-dim:not(.has-background-gradient):before {
   z-index: 1;
 }
@@ -1078,8 +1078,8 @@ body:not(.editor-styles-wrapper)
   body:not(.editor-styles-wrapper)
   .wp-block-cover:not(
     .wp-block-cover:has(
-        .wp-block-cover__background + .wp-block-cover__inner-container
-      )
+      .wp-block-cover__background + .wp-block-cover__inner-container
+    )
   )
   .wp-block-cover__inner-container {
   z-index: auto;
@@ -1219,8 +1219,8 @@ body:not(.editor-styles-wrapper)
   margin: 0;
 }
 .wp-block-form-input__label:has(
-    .wp-block-form-input__label-content + input[type="checkbox"]
-  ) {
+  .wp-block-form-input__label-content + input[type="checkbox"]
+) {
   flex-direction: row-reverse;
 }
 .wp-block-form-input__label-content {
@@ -2112,15 +2112,15 @@ ol.wp-block-latest-comments {
 }
 :where(
   .wp-block-latest-comments:not(
-      [style*="line-height"] .wp-block-latest-comments__comment
-    )
+    [style*="line-height"] .wp-block-latest-comments__comment
+  )
 ) {
   line-height: 1.1;
 }
 :where(
   .wp-block-latest-comments:not(
-      [style*="line-height"] .wp-block-latest-comments__comment-excerpt p
-    )
+    [style*="line-height"] .wp-block-latest-comments__comment-excerpt p
+  )
 ) {
   line-height: 1.8;
 }

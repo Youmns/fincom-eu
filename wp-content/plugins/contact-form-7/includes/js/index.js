@@ -4,8 +4,8 @@
     t = (e) => Math.abs(parseInt(e, 10)),
     a = (e, t, a) => {
       const n = new CustomEvent(`wpcf7${t}`, { bubbles: !0, detail: a });
-      "string" == typeof e && (e = document.querySelector(e)),
-        e.dispatchEvent(n);
+      ("string" == typeof e && (e = document.querySelector(e)),
+        e.dispatchEvent(n));
     },
     n = (e, t) => {
       const n = new Map([
@@ -21,11 +21,11 @@
         ["validating", "validating"],
         ["payment_required", "payment-required"],
       ]);
-      n.has(t) && (t = n.get(t)),
+      (n.has(t) && (t = n.get(t)),
         Array.from(n.values()).includes(t) ||
           (t = `custom-${(t = (t = t
             .replace(/[^0-9a-z]+/i, " ")
-            .trim()).replace(/\s+/, "-"))}`);
+            .trim()).replace(/\s+/, "-"))}`));
       const r = e.getAttribute("data-status");
       if (
         ((e.wpcf7.status = t),
@@ -63,7 +63,7 @@
               data: p,
               ...d
             } = e;
-          "string" == typeof s &&
+          ("string" == typeof s &&
             ((n = a.replace(/^\/|\/$/g, "")),
             (r = s.replace(/^\//, "")),
             (o = r ? n + "/" + r : n)),
@@ -75,7 +75,7 @@
             delete i["X-WP-Nonce"],
             p &&
               ((l = JSON.stringify(p)),
-              (i["Content-Type"] = "application/json"));
+              (i["Content-Type"] = "application/json")));
           const f = {
               code: "fetch_error",
               message: "You are probably offline.",
@@ -165,9 +165,9 @@
             const c = t.dataset.name;
             if (n.has(c)) {
               const { error: t, validInputs: a } = n.get(c);
-              i(e, c),
+              (i(e, c),
                 void 0 !== t && s(e, c, t, { scope: r }),
-                l(e, c, null != a ? a : []);
+                l(e, c, null != a ? a : []));
             }
             if (t.contains(a)) break;
           }
@@ -186,21 +186,21 @@
         s = e.querySelector(
           `.wpcf7-form-control-wrap[data-name="${t}"] .wpcf7-form-control`,
         );
-      (() => {
+      ((() => {
         const t = document.createElement("li");
-        t.setAttribute("id", o),
+        (t.setAttribute("id", o),
           s && s.id
             ? t.insertAdjacentHTML("beforeend", `<a href="#${s.id}">${a}</a>`)
             : t.insertAdjacentText("beforeend", a),
           e.wpcf7.parent
             .querySelector(".screen-reader-response ul")
-            .appendChild(t);
+            .appendChild(t));
       })(),
         r
           .querySelectorAll(`.wpcf7-form-control-wrap[data-name="${t}"]`)
           .forEach((e) => {
             const t = document.createElement("span");
-            t.classList.add("wpcf7-not-valid-tip"),
+            (t.classList.add("wpcf7-not-valid-tip"),
               t.setAttribute("aria-hidden", "true"),
               t.insertAdjacentText("beforeend", a),
               e.appendChild(t),
@@ -208,7 +208,7 @@
                 e.setAttribute("aria-invalid", "true");
               }),
               e.querySelectorAll(".wpcf7-form-control").forEach((e) => {
-                e.classList.add("wpcf7-not-valid"),
+                (e.classList.add("wpcf7-not-valid"),
                   e.setAttribute("aria-describedby", o),
                   "function" == typeof e.setCustomValidity &&
                     e.setCustomValidity(a),
@@ -218,40 +218,40 @@
                     }),
                     t.addEventListener("click", (e) => {
                       t.setAttribute("style", "display: none");
-                    }));
-              });
-          });
+                    })));
+              }));
+          }));
     },
     i = (e, t) => {
       const a = `${e.wpcf7?.unitTag}-ve-${t}`.replaceAll(/[^0-9a-z_-]+/gi, "");
-      e.wpcf7.parent
+      (e.wpcf7.parent
         .querySelector(`.screen-reader-response ul li#${a}`)
         ?.remove(),
         e
           .querySelectorAll(`.wpcf7-form-control-wrap[data-name="${t}"]`)
           .forEach((e) => {
-            e.querySelector(".wpcf7-not-valid-tip")?.remove(),
+            (e.querySelector(".wpcf7-not-valid-tip")?.remove(),
               e.querySelectorAll("[aria-invalid]").forEach((e) => {
                 e.setAttribute("aria-invalid", "false");
               }),
               e.querySelectorAll(".wpcf7-form-control").forEach((e) => {
-                e.removeAttribute("aria-describedby"),
+                (e.removeAttribute("aria-describedby"),
                   e.classList.remove("wpcf7-not-valid"),
                   "function" == typeof e.setCustomValidity &&
-                    e.setCustomValidity("");
-              });
-          });
+                    e.setCustomValidity(""));
+              }));
+          }));
     },
     l = (e, t, a) => {
       e.querySelectorAll(`[data-reflection-of="${t}"]`).forEach((e) => {
         if ("output" === e.tagName.toLowerCase()) {
           const t = e;
-          0 === a.length && a.push(t.dataset.default),
+          (0 === a.length && a.push(t.dataset.default),
             a.slice(0, 1).forEach((e) => {
-              e instanceof File && (e = e.name), (t.textContent = e);
-            });
+              (e instanceof File && (e = e.name), (t.textContent = e));
+            }));
         } else
-          e.querySelectorAll("output").forEach((e) => {
+          (e.querySelectorAll("output").forEach((e) => {
             e.hasAttribute("data-default")
               ? 0 === a.length
                 ? e.removeAttribute("hidden")
@@ -261,12 +261,14 @@
             a.forEach((a) => {
               a instanceof File && (a = a.name);
               const n = document.createElement("output");
-              n.setAttribute("name", t), (n.textContent = a), e.appendChild(n);
-            });
+              (n.setAttribute("name", t),
+                (n.textContent = a),
+                e.appendChild(n));
+            }));
       });
     };
   function p(e, t = {}) {
-    if (wpcf7.blocked) return d(e), void n(e, "submitting");
+    if (wpcf7.blocked) return (d(e), void n(e, "submitting"));
     const c = new FormData(e);
     t.submitter &&
       t.submitter.name &&
@@ -304,7 +306,7 @@
         );
       })
       .then((t) => {
-        t.posted_data_hash &&
+        (t.posted_data_hash &&
           (e.querySelector('input[name="_wpcf7_posted_data_hash"]').value =
             t.posted_data_hash),
           "mail_sent" === t.status &&
@@ -318,19 +320,19 @@
             .insertAdjacentText("beforeend", t.message),
           e.querySelectorAll(".wpcf7-response-output").forEach((e) => {
             e.innerText = t.message;
-          });
+          }));
       })
       .catch((e) => console.error(e));
   }
   r.use((e, t) => {
     if (e.wpcf7 && "feedback" === e.wpcf7.endpoint) {
       const { form: t, detail: r } = e.wpcf7;
-      d(t), a(t, "beforesubmit", r), n(t, "submitting");
+      (d(t), a(t, "beforesubmit", r), n(t, "submitting"));
     }
     return t(e);
   });
   const d = (e) => {
-    e.querySelectorAll(".wpcf7-form-control-wrap").forEach((t) => {
+    (e.querySelectorAll(".wpcf7-form-control-wrap").forEach((t) => {
       t.dataset.name && i(e, t.dataset.name);
     }),
       (e.wpcf7.parent.querySelector(
@@ -338,7 +340,7 @@
       ).innerText = ""),
       e.querySelectorAll(".wpcf7-response-output").forEach((e) => {
         e.innerText = "";
-      });
+      }));
   };
   function f(e) {
     const t = new FormData(e),
@@ -362,32 +364,32 @@
       wpcf7: { endpoint: "refill", form: e, detail: c },
     })
       .then((t) => {
-        e.wpcf7.resetOnMailSent
+        (e.wpcf7.resetOnMailSent
           ? (delete e.wpcf7.resetOnMailSent, n(e, "mail_sent"))
           : n(e, "init"),
           (c.apiResponse = t),
-          a(e, "reset", c);
+          a(e, "reset", c));
       })
       .catch((e) => console.error(e));
   }
   r.use((e, t) => {
     if (e.wpcf7 && "refill" === e.wpcf7.endpoint) {
       const { form: t, detail: a } = e.wpcf7;
-      d(t), n(t, "resetting");
+      (d(t), n(t, "resetting"));
     }
     return t(e);
   });
   const u = (e, t) => {
       for (const a in t) {
         const n = t[a];
-        e.querySelectorAll(`input[name="${a}"]`).forEach((e) => {
+        (e.querySelectorAll(`input[name="${a}"]`).forEach((e) => {
           e.value = "";
         }),
           e
             .querySelectorAll(`img.wpcf7-captcha-${a.replaceAll(":", "")}`)
             .forEach((e) => {
               e.setAttribute("src", n);
-            });
+            }));
         const r = /([0-9]+)\.(png|gif|jpeg)$/.exec(n);
         r &&
           e
@@ -404,16 +406,16 @@
         e.querySelectorAll(
           `.wpcf7-form-control-wrap[data-name="${a}"]`,
         ).forEach((e) => {
-          (e.querySelector(`input[name="${a}"]`).value = ""),
+          ((e.querySelector(`input[name="${a}"]`).value = ""),
             (e.querySelector(".wpcf7-quiz-label").textContent = n),
             (e.querySelector(`input[name="_wpcf7_quiz_answer_${a}"]`).value =
-              r);
+              r));
         });
       }
     };
   function w(e) {
     const a = new FormData(e);
-    (e.wpcf7 = {
+    ((e.wpcf7 = {
       id: t(a.get("_wpcf7")),
       status: e.getAttribute("data-status"),
       pluginVersion: a.get("_wpcf7_version"),
@@ -445,22 +447,22 @@
         e.querySelectorAll(".has-free-text").forEach((t) => {
           const a = t.querySelector("input.wpcf7-free-text"),
             n = t.querySelector('input[type="checkbox"], input[type="radio"]');
-          (a.disabled = !n.checked),
+          ((a.disabled = !n.checked),
             e.addEventListener("change", (e) => {
-              (a.disabled = !n.checked),
-                e.target === n && n.checked && a.focus();
-            });
+              ((a.disabled = !n.checked),
+                e.target === n && n.checked && a.focus());
+            }));
         });
       })(e),
       ((e) => {
         e.querySelectorAll(".wpcf7-validates-as-url").forEach((e) => {
           e.addEventListener("change", (t) => {
             let a = e.value.trim();
-            a &&
+            (a &&
               !a.match(/^[a-z][a-z0-9.+-]*:/i) &&
               -1 !== a.indexOf(".") &&
               ((a = a.replace(/^\/+/, "")), (a = "http://" + a)),
-              (e.value = a);
+              (e.value = a));
           });
         });
       })(e),
@@ -472,7 +474,7 @@
           return;
         const t = () => {
           let t = !0;
-          e.querySelectorAll(".wpcf7-acceptance").forEach((e) => {
+          (e.querySelectorAll(".wpcf7-acceptance").forEach((e) => {
             if (!t || e.classList.contains("optional")) return;
             const a = e.querySelector('input[type="checkbox"]');
             ((e.classList.contains("invert") && a.checked) ||
@@ -481,15 +483,15 @@
           }),
             e.querySelectorAll(".wpcf7-submit").forEach((e) => {
               e.disabled = !t;
-            });
+            }));
         };
-        t(),
+        (t(),
           e.addEventListener("change", (e) => {
             t();
           }),
           e.addEventListener("wpcf7reset", (e) => {
             t();
-          });
+          }));
       })(e),
       ((e) => {
         const a = (e, a) => {
@@ -499,17 +501,17 @@
               o = e.classList.contains("down")
                 ? n - a.value.trim().length
                 : a.value.trim().length;
-            e.setAttribute("data-current-value", o),
+            (e.setAttribute("data-current-value", o),
               (e.innerText = o),
               r && r < a.value.length
                 ? e.classList.add("too-long")
                 : e.classList.remove("too-long"),
               c && a.value.length < c
                 ? e.classList.add("too-short")
-                : e.classList.remove("too-short");
+                : e.classList.remove("too-short"));
           },
           n = (t) => {
-            (t = { init: !1, ...t }),
+            ((t = { init: !1, ...t }),
               e.querySelectorAll(".wpcf7-character-count").forEach((n) => {
                 const r = n.getAttribute("data-target-name"),
                   c = e.querySelector(`[name="${r}"]`);
@@ -520,12 +522,12 @@
                     c.addEventListener("keyup", (e) => {
                       a(n, c);
                     }));
-              });
+              }));
           };
-        n({ init: !0 }),
+        (n({ init: !0 }),
           e.addEventListener("wpcf7reset", (e) => {
             n();
-          });
+          }));
       })(e),
       window.addEventListener("load", (t) => {
         wpcf7.cached && e.reset();
@@ -534,15 +536,15 @@
         wpcf7.reset(e);
       }),
       e.addEventListener("submit", (t) => {
-        wpcf7.submit(e, { submitter: t.submitter }), t.preventDefault();
+        (wpcf7.submit(e, { submitter: t.submitter }), t.preventDefault());
       }),
       e.addEventListener("wpcf7submit", (t) => {
-        t.detail.apiResponse.captcha && u(e, t.detail.apiResponse.captcha),
-          t.detail.apiResponse.quiz && m(e, t.detail.apiResponse.quiz);
+        (t.detail.apiResponse.captcha && u(e, t.detail.apiResponse.captcha),
+          t.detail.apiResponse.quiz && m(e, t.detail.apiResponse.quiz));
       }),
       e.addEventListener("wpcf7reset", (t) => {
-        t.detail.apiResponse.captcha && u(e, t.detail.apiResponse.captcha),
-          t.detail.apiResponse.quiz && m(e, t.detail.apiResponse.quiz);
+        (t.detail.apiResponse.captcha && u(e, t.detail.apiResponse.captcha),
+          t.detail.apiResponse.quiz && m(e, t.detail.apiResponse.quiz));
       }),
       e.addEventListener("change", (t) => {
         t.target.closest(".wpcf7-form-control") &&
@@ -550,13 +552,14 @@
       }),
       e.addEventListener("wpcf7statuschanged", (t) => {
         const a = t.detail.status;
-        e.querySelectorAll(".active-on-any").forEach((e) => {
-          e.removeAttribute("inert"), e.classList.remove("active-on-any");
+        (e.querySelectorAll(".active-on-any").forEach((e) => {
+          (e.removeAttribute("inert"), e.classList.remove("active-on-any"));
         }),
           e.querySelectorAll(`.inert-on-${a}`).forEach((e) => {
-            e.setAttribute("inert", "inert"), e.classList.add("active-on-any");
-          });
-      });
+            (e.setAttribute("inert", "inert"),
+              e.classList.add("active-on-any"));
+          }));
+      }));
   }
   document.addEventListener("DOMContentLoaded", (t) => {
     var a;
@@ -566,7 +569,7 @@
           if ("function" == typeof window.FormData)
             if ("function" == typeof NodeList.prototype.forEach)
               if ("function" == typeof String.prototype.replaceAll) {
-                (wpcf7 = {
+                ((wpcf7 = {
                   init: w,
                   submit: p,
                   reset: f,
@@ -585,12 +588,12 @@
                         "This contact form is placed in the wrong place.",
                         "contact-form-7",
                       );
-                      a.append(n, " ", r), t.replaceWith(a);
+                      (a.append(n, " ", r), t.replaceWith(a));
                     }),
                   document.querySelectorAll(".wpcf7 > form").forEach((e) => {
-                    wpcf7.init(e),
-                      e.closest(".wpcf7").classList.replace("no-js", "js");
-                  });
+                    (wpcf7.init(e),
+                      e.closest(".wpcf7").classList.replace("no-js", "js"));
+                  }));
                 for (const e of wpcf7.schemas.keys())
                   r({
                     endpoint: `contact-forms/${e}/feedback/schema`,

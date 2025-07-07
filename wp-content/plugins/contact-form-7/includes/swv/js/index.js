@@ -9,10 +9,10 @@
       },
       o: (t, e) => Object.prototype.hasOwnProperty.call(t, e),
       r: (t) => {
-        "undefined" != typeof Symbol &&
+        ("undefined" != typeof Symbol &&
           Symbol.toStringTag &&
           Object.defineProperty(t, Symbol.toStringTag, { value: "Module" }),
-          Object.defineProperty(t, "__esModule", { value: !0 });
+          Object.defineProperty(t, "__esModule", { value: !0 }));
       },
     },
     e = {};
@@ -25,12 +25,12 @@
       return (
         (t.largestIndex = 0),
         (t.set = function (e, i) {
-          "" === e
+          ("" === e
             ? (e = t.largestIndex++)
             : /^[0-9]+$/.test(e) &&
               ((e = parseInt(e)),
               t.largestIndex <= e && (t.largestIndex = e + 1)),
-            Map.prototype.set.call(t, e, i);
+            Map.prototype.set.call(t, e, i));
         }),
         t
       );
@@ -54,12 +54,12 @@
             )
               return t.get(i);
             const s = e();
-            return t.set(i, s), s;
+            return (t.set(i, s), s);
           }, this.tree).set(i, s);
         }
     }
   }
-  t.r(e),
+  (t.r(e),
     t.d(e, {
       all: () => D,
       any: () => M,
@@ -110,10 +110,13 @@
     }),
     (i.prototype.values = function () {
       return this.tree.values();
-    });
+    }));
   const s = i;
   function o({ rule: t, field: e, error: i, ...s }) {
-    (this.rule = t), (this.field = e), (this.error = i), (this.properties = s);
+    ((this.rule = t),
+      (this.field = e),
+      (this.error = i),
+      (this.properties = s));
   }
   const n = function (t) {
       if (

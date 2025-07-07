@@ -62,7 +62,8 @@
                     stopAt: !!o.length && o,
                   },
                   s = elementorFrontend.getElements("$wpAdminBar");
-                "column" === i.ekit_sticky && ((n.to = "top"), (n.column = !0)),
+                ("column" === i.ekit_sticky &&
+                  ((n.to = "top"), (n.column = !0)),
                   "show_on_scroll_up" === i.ekit_sticky &&
                     ((n.to = "top"), (n.isShowOnScrollUp = !0)),
                   i.ekit_sticky_parent && (n.parent = ".ekit-widget-wrap"),
@@ -79,7 +80,7 @@
                     "top" === i.ekit_sticky &&
                     "fixed" === s.css("position") &&
                     (n.offset += s.height()),
-                  this.$element.ekit_sticky(n);
+                  this.$element.ekit_sticky(n));
               },
               deactivate: function () {
                 this.isStickyOn() && this.$element.ekit_sticky("destroy");
@@ -95,10 +96,10 @@
                 } else this.deactivate();
               },
               reactivate: function () {
-                this.deactivate(), this.activate();
+                (this.deactivate(), this.activate());
               },
               onElementChange: function (t) {
-                -1 !== ["ekit_sticky", "ekit_sticky_on"].indexOf(t) &&
+                (-1 !== ["ekit_sticky", "ekit_sticky_on"].indexOf(t) &&
                   this.run(!0),
                   -1 !==
                     [
@@ -107,20 +108,21 @@
                       "ekit_sticky_parent",
                       "ekit_sticky_until",
                       "ekit_sticky_color",
-                    ].indexOf(t) && this.reactivate();
+                    ].indexOf(t) && this.reactivate());
               },
               onInit: function () {
-                o.prototype.onInit.apply(this, arguments), this.run();
+                (o.prototype.onInit.apply(this, arguments), this.run());
               },
               onDestroy: function () {
-                o.prototype.onDestroy.apply(this, arguments), this.deactivate();
+                (o.prototype.onDestroy.apply(this, arguments),
+                  this.deactivate());
               },
             });
         })(jQuery, window.elementorFrontend);
       },
       95: function () {
         var t, e;
-        (t = jQuery),
+        ((t = jQuery),
           (e = function (e, i) {
             var o,
               n,
@@ -146,10 +148,10 @@
               p = function (t, e, i) {
                 var o = {},
                   n = t[0].style;
-                i.forEach(function (t) {
+                (i.forEach(function (t) {
                   o[t] = undefined !== n[t] ? n[t] : "";
                 }),
-                  t.data("css-backup-" + e, o);
+                  t.data("css-backup-" + e, o));
               },
               d = function (t, e) {
                 return t.data("css-backup-" + e);
@@ -169,9 +171,9 @@
                   marginTop: 0,
                   marginBottom: 0,
                 };
-                (t[n.to] = n.offset + "px"),
+                ((t[n.to] = n.offset + "px"),
                   (t["top" === n.to ? "bottom" : "top"] = ""),
-                  o.css(t).addClass(n.classes.stickyActive);
+                  o.css(t).addClass(n.classes.stickyActive));
               },
               k = function () {
                 o.css(d(o, "unsticky")).removeClass(n.classes.stickyActive);
@@ -204,7 +206,7 @@
                 };
               },
               h = function () {
-                (a.$spacer = o.clone().addClass(n.classes.spacer).css({
+                ((a.$spacer = o.clone().addClass(n.classes.spacer).css({
                   visibility: "hidden",
                   transition: "none",
                   animation: "none",
@@ -212,14 +214,14 @@
                   o.after(a.$spacer),
                   u(),
                   (s = !0),
-                  o.trigger("sticky:stick");
+                  o.trigger("sticky:stick"));
               },
               v = function () {
-                k(),
+                (k(),
                   a.$spacer.remove(),
                   (s = !1),
                   (o[0].style.transform = null),
-                  o.trigger("sticky:unstick");
+                  o.trigger("sticky:unstick"));
               },
               g = function () {
                 var t = m(o),
@@ -240,14 +242,14 @@
                     f = e ? i.bottom.fromTop - c : i.top.fromBottom + c;
                   (e ? f <= t.bottom.fromTop : f >= t.top.fromBottom) &&
                     (function () {
-                      p(a.$parent, "childNotFollowing", ["position"]),
+                      (p(a.$parent, "childNotFollowing", ["position"]),
                         a.$parent.css("position", "relative"),
-                        p(o, "notFollowing", ["position", "top", "bottom"]);
+                        p(o, "notFollowing", ["position", "top", "bottom"]));
                       var t = { position: "absolute" };
-                      (t[n.to] = ""),
+                      ((t[n.to] = ""),
                         (t["top" === n.to ? "bottom" : "top"] = 0),
                         o.css(t),
-                        (r = !0);
+                        (r = !0));
                     })();
                 }
               },
@@ -276,12 +278,12 @@
                 }
                 if (s) {
                   var u = m(a.$spacer);
-                  (t =
+                  ((t =
                     "top" === n.to
                       ? u.top.fromTop - e
                       : -u.bottom.fromBottom - e),
                     n.parent && g(),
-                    t > 0 && v();
+                    t > 0 && v());
                 } else {
                   var k = m(o);
                   (t =
@@ -290,7 +292,7 @@
                       : -k.bottom.fromBottom - e) <= 0 &&
                     (h(), n.parent && g());
                 }
-                (n.stopAt || n.column) &&
+                ((n.stopAt || n.column) &&
                   d &&
                   n.stopAt &&
                   ((p = "top" === n.to ? -(p - l) : l - p),
@@ -302,16 +304,16 @@
                         -t >= n.effectsOffset &&
                         (o.addClass(n.classes.stickyEffects), (c = !0));
                   })(t),
-                  w();
+                  w());
               },
               w = function () {
-                n.isShowOnScrollUp &&
+                (n.isShowOnScrollUp &&
                   -1 != f &&
                   (f > window.scrollY
                     ? o.addClass(n.classes.up).removeClass(n.classes.down)
                     : f < window.scrollY &&
                       o.addClass(n.classes.down).removeClass(n.classes.up)),
-                  (f = Math.max(window.scrollY, 0));
+                  (f = Math.max(window.scrollY, 0)));
               },
               b = function () {
                 _();
@@ -319,10 +321,10 @@
               $ = function () {
                 s && (k(), u());
               };
-            (this.destroy = function () {
-              s && v(),
+            ((this.destroy = function () {
+              (s && v(),
                 a.$window.off("scroll", b).off("resize", $),
-                o.removeClass(n.classes.sticky);
+                o.removeClass(n.classes.sticky));
             }),
               (n = jQuery.extend(!0, l, i)),
               (o = t(e).addClass(n.classes.sticky)),
@@ -332,7 +334,7 @@
                   ? (a.$parent = o.parent())
                   : (a.$parent = o.closest(n.parent))),
               a.$window.on({ scroll: b, resize: $ }),
-              _();
+              _());
           }),
           (t.fn.ekit_sticky = function (i) {
             var o = "string" == typeof i;
@@ -351,14 +353,14 @@
                     throw ReferenceError(
                       "Method `" + i + "` not found in sticky instance",
                     );
-                  s[i].apply(s, Array.prototype.slice.call(arguments, 1)),
-                    "destroy" === i && n.removeData("ekit_sticky");
+                  (s[i].apply(s, Array.prototype.slice.call(arguments, 1)),
+                    "destroy" === i && n.removeData("ekit_sticky"));
                 } else n.data("ekit_sticky", new e(this, i));
               }),
               this
             );
           }),
-          (window.EkitSticky = e);
+          (window.EkitSticky = e));
       },
     },
     e = {};
@@ -366,9 +368,9 @@
     var n = e[o];
     if (n !== undefined) return n.exports;
     var s = (e[o] = { exports: {} });
-    return t[o](s, s.exports, i), s.exports;
+    return (t[o](s, s.exports, i), s.exports);
   }
-  (i.n = function (t) {
+  ((i.n = function (t) {
     var e =
       t && t.__esModule
         ? function () {
@@ -377,7 +379,7 @@
         : function () {
             return t;
           };
-    return i.d(e, { a: e }), e;
+    return (i.d(e, { a: e }), e);
   }),
     (i.d = function (t, e) {
       for (var o in e)
@@ -390,6 +392,6 @@
     }),
     (function () {
       "use strict";
-      i(95), i(264);
-    })();
+      (i(95), i(264));
+    })());
 })();

@@ -361,11 +361,11 @@
     widget_width = 163,
     arrow_size = 7;
   if (flag_size == 24)
-    (font_size = 12), (widget_width = 173), (arrow_size = 11);
+    ((font_size = 12), (widget_width = 173), (arrow_size = 11));
   else if (flag_size == 32)
-    (font_size = 14), (widget_width = 193), (arrow_size = 12);
+    ((font_size = 14), (widget_width = 193), (arrow_size = 12));
   else if (flag_size == 48)
-    (font_size = 16), (widget_width = 223), (arrow_size = 14);
+    ((font_size = 16), (widget_width = 223), (arrow_size = 14));
 
   widget_css +=
     u_class +

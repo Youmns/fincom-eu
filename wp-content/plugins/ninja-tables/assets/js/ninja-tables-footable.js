@@ -35,7 +35,7 @@
                   r.ft.raise("expanded.ft.row", [self]));
               })
               .on("collapse.ft.row", function (t, e, r) {
-                (a = !1),
+                ((a = !1),
                   FooTable.arr.each(r.__hidden__, function (t) {
                     t.restore();
                   }),
@@ -45,7 +45,7 @@
                     .removeClass("fooicon-minus")
                     .addClass("fooicon-plus"),
                   (r.expanded = !1),
-                  r.ft.raise("collapsed.ft.row", [r]);
+                  r.ft.raise("collapsed.ft.row", [r]));
               })
               .on("draw.ft.table", function (t, e) {
                 i(e.breakpoints.current.name)
@@ -93,7 +93,7 @@
       },
       2475: () => {
         !(function (t) {
-          (t.str.containsExact = function (r, n, u) {
+          ((t.str.containsExact = function (r, n, u) {
             if (
               t.is.emptyString(r) ||
               t.is.emptyString(n) ||
@@ -181,7 +181,7 @@
                   .append(e("<th/>").addClass("ninja-th-" + this.column.name))
                   .append(e("<td/>"))),
                 (this.created = !0));
-            });
+            }));
           var e = function (t, e) {
             var r = e.split(",");
             return (r = r.map(Number)).includes(Number(t));
@@ -239,12 +239,12 @@
             this.set(n[0], n[1]);
           }
         }
-        (s.prototype.clear = n),
+        ((s.prototype.clear = n),
           (s.prototype.delete = u),
           (s.prototype.get = a),
           (s.prototype.has = o),
           (s.prototype.set = i),
-          (t.exports = s);
+          (t.exports = s));
       },
       8407: (t, e, r) => {
         var n = r(7040),
@@ -260,12 +260,12 @@
             this.set(n[0], n[1]);
           }
         }
-        (s.prototype.clear = n),
+        ((s.prototype.clear = n),
           (s.prototype.delete = u),
           (s.prototype.get = a),
           (s.prototype.has = o),
           (s.prototype.set = i),
-          (t.exports = s);
+          (t.exports = s));
       },
       7071: (t, e, r) => {
         var n = r(852)(r(5639), "Map");
@@ -285,12 +285,12 @@
             this.set(n[0], n[1]);
           }
         }
-        (s.prototype.clear = n),
+        ((s.prototype.clear = n),
           (s.prototype.delete = u),
           (s.prototype.get = a),
           (s.prototype.has = o),
           (s.prototype.set = i),
-          (t.exports = s);
+          (t.exports = s));
       },
       3818: (t, e, r) => {
         var n = r(852)(r(5639), "Promise");
@@ -309,9 +309,9 @@
             r = null == t ? 0 : t.length;
           for (this.__data__ = new n(); ++e < r; ) this.add(t[e]);
         }
-        (o.prototype.add = o.prototype.push = u),
+        ((o.prototype.add = o.prototype.push = u),
           (o.prototype.has = a),
-          (t.exports = o);
+          (t.exports = o));
       },
       6384: (t, e, r) => {
         var n = r(8407),
@@ -324,12 +324,12 @@
           var e = (this.__data__ = new n(t));
           this.size = e.size;
         }
-        (l.prototype.clear = u),
+        ((l.prototype.clear = u),
           (l.prototype.delete = a),
           (l.prototype.get = o),
           (l.prototype.has = i),
           (l.prototype.set = s),
-          (t.exports = l);
+          (t.exports = l));
       },
       2705: (t, e, r) => {
         var n = r(5639).Symbol;
@@ -508,7 +508,7 @@
             A = m == j;
           if (A && l(t)) {
             if (!l(e)) return !1;
-            (E = !0), (F = !1);
+            ((E = !0), (F = !1));
           }
           if (A && !F)
             return (
@@ -521,7 +521,7 @@
             if (x || w) {
               var D = x ? t.value() : t,
                 k = w ? e.value() : e;
-              return v || (v = new n()), h(D, k, r, _, v);
+              return (v || (v = new n()), h(D, k, r, _, v));
             }
           }
           return !!A && (v || (v = new n()), o(t, e, r, _, h, v));
@@ -586,7 +586,7 @@
           u = r(1780),
           a = r(7005),
           o = {};
-        (o["[object Float32Array]"] =
+        ((o["[object Float32Array]"] =
           o["[object Float64Array]"] =
           o["[object Int8Array]"] =
           o["[object Int16Array]"] =
@@ -614,7 +614,7 @@
               !1),
           (t.exports = function (t) {
             return a(t) && u(t.length) && !!o[n(t)];
-          });
+          }));
       },
       7206: (t, e, r) => {
         var n = r(1573),
@@ -763,10 +763,10 @@
             var i = Object(e);
             if (!u(e)) {
               var s = n(r, 3);
-              (e = a(e)),
+              ((e = a(e)),
                 (r = function (t) {
                   return s(i[t], t, i);
-                });
+                }));
             }
             var l = t(e, r, o);
             return l > -1 ? i[s ? e[l] : l] : void 0;
@@ -814,7 +814,7 @@
               break;
             }
           }
-          return c.delete(t), c.delete(e), h;
+          return (c.delete(t), c.delete(e), h);
         };
       },
       8351: (t, e, r) => {
@@ -844,7 +844,7 @@
             case m:
               if (t.byteLength != e.byteLength || t.byteOffset != e.byteOffset)
                 return !1;
-              (t = t.buffer), (e = e.buffer);
+              ((t = t.buffer), (e = e.buffer));
             case y:
               return !(t.byteLength != e.byteLength || !C(new u(t), new u(e)));
             case f:
@@ -863,9 +863,9 @@
               if ((x || (x = s), t.size != e.size && !w)) return !1;
               var D = A.get(t);
               if (D) return D == e;
-              (n |= c), A.set(t, e);
+              ((n |= c), A.set(t, e));
               var k = o(x(t), x(e), n, j, C, A);
-              return A.delete(t), k;
+              return (A.delete(t), k);
             case E:
               if (F) return F.call(t) == F.call(e);
           }
@@ -889,7 +889,7 @@
             b = s.get(e);
           if (g && b) return g == e && b == t;
           var _ = !0;
-          s.set(t, e), s.set(e, t);
+          (s.set(t, e), s.set(e, t));
           for (var h = l; ++p < f; ) {
             var v = t[(d = c[p])],
               E = e[d];
@@ -912,7 +912,7 @@
                 j instanceof j) ||
               (_ = !1);
           }
-          return s.delete(t), s.delete(e), _;
+          return (s.delete(t), s.delete(e), _);
         };
       },
       1957: (t, e, r) => {
@@ -968,7 +968,7 @@
             var n = !0;
           } catch (t) {}
           var u = o.call(t);
-          return n && (e ? (t[i] = r) : delete t[i]), u;
+          return (n && (e ? (t[i] = r) : delete t[i]), u);
         };
       },
       9551: (t, e, r) => {
@@ -1007,7 +1007,7 @@
           v = l(o),
           E = l(i),
           y = s;
-        ((n && y(new n(new ArrayBuffer(1))) != g) ||
+        (((n && y(new n(new ArrayBuffer(1))) != g) ||
           (u && y(new u()) != c) ||
           (a && y(a.resolve()) != f) ||
           (o && y(new o()) != p) ||
@@ -1031,7 +1031,7 @@
               }
             return e;
           }),
-          (t.exports = y);
+          (t.exports = y));
       },
       7801: (t) => {
         t.exports = function (t, e) {
@@ -1062,13 +1062,13 @@
       1789: (t, e, r) => {
         var n = r(4536);
         t.exports = function () {
-          (this.__data__ = n ? n(null) : {}), (this.size = 0);
+          ((this.__data__ = n ? n(null) : {}), (this.size = 0));
         };
       },
       401: (t) => {
         t.exports = function (t) {
           var e = this.has(t) && delete this.__data__[t];
-          return (this.size -= e ? 1 : 0), e;
+          return ((this.size -= e ? 1 : 0), e);
         };
       },
       7667: (t, e, r) => {
@@ -1176,7 +1176,7 @@
       },
       7040: (t) => {
         t.exports = function () {
-          (this.__data__ = []), (this.size = 0);
+          ((this.__data__ = []), (this.size = 0));
         };
       },
       4125: (t, e, r) => {
@@ -1210,7 +1210,7 @@
         t.exports = function (t, e) {
           var r = this.__data__,
             u = n(r, t);
-          return u < 0 ? (++this.size, r.push([t, e])) : (r[u][1] = e), this;
+          return (u < 0 ? (++this.size, r.push([t, e])) : (r[u][1] = e), this);
         };
       },
       4785: (t, e, r) => {
@@ -1218,19 +1218,19 @@
           u = r(8407),
           a = r(7071);
         t.exports = function () {
-          (this.size = 0),
+          ((this.size = 0),
             (this.__data__ = {
               hash: new n(),
               map: new (a || u)(),
               string: new n(),
-            });
+            }));
         };
       },
       1285: (t, e, r) => {
         var n = r(5050);
         t.exports = function (t) {
           var e = n(this, t).delete(t);
-          return (this.size -= e ? 1 : 0), e;
+          return ((this.size -= e ? 1 : 0), e);
         };
       },
       6e3: (t, e, r) => {
@@ -1250,7 +1250,7 @@
         t.exports = function (t, e) {
           var r = n(this, t),
             u = r.size;
-          return r.set(t, e), (this.size += r.size == u ? 0 : 1), this;
+          return (r.set(t, e), (this.size += r.size == u ? 0 : 1), this);
         };
       },
       8776: (t) => {
@@ -1277,7 +1277,7 @@
           u = 500;
         t.exports = function (t) {
           var e = n(t, function (t) {
-              return r.size === u && r.clear(), t;
+              return (r.size === u && r.clear(), t);
             }),
             r = e.cache;
           return e;
@@ -1327,7 +1327,7 @@
       619: (t) => {
         var e = "__lodash_hash_undefined__";
         t.exports = function (t) {
-          return this.__data__.set(t, e), this;
+          return (this.__data__.set(t, e), this);
         };
       },
       2385: (t) => {
@@ -1350,14 +1350,14 @@
       7465: (t, e, r) => {
         var n = r(8407);
         t.exports = function () {
-          (this.__data__ = new n()), (this.size = 0);
+          ((this.__data__ = new n()), (this.size = 0));
         };
       },
       3779: (t) => {
         t.exports = function (t) {
           var e = this.__data__,
             r = e.delete(t);
-          return (this.size = e.size), r;
+          return ((this.size = e.size), r);
         };
       },
       7599: (t) => {
@@ -1380,10 +1380,10 @@
           if (r instanceof n) {
             var i = r.__data__;
             if (!u || i.length < o - 1)
-              return i.push([t, e]), (this.size = ++r.size), this;
+              return (i.push([t, e]), (this.size = ++r.size), this);
             r = this.__data__ = new a(i);
           }
-          return r.set(t, e), (this.size = r.size), this;
+          return (r.set(t, e), (this.size = r.size), this);
         };
       },
       5514: (t, e, r) => {
@@ -1461,7 +1461,7 @@
           var i = null == t ? 0 : t.length;
           if (!i) return -1;
           var s = null == r ? 0 : a(r);
-          return s < 0 && (s = o(i + s, 0)), n(t, u(e, 3), s);
+          return (s < 0 && (s = o(i + s, 0)), n(t, u(e, 3), s));
         };
       },
       7361: (t, e, r) => {
@@ -1587,11 +1587,11 @@
               a = r.cache;
             if (a.has(u)) return a.get(u);
             var o = t.apply(this, n);
-            return (r.cache = a.set(u, o) || a), o;
+            return ((r.cache = a.set(u, o) || a), o);
           };
-          return (r.cache = new (a.Cache || n)()), r;
+          return ((r.cache = new (a.Cache || n)()), r);
         }
-        (a.Cache = n), (t.exports = a);
+        ((a.Cache = n), (t.exports = a));
       },
       9601: (t, e, r) => {
         var n = r(371),
@@ -1679,11 +1679,11 @@
     var u = e[n];
     if (void 0 !== u) return u.exports;
     var a = (e[n] = { id: n, loaded: !1, exports: {} });
-    return t[n](a, a.exports, r), (a.loaded = !0), a.exports;
+    return (t[n](a, a.exports, r), (a.loaded = !0), a.exports);
   }
-  (r.n = (t) => {
+  ((r.n = (t) => {
     var e = t && t.__esModule ? () => t.default : () => t;
-    return r.d(e, { a: e }), e;
+    return (r.d(e, { a: e }), e);
   }),
     (r.d = (t, e) => {
       for (var n in e)
@@ -1966,18 +1966,18 @@
             0 in e ? l(t, e) : t
           );
         }
-        (r = Array.isArray(r) ? r : r ? [r] : []),
-          (r = a ? (0 in r ? [] : [1]) : r);
+        ((r = Array.isArray(r) ? r : r ? [r] : []),
+          (r = a ? (0 in r ? [] : [1]) : r));
         for (o = 0; o < r.length; o++) {
           var c,
             f = "",
             p = 0,
             d = "object" == u(r[o]) ? r[o] : {};
-          ((d = Object.assign({}, n, d))[""] = { "": r[o] }),
+          (((d = Object.assign({}, n, d))[""] = { "": r[o] }),
             e.replace(
               /([\s\S]*?)({{((\/)|(\^)|#)(.*?)}}|$)/g,
               function (t, e, r, n, a, o, g) {
-                p
+                (p
                   ? (f += (p && !a) || p > 1 ? t : e)
                   : ((s += e.replace(
                       /{{{(.*?)}}}|{{(!?)(&?)(>?)(.*?)}}/g,
@@ -2003,9 +2003,9 @@
                           }))
                         : (s += i(f, g, d, c)),
                       (f = ""))
-                    : ++p;
+                    : ++p);
               },
-            );
+            ));
         }
         return s;
       };
@@ -2034,7 +2034,7 @@
       function f(t, e) {
         for (var r = 0; r < e.length; r++) {
           var n = e[r];
-          (n.enumerable = n.enumerable || !1),
+          ((n.enumerable = n.enumerable || !1),
             (n.configurable = !0),
             "value" in n && (n.writable = !0),
             Object.defineProperty(
@@ -2055,13 +2055,13 @@
               })(u, "string")),
               "symbol" === c(a) ? a : String(a)),
               n,
-            );
+            ));
         }
         var u, a;
       }
       var p = (function () {
         function t() {
-          !(function (t, e) {
+          (!(function (t, e) {
             if (!(t instanceof e))
               throw new TypeError("Cannot call a class as a function");
           })(this, t),
@@ -2072,7 +2072,7 @@
               ? ((this.instance = new formulaParser.Parser()),
                 this._addFunctionNUMVAL(this.instance),
                 this._addFunctionDATEVAL(this.instance))
-              : (this.instance = !1);
+              : (this.instance = !1));
         }
         var e, r, n;
         return (
@@ -2219,14 +2219,14 @@
             u = this,
             a = this,
             o = a.getNinjaTableConfig(r);
-          (r.init_config = o),
+          ((r.init_config = o),
             e
               .on("ready.ft.table", function (t, n) {
                 try {
-                  e.parent().removeClass("loading_ninja_table"),
+                  (e.parent().removeClass("loading_ninja_table"),
                     a.onReadyFooTable(e, r),
                     jQuery(document).trigger("ninja_table_loaded", [e, r]),
-                    a.jetpackLazyImageCompatibility();
+                    a.jetpackLazyImageCompatibility());
                 } catch (t) {}
               })
               .on("postdraw.ft.table", function (n, u) {
@@ -2249,12 +2249,12 @@
                     jQuery.getScript(n);
                   })();
                 try {
-                  t.trigger("ninja-tables-apply-conditional-formatting", [
+                  (t.trigger("ninja-tables-apply-conditional-formatting", [
                     e,
                     r,
                   ]),
                     e.find("td:contains('#colspan#')").length &&
-                      e.find("td:contains('#colspan#')").remove();
+                      e.find("td:contains('#colspan#')").remove());
                 } catch (t) {
                   console.warn(t);
                 }
@@ -2266,7 +2266,7 @@
                   var u = e.find(
                     ".ninja-custom-filter input, .ninja-custom-filter select",
                   );
-                  b.each(u, function (t, r) {
+                  (b.each(u, function (t, r) {
                     switch (r.type.toLowerCase()) {
                       case "text":
                       case "password":
@@ -2290,7 +2290,7 @@
                     }
                   }),
                     e.removeClass("ninja_has_filter"),
-                    e.trigger("ninja_table_reset_filter");
+                    e.trigger("ninja_table_reset_filter"));
                 }
               })
               .on("preinit.ft.breakpoints", function (t, e) {
@@ -2302,14 +2302,14 @@
                   jQuery.each(r, function (t, e) {
                     if ("search" === e.name) {
                       var r = e.query._original;
-                      (e.query = new FooTable.Query(
+                      ((e.query = new FooTable.Query(
                         window.ninjaTableApp.diacriticsRemoval(
                           e.query._original,
                         ),
                         null,
                         !1,
                       )),
-                        (e.query._value = r);
+                        (e.query._value = r));
                     }
                   });
               }),
@@ -2327,8 +2327,8 @@
                   u = r.text(),
                   a = window.ninjaTableApp.diacriticsRemoval(u),
                   o = new FooTable.Query(a, "AND", !1, !1);
-                n.addFilter("nt_link_filter", o, [r.data("target_column")]),
-                  n.filter();
+                (n.addFilter("nt_link_filter", o, [r.data("target_column")]),
+                  n.filter());
               } catch (t) {
                 console.warn(t);
               }
@@ -2338,9 +2338,9 @@
                 a.loadMoreData(r, e);
               }),
             e.on("postdraw.ft.table", function (t, n) {
-              (!r.chunks || u.chunkLoaded) && a.loadCustomPager(n, e, r),
-                u.hideOnEmptyIcons(e, r);
-            });
+              ((!r.chunks || u.chunkLoaded) && a.loadCustomPager(n, e, r),
+                u.hideOnEmptyIcons(e, r));
+            }));
           var i = FooTable.init(e, o, function (t) {
             if (
               (a.doAccesibility(e),
@@ -2352,27 +2352,27 @@
                   jQuery("body").width() > 767))
             ) {
               var n = parseInt(r.settings.sticky_header_offset);
-              n || (n = 0),
+              (n || (n = 0),
                 setTimeout(function () {
                   jQuery("." + r.uniqueID).stickyTableHeaders({
                     fixedOffset: n,
                   });
-                }, 1e3);
+                }, 1e3));
             }
           });
-          this.ninjaFooTablesInstance || (this.ninjaFooTablesInstance = []),
+          (this.ninjaFooTablesInstance || (this.ninjaFooTablesInstance = []),
             (this.ninjaFooTablesInstance[r.instance_name] = i),
             "ajax_table" == r.render_type ||
               (null != r &&
                 null !== (n = r.editing) &&
                 void 0 !== n &&
                 n.enabled) ||
-              e.find("td:contains('#colspan#')").remove();
+              e.find("td:contains('#colspan#')").remove());
         },
         doAccesibility: function (t) {
           if ("yes" != t.data("post_accessible")) {
             var e = "ninja_drop_down_id_" + t.attr("id");
-            t.find(".footable-header th").attr("scope", "col"),
+            (t.find(".footable-header th").attr("scope", "col"),
               t
                 .find(
                   ".footable-filtering .footable-filtering-search > .input-group > input",
@@ -2402,15 +2402,15 @@
                 .find(
                   ".footable-filtering .footable-filtering-search > .input-group  ul.dropdown-menu",
                 )
-                .attr({ role: "group", "aria-labelledby": e });
+                .attr({ role: "group", "aria-labelledby": e }));
             var r = t.find("thead .ninja-custom-filter");
             jQuery.each(r, function (e, r) {
               var n = jQuery(r),
                 u = n.attr("data-element_type"),
                 a = "nt_cf_" + e + "_table_" + t.attr("data-footable_id");
               if ("radio" == u || "checkbox" == u)
-                n.attr({ role: "group", "aria-labelledby": a }),
-                  n.find(".ninja_filter_title").attr("id", a);
+                (n.attr({ role: "group", "aria-labelledby": a }),
+                  n.find(".ninja_filter_title").attr("id", a));
               else {
                 var o = n.find("select,input");
                 o.length &&
@@ -2419,11 +2419,11 @@
               }
             });
             var n = t.find(".pagination");
-            n &&
+            (n &&
               jQuery.each(n.children(), function (t, e) {
                 var r = jQuery(e),
                   n = r.attr("data-page");
-                (n =
+                ((n =
                   "first" == n
                     ? "first page"
                     : "prev" == n
@@ -2440,9 +2440,9 @@
                                 ? "page " + n
                                 : "page size"),
                   r.attr("aria-label", n),
-                  r.find("a").attr({ role: "button", "aria-label": n });
+                  r.find("a").attr({ role: "button", "aria-label": n }));
               }),
-              t.data("post_accessible", "yes");
+              t.data("post_accessible", "yes"));
           }
         },
         loadMoreData: function (t, e) {
@@ -2463,15 +2463,15 @@
               ninja_table_public_nonce:
                 window.ninja_footables.ninja_table_public_nonce,
             };
-            e.editing &&
+            (e.editing &&
               "yes" == e.editing.check_editing &&
               ((a.check_editing = "yes"),
               "yes" == e.editing.own_data_only && (a.own_only = "yes")),
               b
                 .get(window.ninja_footables.ajax_url, a)
                 .then(function (u) {
-                  n.loadChuck(t + 1, e, r),
-                    u && (n.chunkResponse = n.chunkResponse.concat(u));
+                  (n.loadChuck(t + 1, e, r),
+                    u && (n.chunkResponse = n.chunkResponse.concat(u)));
                 })
                 .then(function () {
                   t === u &&
@@ -2482,7 +2482,7 @@
                         maxChunk: u,
                       });
                     }, 500));
-                });
+                }));
           }
         },
         getNinjaTableConfig: function (t) {
@@ -2491,7 +2491,7 @@
           if (
             (r.data_request_url && (r.rows = b.get(r.data_request_url)),
             jQuery.each(t.columns, function (n, u) {
-              (u.original_type = u.type),
+              ((u.original_type = u.type),
                 "date" === u.type
                   ? ((u.sortValue = function (t) {
                       return (
@@ -2533,7 +2533,7 @@
                     u.transformed_value && u.transformed_value.trim())
                   ) {
                     var s = FooTable.Export.snapshot;
-                    b.each(s, function (r, n) {
+                    (b.each(s, function (r, n) {
                       if (!n.value.value_transformation_complete) {
                         var a = e.getShortcodes(
                             u.transformed_value,
@@ -2542,7 +2542,7 @@
                             t.columns,
                           ),
                           o = a;
-                        "yes" === t.settings.has_formula &&
+                        ("yes" === t.settings.has_formula &&
                           (a = o = d.parse(i()(a), u.decimalSeparator)),
                           "," === u.decimalSeparator &&
                             (o = e.euFormat(transformedValue)),
@@ -2552,7 +2552,7 @@
                               ((e.filterValue = o),
                               (e.sortValue =
                                 "numeric" === u.original_type ? Number(a) : a));
-                          });
+                          }));
                       }
                     }),
                       (n = e.getShortcodes(
@@ -2563,10 +2563,10 @@
                       )),
                       "yes" == t.settings.has_formula &&
                         (n = d.parse(i()(n), u.decimalSeparator)),
-                      "," == u.decimalSeparator && (n = e.euFormat(n));
+                      "," == u.decimalSeparator && (n = e.euFormat(n)));
                   }
                   return n;
-                });
+                }));
             }),
             (r.columns = t.columns),
             t.editing &&
@@ -2614,8 +2614,8 @@
             t.custom_filter_key)
           ) {
             var n = t.custom_filter_key;
-            (r.components = { filtering: FooTable[n] }),
-              (r.filtering.enabled = !0);
+            ((r.components = { filtering: FooTable[n] }),
+              (r.filtering.enabled = !0));
           }
           return (
             t.settings.defualt_filter &&
@@ -2675,7 +2675,7 @@
                 firstDay: r.data("first_day_of_week"),
                 i18n: ninja_footables.i18n.pikaday,
                 onOpen: function () {
-                  b(".pika-lendar .pika-title").attr({
+                  (b(".pika-lendar .pika-title").attr({
                     "aria-atomic": !0,
                     role: "button",
                   }),
@@ -2691,7 +2691,7 @@
                     b("select.pika-select.pika-select-year").attr(
                       "title",
                       "Select Year",
-                    );
+                    ));
                 },
                 onclose: function () {
                   b(".pika-single").attr({
@@ -2703,7 +2703,7 @@
               });
             });
           }
-          t.hasClass("nt_has_lightbox") && t.on("click", ".nt_lightbox", lity),
+          (t.hasClass("nt_has_lightbox") && t.on("click", ".nt_lightbox", lity),
             t.removeClass("ninja_require_initial_hide"),
             t.parent().find(".footable-loader").remove(),
             t
@@ -2719,7 +2719,7 @@
                 13 === t.keyCode && t.preventDefault();
               },
             ),
-            "" === t.find("tfoot").text().trim() && t.find("tfoot").remove();
+            "" === t.find("tfoot").text().trim() && t.find("tfoot").remove());
         },
         loadCustomPager: function (t, e, r) {
           if (r.settings.pager && !e.find(".nt_customer_pager").length) {
@@ -2731,29 +2731,29 @@
               -1 == a.indexOf(u) && a.push(u);
               var o = t.rows.all.length,
                 i = [];
-              a.forEach(function (t) {
+              (a.forEach(function (t) {
                 (t = parseInt(t)) <= o && i.push(t);
               }),
                 i.sort(function (t, e) {
                   return t - e;
                 }),
-                (i = b.unique(i));
+                (i = b.unique(i)));
               var s = "";
               b.each(i, function (t, e) {
                 var r = "";
-                u == e && (r = "selected"),
+                (u == e && (r = "selected"),
                   (s += "<option "
                     .concat(r, ' value="')
                     .concat(e, '">')
-                    .concat(e, "</option>"));
+                    .concat(e, "</option>")));
               });
               var l = b("<li>", { class: "nt_customer_pager" }).append(
                 b("<select>", { class: "nt_pager_selection" })
                   .html(s)
                   .on("change", function () {
                     var t = b(this).val();
-                    e.data("page-size", t),
-                      FooTable.get("#footable_" + r.table_id).pageSize(t);
+                    (e.data("page-size", t),
+                      FooTable.get("#footable_" + r.table_id).pageSize(t));
                   }),
               );
               n.append(l);
@@ -2762,7 +2762,7 @@
         },
         getShortcodes: function (t, e, r, n) {
           var u = e.transformed_value;
-          1 != r.value_transformation_complete &&
+          (1 != r.value_transformation_complete &&
             (b.each(r, function (t, e) {
               if ("____editing____" != t) {
                 var u = l()(n, ["key", t]);
@@ -2778,7 +2778,7 @@
               }
             }),
             (r.value_transformation_complete = !0)),
-            -1 != u.indexOf("{{") && (u = i()(a(u, { row: r })));
+            -1 != u.indexOf("{{") && (u = i()(a(u, { row: r }))));
           var o = u.match(/{row.([^\}]*)}/g);
           return (
             o &&
@@ -2833,11 +2833,11 @@
           var n = "";
           e.btn_extra_class && e.btn_extra_class && (n = e.btn_extra_class);
           var u = "";
-          e.btn_text_color && (u += "color: " + e.btn_text_color + ";"),
+          (e.btn_text_color && (u += "color: " + e.btn_text_color + ";"),
             e.btn_bg_color &&
               (u += "background-color: " + e.btn_bg_color + ";"),
             e.btn_border_color &&
-              (u += "border-color: " + e.btn_border_color + ";");
+              (u += "border-color: " + e.btn_border_color + ";"));
           var a = "";
           e.button_text && (a = e.button_text);
           var o = "";
@@ -2907,7 +2907,7 @@
         hideOnEmptyIcons: function (t, e) {
           if (e.settings && e.settings.hide_on_empty) {
             var r = [];
-            e.columns &&
+            (e.columns &&
               e.columns.forEach(function (t, e) {
                 "hidden" === (null == t ? void 0 : t.breakpoints) && r.push(e);
               }),
@@ -2936,7 +2936,7 @@
                   n.length > 0 &&
                   !0 !== a &&
                   b(this).find("span.fooicon-plus").remove();
-              });
+              }));
           }
         },
         euFormat: function (t) {
@@ -3203,7 +3203,7 @@
             /[\u007A\u24E9\uFF5A\u017A\u1E91\u017C\u017E\u1E93\u1E95\u01B6\u0225\u0240\u2C6C\uA763]/g,
         },
       ];
-      (window.ninjaTableApp = v),
+      ((window.ninjaTableApp = v),
         (window.ninjaTableApp.diacriticsRemoval = function (t) {
           if (t)
             for (var e = 0; e < E.length; e++)
@@ -3214,6 +3214,6 @@
           setTimeout(function () {
             v.initTables();
           }, 0 | ninja_footables.delay);
-        });
-    })();
+        }));
+    })());
 })();

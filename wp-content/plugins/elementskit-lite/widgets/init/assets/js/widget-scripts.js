@@ -78,14 +78,14 @@
                     callback: function (t, e) {
                       if ("OK" == e) {
                         var i = t[0].geometry.location;
-                        j.setCenter(i.lat() || 0, i.lng() || 0),
+                        (j.setCenter(i.lat() || 0, i.lng() || 0),
                           j.addMarker({
                             lat: i.lat(),
                             lng: i.lng(),
                             title: c,
                             infoWindow: N,
                             icon: Y,
-                          });
+                          }));
                       }
                     },
                   })
@@ -115,7 +115,10 @@
                   fullscreenControl: F,
                   scrollwheel: B,
                 });
-                H.setCenter(X[0].map_marker_lat || 0, X[0].map_marker_lng || 0),
+                (H.setCenter(
+                  X[0].map_marker_lat || 0,
+                  X[0].map_marker_lng || 0,
+                ),
                   "" != W &&
                     (H.addStyle({
                       styledMapName: "Styled Map",
@@ -143,7 +146,7 @@
                       infoWindow: e,
                       icon: i,
                     });
-                  });
+                  }));
               }
             if ("static" == s) {
               var X = JSON.parse(
@@ -178,7 +181,7 @@
                 ]);
               });
               var $ = JSON.parse(JSON.stringify(U));
-              j.drawPolyline({
+              (j.drawPolyline({
                 path: $,
                 strokeColor: b.toString(),
                 strokeOpacity: x,
@@ -211,7 +214,7 @@
                     styles: JSON.parse(W),
                     mapTypeId: "polyline_map_style",
                   }),
-                  j.setStyle("polyline_map_style"));
+                  j.setStyle("polyline_map_style")));
             }
             if ("polygon" == s) {
               X = JSON.parse(
@@ -241,7 +244,7 @@
               j.drawOverlay({ lat: a, lng: h, content: K });
             }
             if ("routes" == s)
-              j.drawRoute({
+              (j.drawRoute({
                 origin: [T, k],
                 destination: [z, L],
                 travelMode: O.toString(),
@@ -272,7 +275,7 @@
                       infoWindow: e,
                       icon: i,
                     });
-                  });
+                  }));
             if ("panorama" == s)
               GMaps.createPanorama({
                 el: "#ekit-google-map-" + n,
@@ -312,7 +315,7 @@
          * imagesLoaded PACKAGED v4.1.4
          * JavaScript is all like "You images are done yet or what?"
          * MIT License
-         */ "undefined" != typeof window && window,
+         */ ("undefined" != typeof window && window,
           "function" ==
           typeof (o = function () {
             function t() {}
@@ -322,41 +325,41 @@
                 if (t && e) {
                   var i = (this._events = this._events || {}),
                     n = (i[t] = i[t] || []);
-                  return -1 == n.indexOf(e) && n.push(e), this;
+                  return (-1 == n.indexOf(e) && n.push(e), this);
                 }
               }),
               (e.once = function (t, e) {
                 if (t && e) {
                   this.on(t, e);
                   var i = (this._onceEvents = this._onceEvents || {});
-                  return ((i[t] = i[t] || {})[e] = !0), this;
+                  return (((i[t] = i[t] || {})[e] = !0), this);
                 }
               }),
               (e.off = function (t, e) {
                 var i = this._events && this._events[t];
                 if (i && i.length) {
                   var n = i.indexOf(e);
-                  return -1 != n && i.splice(n, 1), this;
+                  return (-1 != n && i.splice(n, 1), this);
                 }
               }),
               (e.emitEvent = function (t, e) {
                 var i = this._events && this._events[t];
                 if (i && i.length) {
-                  (i = i.slice(0)), (e = e || []);
+                  ((i = i.slice(0)), (e = e || []));
                   for (
                     var n = this._onceEvents && this._onceEvents[t], o = 0;
                     o < i.length;
                     o++
                   ) {
                     var s = i[o];
-                    n && n[s] && (this.off(t, s), delete n[s]),
-                      s.apply(this, e);
+                    (n && n[s] && (this.off(t, s), delete n[s]),
+                      s.apply(this, e));
                   }
                   return this;
                 }
               }),
               (e.allOff = function () {
-                delete this._events, delete this._onceEvents;
+                (delete this._events, delete this._onceEvents);
               }),
               t
             );
@@ -373,7 +376,7 @@
            */
           (function (i, o) {
             "use strict";
-            (r = function (t) {
+            ((r = function (t) {
               return (function (t, e) {
                 var i = t.jQuery,
                   n = t.console;
@@ -392,7 +395,7 @@
                 function h(t, e, s) {
                   if (!(this instanceof h)) return new h(t, e, s);
                   var a = t;
-                  "string" == typeof t && (a = document.querySelectorAll(t)),
+                  ("string" == typeof t && (a = document.querySelectorAll(t)),
                     a
                       ? ((this.elements = r(a)),
                         (this.options = o({}, this.options)),
@@ -401,18 +404,18 @@
                         this.getImages(),
                         i && (this.jqDeferred = new i.Deferred()),
                         setTimeout(this.check.bind(this)))
-                      : n.error("Bad element for imagesLoaded " + (a || t));
+                      : n.error("Bad element for imagesLoaded " + (a || t)));
                 }
-                (h.prototype = Object.create(e.prototype)),
+                ((h.prototype = Object.create(e.prototype)),
                   (h.prototype.options = {}),
                   (h.prototype.getImages = function () {
-                    (this.images = []),
-                      this.elements.forEach(this.addElementImages, this);
+                    ((this.images = []),
+                      this.elements.forEach(this.addElementImages, this));
                   }),
                   (h.prototype.addElementImages = function (t) {
-                    "IMG" == t.nodeName && this.addImage(t),
+                    ("IMG" == t.nodeName && this.addImage(t),
                       !0 === this.options.background &&
-                        this.addElementBackgroundImages(t);
+                        this.addElementBackgroundImages(t));
                     var e = t.nodeType;
                     if (e && l[e]) {
                       for (
@@ -431,13 +434,15 @@
                         }
                       }
                     }
-                  });
+                  }));
                 var l = { 1: !0, 9: !0, 11: !0 };
                 function c(t) {
                   this.img = t;
                 }
                 function u(t, e) {
-                  (this.url = t), (this.element = e), (this.img = new Image());
+                  ((this.url = t),
+                    (this.element = e),
+                    (this.img = new Image()));
                 }
                 return (
                   (h.prototype.addElementBackgroundImages = function (t) {
@@ -450,8 +455,8 @@
 
                       ) {
                         var o = n && n[2];
-                        o && this.addBackground(o, t),
-                          (n = i.exec(e.backgroundImage));
+                        (o && this.addBackground(o, t),
+                          (n = i.exec(e.backgroundImage)));
                       }
                   }),
                   (h.prototype.addImage = function (t) {
@@ -469,16 +474,16 @@
                         t.progress(e, i, n);
                       });
                     }
-                    (this.progressedCount = 0),
+                    ((this.progressedCount = 0),
                       (this.hasAnyBroken = !1),
                       this.images.length
                         ? this.images.forEach(function (t) {
-                            t.once("progress", e), t.check();
+                            (t.once("progress", e), t.check());
                           })
-                        : this.complete();
+                        : this.complete());
                   }),
                   (h.prototype.progress = function (t, e, i) {
-                    this.progressedCount++,
+                    (this.progressedCount++,
                       (this.hasAnyBroken = this.hasAnyBroken || !t.isLoaded),
                       this.emitEvent("progress", [this, t, e]),
                       this.jqDeferred &&
@@ -486,7 +491,7 @@
                         this.jqDeferred.notify(this, t),
                       this.progressedCount == this.images.length &&
                         this.complete(),
-                      this.options.debug;
+                      this.options.debug);
                   }),
                   (h.prototype.complete = function () {
                     var t = this.hasAnyBroken ? "fail" : "done";
@@ -518,28 +523,28 @@
                     return this.img.complete && this.img.naturalWidth;
                   }),
                   (c.prototype.confirm = function (t, e) {
-                    (this.isLoaded = t),
-                      this.emitEvent("progress", [this, this.img, e]);
+                    ((this.isLoaded = t),
+                      this.emitEvent("progress", [this, this.img, e]));
                   }),
                   (c.prototype.handleEvent = function (t) {
                     var e = "on" + t.type;
                     this[e] && this[e](t);
                   }),
                   (c.prototype.onload = function () {
-                    this.confirm(!0, "onload"), this.unbindEvents();
+                    (this.confirm(!0, "onload"), this.unbindEvents());
                   }),
                   (c.prototype.onerror = function () {
-                    this.confirm(!1, "onerror"), this.unbindEvents();
+                    (this.confirm(!1, "onerror"), this.unbindEvents());
                   }),
                   (c.prototype.unbindEvents = function () {
-                    this.proxyImage.removeEventListener("load", this),
+                    (this.proxyImage.removeEventListener("load", this),
                       this.proxyImage.removeEventListener("error", this),
                       this.img.removeEventListener("load", this),
-                      this.img.removeEventListener("error", this);
+                      this.img.removeEventListener("error", this));
                   }),
                   (u.prototype = Object.create(c.prototype)),
                   (u.prototype.check = function () {
-                    this.img.addEventListener("load", this),
+                    (this.img.addEventListener("load", this),
                       this.img.addEventListener("error", this),
                       (this.img.src = this.url),
                       this.getIsImageComplete() &&
@@ -547,15 +552,15 @@
                           0 !== this.img.naturalWidth,
                           "naturalWidth",
                         ),
-                        this.unbindEvents());
+                        this.unbindEvents()));
                   }),
                   (u.prototype.unbindEvents = function () {
-                    this.img.removeEventListener("load", this),
-                      this.img.removeEventListener("error", this);
+                    (this.img.removeEventListener("load", this),
+                      this.img.removeEventListener("error", this));
                   }),
                   (u.prototype.confirm = function (t, e) {
-                    (this.isLoaded = t),
-                      this.emitEvent("progress", [this, this.element, e]);
+                    ((this.isLoaded = t),
+                      this.emitEvent("progress", [this, this.element, e]));
                   }),
                   (h.makeJQueryPlugin = function (e) {
                     (e = e || t.jQuery) &&
@@ -568,21 +573,21 @@
                 );
               })(i, t);
             }.apply(e, [n])),
-              r === undefined || (t.exports = r);
-          })("undefined" != typeof window ? window : this);
+              r === undefined || (t.exports = r));
+          })("undefined" != typeof window ? window : this));
       },
       444: function () {
         !(function (t) {
           "use strict";
           function e() {
-            (this.bodyEl = t("body")), (this.wnEl = t(window));
+            ((this.bodyEl = t("body")), (this.wnEl = t(window)));
           }
-          (e.prototype.setWnWidth = function () {
+          ((e.prototype.setWnWidth = function () {
             this.wnWidth = this.wnEl.width();
           }),
             (e.prototype.hide = function () {
-              this.el.removeClass("is-active"),
-                this.bodyEl.children("[data-info-tip-content]").remove();
+              (this.el.removeClass("is-active"),
+                this.bodyEl.children("[data-info-tip-content]").remove());
             }),
             (e.prototype.init = function () {
               var e = this;
@@ -594,7 +599,7 @@
                       n = i.offset(),
                       o = i.children("p");
                     if (!i.hasClass("is-active")) {
-                      i.addClass("is-active"),
+                      (i.addClass("is-active"),
                         (n.left = n.left - 40),
                         (o = o
                           .clone()
@@ -608,7 +613,7 @@
                           })
                           .appendTo(e.bodyEl)),
                         (n.left = n.left + 10),
-                        (o.contentWidth = o.outerWidth());
+                        (o.contentWidth = o.outerWidth()));
                       var s =
                         o.contentWidth - (n.left + o.contentWidth - e.wnWidth);
                       s < o.contentWidth && o.css("width", s);
@@ -618,12 +623,12 @@
                     e.hide();
                   }),
                 this.wnEl.on("resize", function () {
-                  i.setWnWidth(), i.hide();
+                  (i.setWnWidth(), i.hide());
                 }));
-            });
+            }));
           var i = new e();
           t(window).on("load", function () {
-            (i.el = t("[data-info-tip]")), i.init();
+            ((i.el = t("[data-info-tip]")), i.init());
           });
         })(jQuery);
       },
@@ -715,7 +720,7 @@
            * Copyright 2010-2018 Metafizzy
            */
         }
-        (ht = window),
+        ((ht = window),
           (rt = [i(669)]),
           (at = function (t) {
             return (function (t, e) {
@@ -775,7 +780,7 @@
                     : function (t) {
                         s.error(t);
                       };
-              return n(e || t.jQuery), i;
+              return (n(e || t.jQuery), i);
             })(ht, t);
           }.apply(e, rt)),
           at === undefined || (t.exports = at),
@@ -788,41 +793,41 @@
                 if (t && e) {
                   var i = (this._events = this._events || {}),
                     n = (i[t] = i[t] || []);
-                  return -1 == n.indexOf(e) && n.push(e), this;
+                  return (-1 == n.indexOf(e) && n.push(e), this);
                 }
               }),
               (e.once = function (t, e) {
                 if (t && e) {
                   this.on(t, e);
                   var i = (this._onceEvents = this._onceEvents || {});
-                  return ((i[t] = i[t] || {})[e] = !0), this;
+                  return (((i[t] = i[t] || {})[e] = !0), this);
                 }
               }),
               (e.off = function (t, e) {
                 var i = this._events && this._events[t];
                 if (i && i.length) {
                   var n = i.indexOf(e);
-                  return -1 != n && i.splice(n, 1), this;
+                  return (-1 != n && i.splice(n, 1), this);
                 }
               }),
               (e.emitEvent = function (t, e) {
                 var i = this._events && this._events[t];
                 if (i && i.length) {
-                  (i = i.slice(0)), (e = e || []);
+                  ((i = i.slice(0)), (e = e || []));
                   for (
                     var n = this._onceEvents && this._onceEvents[t], o = 0;
                     o < i.length;
                     o++
                   ) {
                     var s = i[o];
-                    n && n[s] && (this.off(t, s), delete n[s]),
-                      s.apply(this, e);
+                    (n && n[s] && (this.off(t, s), delete n[s]),
+                      s.apply(this, e));
                   }
                   return this;
                 }
               }),
               (e.allOff = function () {
-                delete this._events, delete this._onceEvents;
+                (delete this._events, delete this._onceEvents);
               }),
               t
             );
@@ -874,17 +879,17 @@
               if (!c) {
                 c = !0;
                 var e = document.createElement("div");
-                (e.style.width = "200px"),
+                ((e.style.width = "200px"),
                   (e.style.padding = "1px 2px 3px 4px"),
                   (e.style.borderStyle = "solid"),
                   (e.style.borderWidth = "1px 2px 3px 4px"),
-                  (e.style.boxSizing = "border-box");
+                  (e.style.boxSizing = "border-box"));
                 var i = document.body || document.documentElement;
                 i.appendChild(e);
                 var o = n(e);
-                (r = 200 == Math.round(t(o.width))),
+                ((r = 200 == Math.round(t(o.width))),
                   (s.isBoxSizeOuter = r),
-                  i.removeChild(e);
+                  i.removeChild(e));
               }
             }
             function s(e) {
@@ -896,7 +901,7 @@
                 var s = n(e);
                 if ("none" == s.display) return i();
                 var a = {};
-                (a.width = e.offsetWidth), (a.height = e.offsetHeight);
+                ((a.width = e.offsetWidth), (a.height = e.offsetHeight));
                 for (
                   var c = (a.isBorderBox = "border-box" == s.boxSizing), u = 0;
                   u < l;
@@ -960,7 +965,7 @@
             : (r = a),
           (function (t, e) {
             "use strict";
-            (c = function () {
+            ((c = function () {
               var t = (function () {
                 var t = window.Element.prototype;
                 if (t.matches) return "matches";
@@ -987,10 +992,10 @@
                   (l = c.call(u.exports, i, u.exports, u)),
                   (u.loaded = !0),
                   l === undefined && (l = u.exports))
-                : (l = c);
+                : (l = c));
           })(window),
           (function (t, e) {
-            (d = function (e) {
+            ((d = function (e) {
               return (function (t, e) {
                 var i = {
                     extend: function (t, e) {
@@ -1002,7 +1007,7 @@
                     },
                   },
                   n = Array.prototype.slice;
-                (i.makeArray = function (t) {
+                ((i.makeArray = function (t) {
                   return Array.isArray(t)
                     ? t
                     : null == t
@@ -1055,7 +1060,7 @@
                       var e = arguments,
                         s = this;
                       this[o] = setTimeout(function () {
-                        n.apply(s, e), delete s[o];
+                        (n.apply(s, e), delete s[o]);
                       }, i);
                     };
                   }),
@@ -1071,7 +1076,7 @@
                         return e + "-" + i;
                       })
                       .toLowerCase();
-                  });
+                  }));
                 var o = t.console;
                 return (
                   (i.htmlInit = function (e, n) {
@@ -1110,7 +1115,7 @@
                 );
               })(t, e);
             }.apply((f = {}), (rt = [l]))),
-              d !== undefined || (d = f);
+              d !== undefined || (d = f));
           })(window),
           window,
           (p = [n, r]),
@@ -1153,10 +1158,10 @@
                 transitionDelay: r + "Delay",
               },
               c = (n.prototype = Object.create(t.prototype));
-            (c.constructor = n),
+            ((c.constructor = n),
               (c._create = function () {
-                (this._transn = { ingProperties: {}, clean: {}, onEnd: {} }),
-                  this.css({ position: "absolute" });
+                ((this._transn = { ingProperties: {}, clean: {}, onEnd: {} }),
+                  this.css({ position: "absolute" }));
               }),
               (c.handleEvent = function (t) {
                 var e = "on" + t.type;
@@ -1178,14 +1183,14 @@
                   s = parseFloat(n),
                   r = parseFloat(o),
                   a = this.layout.size;
-                -1 != n.indexOf("%") && (s = (s / 100) * a.width),
+                (-1 != n.indexOf("%") && (s = (s / 100) * a.width),
                   -1 != o.indexOf("%") && (r = (r / 100) * a.height),
                   (s = isNaN(s) ? 0 : s),
                   (r = isNaN(r) ? 0 : r),
                   (s -= e ? a.paddingLeft : a.paddingRight),
                   (r -= i ? a.paddingTop : a.paddingBottom),
                   (this.position.x = s),
-                  (this.position.y = r);
+                  (this.position.y = r));
               }),
               (c.layoutPosition = function () {
                 var t = this.layout.size,
@@ -1196,15 +1201,15 @@
                   s = i ? "left" : "right",
                   r = i ? "right" : "left",
                   a = this.position.x + t[o];
-                (e[s] = this.getXValue(a)), (e[r] = "");
+                ((e[s] = this.getXValue(a)), (e[r] = ""));
                 var h = n ? "paddingTop" : "paddingBottom",
                   l = n ? "top" : "bottom",
                   c = n ? "bottom" : "top",
                   u = this.position.y + t[h];
-                (e[l] = this.getYValue(u)),
+                ((e[l] = this.getYValue(u)),
                   (e[c] = ""),
                   this.css(e),
-                  this.emitEvent("layout", [this]);
+                  this.emitEvent("layout", [this]));
               }),
               (c.getXValue = function (t) {
                 var e = this.layout._getOption("horizontal");
@@ -1227,12 +1232,12 @@
                   var s = t - i,
                     r = e - n,
                     a = {};
-                  (a.transform = this.getTranslate(s, r)),
+                  ((a.transform = this.getTranslate(s, r)),
                     this.transition({
                       to: a,
                       onTransitionEnd: { transform: this.layoutPosition },
                       isCleaning: !0,
-                    });
+                    }));
                 } else this.layoutPosition();
               }),
               (c.getTranslate = function (t, e) {
@@ -1245,12 +1250,12 @@
                 );
               }),
               (c.goTo = function (t, e) {
-                this.setPosition(t, e), this.layoutPosition();
+                (this.setPosition(t, e), this.layoutPosition());
               }),
               (c.moveTo = c._transitionTo),
               (c.setPosition = function (t, e) {
-                (this.position.x = parseFloat(t)),
-                  (this.position.y = parseFloat(e));
+                ((this.position.x = parseFloat(t)),
+                  (this.position.y = parseFloat(e)));
               }),
               (c._nonTransition = function (t) {
                 for (var e in (this.css(t.to),
@@ -1264,25 +1269,25 @@
                   for (var i in t.onTransitionEnd)
                     e.onEnd[i] = t.onTransitionEnd[i];
                   for (i in t.to)
-                    (e.ingProperties[i] = !0),
-                      t.isCleaning && (e.clean[i] = !0);
-                  t.from && (this.css(t.from), this.element.offsetHeight),
+                    ((e.ingProperties[i] = !0),
+                      t.isCleaning && (e.clean[i] = !0));
+                  (t.from && (this.css(t.from), this.element.offsetHeight),
                     this.enableTransition(t.to),
                     this.css(t.to),
-                    (this.isTransitioning = !0);
+                    (this.isTransitioning = !0));
                 } else this._nonTransition(t);
-              });
+              }));
             var u = "opacity," + o(a);
-            (c.enableTransition = function () {
+            ((c.enableTransition = function () {
               if (!this.isTransitioning) {
                 var t = this.layout.options.transitionDuration;
-                (t = "number" == typeof t ? t + "ms" : t),
+                ((t = "number" == typeof t ? t + "ms" : t),
                   this.css({
                     transitionProperty: u,
                     transitionDuration: t,
                     transitionDelay: this.staggerDelay || 0,
                   }),
-                  this.element.addEventListener(h, this, !1);
+                  this.element.addEventListener(h, this, !1));
               }
             }),
               (c.onwebkitTransitionEnd = function (t) {
@@ -1290,31 +1295,31 @@
               }),
               (c.onotransitionend = function (t) {
                 this.ontransitionend(t);
-              });
+              }));
             var d = { "-webkit-transform": "transform" };
-            (c.ontransitionend = function (t) {
+            ((c.ontransitionend = function (t) {
               if (t.target === this.element) {
                 var e = this._transn,
                   n = d[t.propertyName] || t.propertyName;
-                delete e.ingProperties[n],
+                (delete e.ingProperties[n],
                   i(e.ingProperties) && this.disableTransition(),
                   n in e.clean &&
                     ((this.element.style[t.propertyName] = ""),
                     delete e.clean[n]),
                   n in e.onEnd && (e.onEnd[n].call(this), delete e.onEnd[n]),
-                  this.emitEvent("transitionEnd", [this]);
+                  this.emitEvent("transitionEnd", [this]));
               }
             }),
               (c.disableTransition = function () {
-                this.removeTransitionStyles(),
+                (this.removeTransitionStyles(),
                   this.element.removeEventListener(h, this, !1),
-                  (this.isTransitioning = !1);
+                  (this.isTransitioning = !1));
               }),
               (c._removeStyles = function (t) {
                 var e = {};
                 for (var i in t) e[i] = "";
                 this.css(e);
-              });
+              }));
             var f = {
               transitionProperty: "",
               transitionDuration: "",
@@ -1325,12 +1330,12 @@
                 this.css(f);
               }),
               (c.stagger = function (t) {
-                (t = isNaN(t) ? 0 : t), (this.staggerDelay = t + "ms");
+                ((t = isNaN(t) ? 0 : t), (this.staggerDelay = t + "ms"));
               }),
               (c.removeElem = function () {
-                this.element.parentNode.removeChild(this.element),
+                (this.element.parentNode.removeChild(this.element),
                   this.css({ display: "" }),
-                  this.emitEvent("remove", [this]);
+                  this.emitEvent("remove", [this]));
               }),
               (c.remove = function () {
                 return r && parseFloat(this.layout.options.transitionDuration)
@@ -1341,17 +1346,17 @@
                   : void this.removeElem();
               }),
               (c.reveal = function () {
-                delete this.isHidden, this.css({ display: "" });
+                (delete this.isHidden, this.css({ display: "" }));
                 var t = this.layout.options,
                   e = {};
-                (e[this.getHideRevealTransitionEndProperty("visibleStyle")] =
+                ((e[this.getHideRevealTransitionEndProperty("visibleStyle")] =
                   this.onRevealTransitionEnd),
                   this.transition({
                     from: t.hiddenStyle,
                     to: t.visibleStyle,
                     isCleaning: !0,
                     onTransitionEnd: e,
-                  });
+                  }));
               }),
               (c.onRevealTransitionEnd = function () {
                 this.isHidden || this.emitEvent("reveal");
@@ -1362,17 +1367,17 @@
                 for (var i in e) return i;
               }),
               (c.hide = function () {
-                (this.isHidden = !0), this.css({ display: "" });
+                ((this.isHidden = !0), this.css({ display: "" }));
                 var t = this.layout.options,
                   e = {};
-                (e[this.getHideRevealTransitionEndProperty("hiddenStyle")] =
+                ((e[this.getHideRevealTransitionEndProperty("hiddenStyle")] =
                   this.onHideTransitionEnd),
                   this.transition({
                     from: t.visibleStyle,
                     to: t.hiddenStyle,
                     isCleaning: !0,
                     onTransitionEnd: e,
-                  });
+                  }));
               }),
               (c.onHideTransitionEnd = function () {
                 this.isHidden &&
@@ -1397,20 +1402,20 @@
             : (v = m),
           (function (t, e) {
             "use strict";
-            (y = function (e, i, n, o) {
+            ((y = function (e, i, n, o) {
               return (function (t, e, i, n, o) {
                 function s(t, e) {
                   var i = n.getQueryElement(t);
                   if (i) {
-                    (this.element = i),
+                    ((this.element = i),
                       l && (this.$element = l(this.element)),
                       (this.options = n.extend({}, this.constructor.defaults)),
-                      this.option(e);
+                      this.option(e));
                     var o = ++u;
-                    (this.element.outlayerGUID = o),
+                    ((this.element.outlayerGUID = o),
                       (d[o] = this),
                       this._create(),
-                      this._getOption("initLayout") && this.layout();
+                      this._getOption("initLayout") && this.layout());
                   } else
                     h &&
                       h.error(
@@ -1442,7 +1447,7 @@
                   c = function () {},
                   u = 0,
                   d = {};
-                (s.namespace = "outlayer"),
+                ((s.namespace = "outlayer"),
                   (s.Item = o),
                   (s.defaults = {
                     containerStyle: { position: "relative" },
@@ -1454,9 +1459,9 @@
                     transitionDuration: "0.4s",
                     hiddenStyle: { opacity: 0, transform: "scale(0.001)" },
                     visibleStyle: { opacity: 1, transform: "scale(1)" },
-                  });
+                  }));
                 var f = s.prototype;
-                n.extend(f, e.prototype),
+                (n.extend(f, e.prototype),
                   (f.option = function (t) {
                     n.extend(this.options, t);
                   }),
@@ -1476,11 +1481,11 @@
                     resizeContainer: "isResizingContainer",
                   }),
                   (f._create = function () {
-                    this.reloadItems(),
+                    (this.reloadItems(),
                       (this.stamps = []),
                       this.stamp(this.options.stamp),
                       n.extend(this.element.style, this.options.containerStyle),
-                      this._getOption("resize") && this.bindResize();
+                      this._getOption("resize") && this.bindResize());
                   }),
                   (f.reloadItems = function () {
                     this.items = this._itemize(this.element.children);
@@ -1508,11 +1513,11 @@
                     });
                   }),
                   (f.layout = function () {
-                    this._resetLayout(), this._manageStamps();
+                    (this._resetLayout(), this._manageStamps());
                     var t = this._getOption("layoutInstant"),
                       e = void 0 !== t ? t : !this._isLayoutInited;
-                    this.layoutItems(this.items, e),
-                      (this._isLayoutInited = !0);
+                    (this.layoutItems(this.items, e),
+                      (this._isLayoutInited = !0));
                   }),
                   (f._init = f.layout),
                   (f._resetLayout = function () {
@@ -1532,9 +1537,9 @@
                       : (this[t] = 0);
                   }),
                   (f.layoutItems = function (t, e) {
-                    (t = this._getItemsForLayout(t)),
+                    ((t = this._getItemsForLayout(t)),
                       this._layoutItems(t, e),
-                      this._postLayout();
+                      this._postLayout());
                   }),
                   (f._getItemsForLayout = function (t) {
                     return t.filter(function (t) {
@@ -1546,23 +1551,23 @@
                       (this._emitCompleteOnItems("layout", t), t && t.length)
                     ) {
                       var i = [];
-                      t.forEach(function (t) {
+                      (t.forEach(function (t) {
                         var n = this._getItemLayoutPosition(t);
-                        (n.item = t),
+                        ((n.item = t),
                           (n.isInstant = e || t.isLayoutInstant),
-                          i.push(n);
+                          i.push(n));
                       }, this),
-                        this._processLayoutQueue(i);
+                        this._processLayoutQueue(i));
                     }
                   }),
                   (f._getItemLayoutPosition = function () {
                     return { x: 0, y: 0 };
                   }),
                   (f._processLayoutQueue = function (t) {
-                    this.updateStagger(),
+                    (this.updateStagger(),
                       t.forEach(function (t, e) {
                         this._positionItem(t.item, t.x, t.y, t.isInstant, e);
-                      }, this);
+                      }, this));
                   }),
                   (f.updateStagger = function () {
                     var t = this.options.stagger;
@@ -1590,7 +1595,7 @@
                   (f._setContainerMeasure = function (t, e) {
                     if (void 0 !== t) {
                       var i = this.size;
-                      i.isBorderBox &&
+                      (i.isBorderBox &&
                         (t += e
                           ? i.paddingLeft +
                             i.paddingRight +
@@ -1601,7 +1606,8 @@
                             i.borderTopWidth +
                             i.borderBottomWidth),
                         (t = Math.max(t, 0)),
-                        (this.element.style[e ? "width" : "height"] = t + "px");
+                        (this.element.style[e ? "width" : "height"] =
+                          t + "px"));
                     }
                   }),
                   (f._emitCompleteOnItems = function (t, e) {
@@ -1627,7 +1633,7 @@
                         ((this.$element = this.$element || l(this.element)), e)
                       ) {
                         var o = l.Event(e);
-                        (o.type = t), this.$element.trigger(o, i);
+                        ((o.type = t), this.$element.trigger(o, i));
                       } else this.$element.trigger(t, i);
                   }),
                   (f.ignore = function (t) {
@@ -1646,7 +1652,7 @@
                   (f.unstamp = function (t) {
                     (t = this._find(t)) &&
                       t.forEach(function (t) {
-                        n.removeFrom(this.stamps, t), this.unignore(t);
+                        (n.removeFrom(this.stamps, t), this.unignore(t));
                       }, this);
                   }),
                   (f._find = function (t) {
@@ -1688,12 +1694,12 @@
                   }),
                   (f.handleEvent = n.handleEvent),
                   (f.bindResize = function () {
-                    t.addEventListener("resize", this),
-                      (this.isResizeBound = !0);
+                    (t.addEventListener("resize", this),
+                      (this.isResizeBound = !0));
                   }),
                   (f.unbindResize = function () {
-                    t.removeEventListener("resize", this),
-                      (this.isResizeBound = !1);
+                    (t.removeEventListener("resize", this),
+                      (this.isResizeBound = !1));
                   }),
                   (f.onresize = function () {
                     this.resize();
@@ -1712,7 +1718,7 @@
                   }),
                   (f.addItems = function (t) {
                     var e = this._itemize(t);
-                    return e.length && (this.items = this.items.concat(e)), e;
+                    return (e.length && (this.items = this.items.concat(e)), e);
                   }),
                   (f.appended = function (t) {
                     var e = this.addItems(t);
@@ -1722,12 +1728,12 @@
                     var e = this._itemize(t);
                     if (e.length) {
                       var i = this.items.slice(0);
-                      (this.items = e.concat(i)),
+                      ((this.items = e.concat(i)),
                         this._resetLayout(),
                         this._manageStamps(),
                         this.layoutItems(e, !0),
                         this.reveal(e),
-                        this.layoutItems(i);
+                        this.layoutItems(i));
                     }
                   }),
                   (f.reveal = function (t) {
@@ -1736,7 +1742,7 @@
                     ) {
                       var e = this.updateStagger();
                       t.forEach(function (t, i) {
-                        t.stagger(i * e), t.reveal();
+                        (t.stagger(i * e), t.reveal());
                       });
                     }
                   }),
@@ -1744,7 +1750,7 @@
                     if ((this._emitCompleteOnItems("hide", t), t && t.length)) {
                       var e = this.updateStagger();
                       t.forEach(function (t, i) {
-                        t.stagger(i * e), t.hide();
+                        (t.stagger(i * e), t.hide());
                       });
                     }
                   }),
@@ -1775,27 +1781,27 @@
                   }),
                   (f.remove = function (t) {
                     var e = this.getItems(t);
-                    this._emitCompleteOnItems("remove", e),
+                    (this._emitCompleteOnItems("remove", e),
                       e &&
                         e.length &&
                         e.forEach(function (t) {
-                          t.remove(), n.removeFrom(this.items, t);
-                        }, this);
+                          (t.remove(), n.removeFrom(this.items, t));
+                        }, this));
                   }),
                   (f.destroy = function () {
                     var t = this.element.style;
-                    (t.height = ""),
+                    ((t.height = ""),
                       (t.position = ""),
                       (t.width = ""),
                       this.items.forEach(function (t) {
                         t.destroy();
                       }),
-                      this.unbindResize();
+                      this.unbindResize());
                     var e = this.element.outlayerGUID;
-                    delete d[e],
+                    (delete d[e],
                       delete this.element.outlayerGUID,
                       l &&
-                        l.removeData(this.element, this.constructor.namespace);
+                        l.removeData(this.element, this.constructor.namespace));
                   }),
                   (s.data = function (t) {
                     var e = (t = n.getQueryElement(t)) && t.outlayerGUID;
@@ -1814,12 +1820,12 @@
                       l && l.bridget && l.bridget(t, i),
                       i
                     );
-                  });
+                  }));
                 var p = { ms: 1, s: 1e3 };
-                return (s.Item = o), s;
+                return ((s.Item = o), s);
               })(t, e, i, n, o);
             }.apply((_ = {}), (rt = [n, r, d, v]))),
-              y !== undefined || (y = _);
+              y !== undefined || (y = _));
           })(window),
           window,
           (w = [y]),
@@ -1830,16 +1836,16 @@
             }
             var i = (e.prototype = Object.create(t.Item.prototype)),
               n = i._create;
-            (i._create = function () {
-              (this.id = this.layout.itemGUID++),
+            ((i._create = function () {
+              ((this.id = this.layout.itemGUID++),
                 n.call(this),
-                (this.sortData = {});
+                (this.sortData = {}));
             }),
               (i.updateSortData = function () {
                 if (!this.isIgnored) {
-                  (this.sortData.id = this.id),
+                  ((this.sortData.id = this.id),
                     (this.sortData["original-order"] = this.id),
-                    (this.sortData.random = Math.random());
+                    (this.sortData.random = Math.random()));
                   var t = this.layout.options.getSortData,
                     e = this.layout._sorters;
                   for (var i in t) {
@@ -1847,11 +1853,11 @@
                     this.sortData[i] = n(this.element, this);
                   }
                 }
-              });
+              }));
             var o = i.destroy;
             return (
               (i.destroy = function () {
-                o.apply(this, arguments), this.css({ display: "" });
+                (o.apply(this, arguments), this.css({ display: "" }));
               }),
               e
             );
@@ -1864,12 +1870,12 @@
           (S = function (t, e) {
             "use strict";
             function i(t) {
-              (this.isotope = t),
+              ((this.isotope = t),
                 t &&
                   ((this.options = t.options[this.namespace]),
                   (this.element = t.element),
                   (this.items = t.filteredItems),
-                  (this.size = t.size));
+                  (this.size = t.size)));
             }
             var n = i.prototype;
             return (
@@ -1919,7 +1925,7 @@
                 this.isotope.layout.apply(this.isotope, arguments);
               }),
               (n.getSize = function () {
-                this.isotope.getSize(), (this.size = this.isotope.size);
+                (this.isotope.getSize(), (this.size = this.isotope.size));
               }),
               (i.modes = {}),
               (i.create = function (t, e) {
@@ -1949,13 +1955,13 @@
             var n = i.prototype;
             return (
               (n._resetLayout = function () {
-                this.getSize(),
+                (this.getSize(),
                   this._getMeasurement("columnWidth", "outerWidth"),
                   this._getMeasurement("gutter", "outerWidth"),
                   this.measureColumns(),
-                  (this.colYs = []);
+                  (this.colYs = []));
                 for (var t = 0; t < this.cols; t++) this.colYs.push(0);
-                (this.maxY = 0), (this.horizontalColIndex = 0);
+                ((this.maxY = 0), (this.horizontalColIndex = 0));
               }),
               (n.measureColumns = function () {
                 if ((this.getContainerWidth(), !this.columnWidth)) {
@@ -1968,8 +1974,8 @@
                   o = this.containerWidth + this.gutter,
                   s = o / n,
                   r = n - (o % n);
-                (s = Math[r && r < 1 ? "round" : "floor"](s)),
-                  (this.cols = Math.max(s, 1));
+                ((s = Math[r && r < 1 ? "round" : "floor"](s)),
+                  (this.cols = Math.max(s, 1)));
               }),
               (n.getContainerWidth = function () {
                 var t = this._getOption("fitWidth")
@@ -2036,8 +2042,8 @@
                   r = Math.floor(o / this.columnWidth);
                 r = Math.max(0, r);
                 var a = Math.floor(s / this.columnWidth);
-                (a -= s % this.columnWidth ? 0 : 1),
-                  (a = Math.min(this.cols - 1, a));
+                ((a -= s % this.columnWidth ? 0 : 1),
+                  (a = Math.min(this.cols - 1, a)));
                 for (
                   var h =
                       (this._getOption("originTop") ? n.top : n.bottom) +
@@ -2064,7 +2070,7 @@
               }),
               (n.needsResizeLayout = function () {
                 var t = this.containerWidth;
-                return this.getContainerWidth(), t != this.containerWidth;
+                return (this.getContainerWidth(), t != this.containerWidth);
               }),
               i
             );
@@ -2082,7 +2088,7 @@
             for (var s in e.prototype) o[s] || (n[s] = e.prototype[s]);
             var r = n.measureColumns;
             n.measureColumns = function () {
-              (this.items = this.isotope.filteredItems), r.call(this);
+              ((this.items = this.isotope.filteredItems), r.call(this));
             };
             var a = n._getOption;
             return (
@@ -2107,10 +2113,10 @@
               i = e.prototype;
             return (
               (i._resetLayout = function () {
-                (this.x = 0),
+                ((this.x = 0),
                   (this.y = 0),
                   (this.maxY = 0),
-                  this._getMeasurement("gutter", "outerWidth");
+                  this._getMeasurement("gutter", "outerWidth"));
               }),
               (i._getItemLayoutPosition = function (t) {
                 t.getSize();
@@ -2154,7 +2160,7 @@
                     (this.isotope.size.innerWidth - t.size.outerWidth) *
                     this.options.horizontalAlignment,
                   i = this.y;
-                return (this.y += t.size.outerHeight), { x: e, y: i };
+                return ((this.y += t.size.outerHeight), { x: e, y: i });
               }),
               (i._getContainerSize = function () {
                 return { height: this.y };
@@ -2166,7 +2172,7 @@
             ? (H = N.apply((Y = {}), j)) === undefined && (H = Y)
             : (H = N),
           (function (i, n) {
-            (at = function (t, e, n, o, s, r) {
+            ((at = function (t, e, n, o, s, r) {
               return (function (t, e, i, n, o, s, r) {
                 function a(t, e) {
                   return function (i, n) {
@@ -2196,9 +2202,9 @@
                     isJQueryFiltering: !0,
                     sortAscending: !0,
                   });
-                (c.Item = s), (c.LayoutMode = r);
+                ((c.Item = s), (c.LayoutMode = r));
                 var u = c.prototype;
-                (u._create = function () {
+                ((u._create = function () {
                   for (var t in ((this.itemGUID = 0),
                   (this._sorters = {}),
                   this._getSorters(),
@@ -2210,7 +2216,7 @@
                     this._initLayoutMode(t);
                 }),
                   (u.reloadItems = function () {
-                    (this.itemGUID = 0), e.prototype.reloadItems.call(this);
+                    ((this.itemGUID = 0), e.prototype.reloadItems.call(this));
                   }),
                   (u._itemize = function () {
                     for (
@@ -2221,13 +2227,13 @@
                     ) {
                       t[i].id = this.itemGUID++;
                     }
-                    return this._updateItemsSortData(t), t;
+                    return (this._updateItemsSortData(t), t);
                   }),
                   (u._initLayoutMode = function (t) {
                     var e = r.modes[t],
                       i = this.options[t] || {};
-                    (this.options[t] = e.options ? o.extend(e.options, i) : i),
-                      (this.modes[t] = new e(this));
+                    ((this.options[t] = e.options ? o.extend(e.options, i) : i),
+                      (this.modes[t] = new e(this)));
                   }),
                   (u.layout = function () {
                     return !this._isLayoutInited &&
@@ -2237,30 +2243,30 @@
                   }),
                   (u._layout = function () {
                     var t = this._getIsInstant();
-                    this._resetLayout(),
+                    (this._resetLayout(),
                       this._manageStamps(),
                       this.layoutItems(this.filteredItems, t),
-                      (this._isLayoutInited = !0);
+                      (this._isLayoutInited = !0));
                   }),
                   (u.arrange = function (t) {
-                    this.option(t), this._getIsInstant();
+                    (this.option(t), this._getIsInstant());
                     var e = this._filter(this.items);
-                    (this.filteredItems = e.matches),
+                    ((this.filteredItems = e.matches),
                       this._bindArrangeComplete(),
                       this._isInstant
                         ? this._noTransition(this._hideReveal, [e])
                         : this._hideReveal(e),
                       this._sort(),
-                      this._layout();
+                      this._layout());
                   }),
                   (u._init = u.arrange),
                   (u._hideReveal = function (t) {
-                    this.reveal(t.needReveal), this.hide(t.needHide);
+                    (this.reveal(t.needReveal), this.hide(t.needHide));
                   }),
                   (u._getIsInstant = function () {
                     var t = this._getOption("layoutInstant"),
                       e = void 0 !== t ? t : !this._isLayoutInited;
-                    return (this._isInstant = e), e;
+                    return ((this._isInstant = e), e);
                   }),
                   (u._bindArrangeComplete = function () {
                     function t() {
@@ -2275,15 +2281,15 @@
                       i,
                       n,
                       o = this;
-                    this.once("layoutComplete", function () {
-                      (e = !0), t();
+                    (this.once("layoutComplete", function () {
+                      ((e = !0), t());
                     }),
                       this.once("hideComplete", function () {
-                        (i = !0), t();
+                        ((i = !0), t());
                       }),
                       this.once("revealComplete", function () {
-                        (n = !0), t();
-                      });
+                        ((n = !0), t());
+                      }));
                   }),
                   (u._filter = function (t) {
                     var e = this.options.filter;
@@ -2300,10 +2306,10 @@
                       var a = t[r];
                       if (!a.isIgnored) {
                         var h = s(a);
-                        h && i.push(a),
+                        (h && i.push(a),
                           h && a.isHidden
                             ? n.push(a)
-                            : h || a.isHidden || o.push(a);
+                            : h || a.isHidden || o.push(a));
                       }
                     }
                     return { matches: i, needReveal: n, needHide: o };
@@ -2323,11 +2329,11 @@
                   }),
                   (u.updateSortData = function (t) {
                     var e;
-                    t
+                    (t
                       ? ((t = o.makeArray(t)), (e = this.getItems(t)))
                       : (e = this.items),
                       this._getSorters(),
-                      this._updateItemsSortData(e);
+                      this._updateItemsSortData(e));
                   }),
                   (u._getSorters = function () {
                     var t = this.options.getSortData;
@@ -2340,7 +2346,7 @@
                     for (var e = t && t.length, i = 0; e && i < e; i++) {
                       t[i].updateSortData();
                     }
-                  });
+                  }));
                 var d = (function () {
                   function t(t) {
                     if ("string" != typeof t) return t;
@@ -2369,7 +2375,7 @@
                   }
                   return t;
                 })();
-                (c.sortDataParsers = {
+                ((c.sortDataParsers = {
                   parseInt: (function (t) {
                     function e(e) {
                       return t.apply(this, arguments);
@@ -2415,11 +2421,11 @@
                     var t = this.options.layoutMode,
                       e = this.modes[t];
                     if (!e) throw new Error("No layout mode: " + t);
-                    return (e.options = this.options[t]), e;
+                    return ((e.options = this.options[t]), e);
                   }),
                   (u._resetLayout = function () {
-                    e.prototype._resetLayout.call(this),
-                      this._mode()._resetLayout();
+                    (e.prototype._resetLayout.call(this),
+                      this._mode()._resetLayout());
                   }),
                   (u._getItemLayoutPosition = function (t) {
                     return this._mode()._getItemLayoutPosition(t);
@@ -2443,11 +2449,11 @@
                   (u.prepended = function (t) {
                     var e = this._itemize(t);
                     if (e.length) {
-                      this._resetLayout(), this._manageStamps();
+                      (this._resetLayout(), this._manageStamps());
                       var i = this._filterRevealAdded(e);
-                      this.layoutItems(this.filteredItems),
+                      (this.layoutItems(this.filteredItems),
                         (this.filteredItems = i.concat(this.filteredItems)),
-                        (this.items = e.concat(this.items));
+                        (this.items = e.concat(this.items)));
                     }
                   }),
                   (u._filterRevealAdded = function (t) {
@@ -2466,14 +2472,14 @@
                         n,
                         o = e.length;
                       for (i = 0; i < o; i++)
-                        (n = e[i]), this.element.appendChild(n.element);
+                        ((n = e[i]), this.element.appendChild(n.element));
                       var s = this._filter(e).matches;
                       for (i = 0; i < o; i++) e[i].isLayoutInstant = !0;
                       for (this.arrange(), i = 0; i < o; i++)
                         delete e[i].isLayoutInstant;
                       this.reveal(s);
                     }
-                  });
+                  }));
                 var f = u.remove;
                 return (
                   (u.remove = function (t) {
@@ -2489,15 +2495,15 @@
                     for (var t = 0; t < this.items.length; t++) {
                       this.items[t].sortData.random = Math.random();
                     }
-                    (this.options.sortBy = "random"),
+                    ((this.options.sortBy = "random"),
                       this._sort(),
-                      this._layout();
+                      this._layout());
                   }),
                   (u._noTransition = function (t, e) {
                     var i = this.options.transitionDuration;
                     this.options.transitionDuration = 0;
                     var n = t.apply(this, e);
-                    return (this.options.transitionDuration = i), n;
+                    return ((this.options.transitionDuration = i), n);
                   }),
                   (u.getFilteredItemElements = function () {
                     return this.filteredItems.map(function (t) {
@@ -2508,7 +2514,7 @@
                 );
               })(i, t, 0, n, o, s, r);
             }.apply(e, (rt = [y, r, l, d, E, T, D, B, H]))),
-              at === undefined || (t.exports = at);
+              at === undefined || (t.exports = at));
           })(window),
           window,
           (Q = function () {
@@ -2596,13 +2602,13 @@
           (G = [X]),
           (U = function (t) {
             function e(t, e, i) {
-              (this.width = t || 0),
+              ((this.width = t || 0),
                 (this.height = e || 0),
                 (this.sortDirection = i || "downwardLeftToRight"),
-                this.reset();
+                this.reset());
             }
             var i = e.prototype;
-            (i.reset = function () {
+            ((i.reset = function () {
               this.spaces = [];
               var e = new t({
                 x: 0,
@@ -2610,8 +2616,8 @@
                 width: this.width,
                 height: this.height,
               });
-              this.spaces.push(e),
-                (this.sorter = n[this.sortDirection] || n.downwardLeftToRight);
+              (this.spaces.push(e),
+                (this.sorter = n[this.sortDirection] || n.downwardLeftToRight));
             }),
               (i.pack = function (t) {
                 for (var e = 0; e < this.spaces.length; e++) {
@@ -2630,7 +2636,7 @@
                     i.x + i.width >= t.x + t.width &&
                     i.height >= t.height - 0.01
                   ) {
-                    (t.y = i.y), this.placed(t);
+                    ((t.y = i.y), this.placed(t));
                     break;
                   }
                 }
@@ -2643,13 +2649,13 @@
                     i.y + i.height >= t.y + t.height &&
                     i.width >= t.width - 0.01
                   ) {
-                    (t.x = i.x), this.placed(t);
+                    ((t.x = i.x), this.placed(t));
                     break;
                   }
                 }
               }),
               (i.placeInSpace = function (t, e) {
-                (t.x = e.x), (t.y = e.y), this.placed(t);
+                ((t.x = e.x), (t.y = e.y), this.placed(t));
               }),
               (i.placed = function (t) {
                 for (var e = [], i = 0; i < this.spaces.length; i++) {
@@ -2657,13 +2663,13 @@
                     o = n.getMaximalFreeRects(t);
                   o ? e.push.apply(e, o) : e.push(n);
                 }
-                (this.spaces = e), this.mergeSortSpaces();
+                ((this.spaces = e), this.mergeSortSpaces());
               }),
               (i.mergeSortSpaces = function () {
-                e.mergeRects(this.spaces), this.spaces.sort(this.sorter);
+                (e.mergeRects(this.spaces), this.spaces.sort(this.sorter));
               }),
               (i.addSpace = function (t) {
-                this.spaces.push(t), this.mergeSortSpaces();
+                (this.spaces.push(t), this.mergeSortSpaces());
               }),
               (e.mergeRects = function (t) {
                 var e = 0,
@@ -2673,7 +2679,7 @@
                     if (o == i) n++;
                     else {
                       if (o.contains(i)) {
-                        t.splice(e, 1), (i = t[e]);
+                        (t.splice(e, 1), (i = t[e]));
                         continue t;
                       }
                       i.contains(o) ? t.splice(e + n, 1) : n++;
@@ -2683,7 +2689,7 @@
                   i = t[++e];
                 }
                 return t;
-              });
+              }));
             var n = {
               downwardLeftToRight: function (t, e) {
                 return t.y - e.y || t.x - e.x;
@@ -2710,7 +2716,7 @@
               o = (n.prototype = Object.create(t.Item.prototype)),
               s = o._create;
             o._create = function () {
-              s.call(this), (this.rect = new e());
+              (s.call(this), (this.rect = new e()));
             };
             var r = o.moveTo;
             return (
@@ -2726,24 +2732,24 @@
                   : void r.apply(this, arguments);
               }),
               (o.enablePlacing = function () {
-                this.removeTransitionStyles(),
+                (this.removeTransitionStyles(),
                   this.isTransitioning && i && (this.element.style[i] = "none"),
                   (this.isTransitioning = !1),
                   this.getSize(),
                   this.layout._setRectSize(this.element, this.rect),
-                  (this.isPlacing = !0);
+                  (this.isPlacing = !0));
               }),
               (o.disablePlacing = function () {
                 this.isPlacing = !1;
               }),
               (o.removeElem = function () {
-                this.element.parentNode.removeChild(this.element),
+                (this.element.parentNode.removeChild(this.element),
                   this.layout.packer.addSpace(this.rect),
-                  this.emitEvent("remove", [this]);
+                  this.emitEvent("remove", [this]));
               }),
               (o.showDropPlaceholder = function () {
                 var t = this.dropPlaceholder;
-                t ||
+                (t ||
                   (((t = this.dropPlaceholder =
                     document.createElement("div")).className =
                     "packery-drop-placeholder"),
@@ -2751,7 +2757,7 @@
                   (t.style.width = this.size.width + "px"),
                   (t.style.height = this.size.height + "px"),
                   this.positionDropPlaceholder(),
-                  this.layout.element.appendChild(t);
+                  this.layout.element.appendChild(t));
               }),
               (o.positionDropPlaceholder = function () {
                 this.dropPlaceholder.style[i] =
@@ -2786,14 +2792,14 @@
             var h = e.create("packery");
             h.Item = o;
             var l = h.prototype;
-            (l._create = function () {
-              e.prototype._create.call(this),
+            ((l._create = function () {
+              (e.prototype._create.call(this),
                 (this.packer = new n()),
                 (this.shiftPacker = new n()),
                 (this.isEnabled = !0),
-                (this.dragItemCount = 0);
+                (this.dragItemCount = 0));
               var t = this;
-              (this.handleDraggabilly = {
+              ((this.handleDraggabilly = {
                 dragStart: function () {
                   t.itemDragStart(this.element);
                 },
@@ -2823,11 +2829,11 @@
                   stop: function (e, i) {
                     i && t.itemDragEnd(e.currentTarget);
                   },
-                });
+                }));
             }),
               (l._resetLayout = function () {
                 var t, e, i;
-                this.getSize(),
+                (this.getSize(),
                   this._getMeasurements(),
                   this._getOption("horizontal")
                     ? ((t = 1 / 0),
@@ -2842,12 +2848,12 @@
                     i),
                   this.packer.reset(),
                   (this.maxY = 0),
-                  (this.maxX = 0);
+                  (this.maxX = 0));
               }),
               (l._getMeasurements = function () {
-                this._getMeasurement("columnWidth", "width"),
+                (this._getMeasurement("columnWidth", "width"),
                   this._getMeasurement("rowHeight", "height"),
-                  this._getMeasurement("gutter", "width");
+                  this._getMeasurement("gutter", "width"));
               }),
               (l._getItemLayoutPosition = function (t) {
                 if (
@@ -2857,27 +2863,27 @@
                   var e = this._getPackMethod();
                   this.packer[e](t.rect);
                 } else this.packer.pack(t.rect);
-                return this._setMaxXY(t.rect), t.rect;
+                return (this._setMaxXY(t.rect), t.rect);
               }),
               (l.shiftLayout = function () {
-                (this.isShifting = !0), this.layout(), delete this.isShifting;
+                ((this.isShifting = !0), this.layout(), delete this.isShifting);
               }),
               (l._getPackMethod = function () {
                 return this._getOption("horizontal") ? "rowPack" : "columnPack";
               }),
               (l._setMaxXY = function (t) {
-                (this.maxX = Math.max(t.x + t.width, this.maxX)),
-                  (this.maxY = Math.max(t.y + t.height, this.maxY));
+                ((this.maxX = Math.max(t.x + t.width, this.maxX)),
+                  (this.maxY = Math.max(t.y + t.height, this.maxY)));
               }),
               (l._setRectSize = function (e, i) {
                 var n = t(e),
                   o = n.outerWidth,
                   s = n.outerHeight;
-                (o || s) &&
+                ((o || s) &&
                   ((o = this._applyGridGutter(o, this.columnWidth)),
                   (s = this._applyGridGutter(s, this.rowHeight))),
                   (i.width = Math.min(o, this.packer.width)),
-                  (i.height = Math.min(s, this.packer.height));
+                  (i.height = Math.min(s, this.packer.height)));
               }),
               (l._applyGridGutter = function (t, e) {
                 if (!e) return t + this.gutter;
@@ -2900,9 +2906,9 @@
                     y: this._getOption("originTop") ? o.top : o.bottom,
                   });
                 }
-                this._setRectSize(t, e),
+                (this._setRectSize(t, e),
                   this.packer.placed(e),
-                  this._setMaxXY(e);
+                  this._setMaxXY(e));
               }),
               (l.sortItemsByPosition = function () {
                 var t = this._getOption("horizontal") ? r : s;
@@ -2930,7 +2936,7 @@
                 }
                 var i = this,
                   n = 0;
-                t.once("layout", e), this.once("layoutComplete", e);
+                (t.once("layout", e), this.once("layoutComplete", e));
               }),
               (l.resize = function () {
                 this.isResizeBound &&
@@ -2982,7 +2988,7 @@
                 }
               }),
               (l.updateShiftTargets = function (t) {
-                this.shiftPacker.reset(), this._getBoundingRect();
+                (this.shiftPacker.reset(), this._getBoundingRect());
                 var e = this._getOption("originLeft"),
                   n = this._getOption("originTop");
                 this.stamps.forEach(function (t) {
@@ -2993,13 +2999,13 @@
                         x: e ? s.left : s.right,
                         y: n ? s.top : s.bottom,
                       });
-                    this._setRectSize(t, r), this.shiftPacker.placed(r);
+                    (this._setRectSize(t, r), this.shiftPacker.placed(r));
                   }
                 }, this);
                 var o = this._getOption("horizontal"),
                   s = o ? "rowHeight" : "columnWidth",
                   r = o ? "height" : "width";
-                (this.shiftTargetKeys = []), (this.shiftTargets = []);
+                ((this.shiftTargetKeys = []), (this.shiftTargets = []));
                 var a,
                   h = this[s];
                 if ((h = h && h + this.gutter)) {
@@ -3008,15 +3014,15 @@
                   a = (c - l) * h;
                   for (var u = 0; c > u; u++) this._addShiftTarget(u * h, 0, a);
                 } else
-                  (a = this.shiftPacker[r] + this.gutter - t.rect[r]),
-                    this._addShiftTarget(0, 0, a);
+                  ((a = this.shiftPacker[r] + this.gutter - t.rect[r]),
+                    this._addShiftTarget(0, 0, a));
                 var d = this._getItemsForLayout(this.items),
                   f = this._getPackMethod();
                 d.forEach(function (t) {
                   var e = t.rect;
-                  this._setRectSize(t.element, e),
+                  (this._setRectSize(t.element, e),
                     this.shiftPacker[f](e),
-                    this._addShiftTarget(e.x, e.y, a);
+                    this._addShiftTarget(e.x, e.y, a));
                   var i = o ? e.x + e.width : e.x,
                     n = o ? e.y : e.y + e.height;
                   if ((this._addShiftTarget(i, n, a), h))
@@ -3040,21 +3046,21 @@
                 var n,
                   o = 1 / 0,
                   s = { x: e, y: i };
-                this.shiftTargets.forEach(function (t) {
+                (this.shiftTargets.forEach(function (t) {
                   var e = a(t, s);
                   o > e && ((n = t), (o = e));
                 }),
                   (t.rect.x = n.x),
-                  (t.rect.y = n.y);
-              });
+                  (t.rect.y = n.y));
+              }));
             var c = 120;
-            (l.itemDragMove = function (t, e, i) {
+            ((l.itemDragMove = function (t, e, i) {
               function n() {
-                s.shift(o, e, i), o.positionDropPlaceholder(), s.layout();
+                (s.shift(o, e, i), o.positionDropPlaceholder(), s.layout());
               }
               var o = this.isEnabled && this.getItem(t);
               if (o) {
-                (e -= this.size.paddingLeft), (i -= this.size.paddingTop);
+                ((e -= this.size.paddingLeft), (i -= this.size.paddingTop));
                 var s = this,
                   r = new Date();
                 this._itemDragTime && r - this._itemDragTime < c
@@ -3072,18 +3078,18 @@
                 }
                 var i = this.isEnabled && this.getItem(t);
                 if (i) {
-                  clearTimeout(this.dragTimeout),
-                    i.element.classList.add("is-positioning-post-drag");
+                  (clearTimeout(this.dragTimeout),
+                    i.element.classList.add("is-positioning-post-drag"));
                   var n = 0,
                     o = this;
-                  i.once("layout", e),
+                  (i.once("layout", e),
                     this.once("layoutComplete", e),
                     i.moveTo(i.rect.x, i.rect.y),
                     this.layout(),
                     (this.dragItemCount = Math.max(0, this.dragItemCount - 1)),
                     this.sortItemsByPosition(),
                     i.disablePlacing(),
-                    this.unstamp(i.element);
+                    this.unstamp(i.element));
                 }
               }),
               (l.bindDraggabillyEvents = function (t) {
@@ -3094,9 +3100,9 @@
               }),
               (l._bindDraggabillyEvents = function (t, e) {
                 var i = this.handleDraggabilly;
-                t[e]("dragStart", i.dragStart),
+                (t[e]("dragStart", i.dragStart),
                   t[e]("dragMove", i.dragMove),
-                  t[e]("dragEnd", i.dragEnd);
+                  t[e]("dragEnd", i.dragEnd));
               }),
               (l.bindUIDraggableEvents = function (t) {
                 this._bindUIDraggableEvents(t, "on");
@@ -3109,11 +3115,11 @@
                 t[e]("dragstart", i.start)
                   [e]("drag", i.drag)
                   [e]("dragstop", i.stop);
-              });
+              }));
             var u = l.destroy;
             return (
               (l.destroy = function () {
-                u.apply(this, arguments), (this.isEnabled = !1);
+                (u.apply(this, arguments), (this.isEnabled = !1));
               }),
               (h.Rect = i),
               (h.Packer = n),
@@ -3132,13 +3138,13 @@
             for (var s in e.prototype) o[s] || (n[s] = e.prototype[s]);
             var r = n._resetLayout;
             n._resetLayout = function () {
-              (this.packer = this.packer || new e.Packer()),
+              ((this.packer = this.packer || new e.Packer()),
                 (this.shiftPacker = this.shiftPacker || new e.Packer()),
-                r.apply(this, arguments);
+                r.apply(this, arguments));
             };
             var a = n._getItemLayoutPosition;
             n._getItemLayoutPosition = function (t) {
-              return (t.rect = t.rect || new e.Rect()), a.call(this, t);
+              return ((t.rect = t.rect || new e.Rect()), a.call(this, t));
             };
             var h = n.needsResizeLayout;
             n.needsResizeLayout = function () {
@@ -3159,7 +3165,7 @@
             );
           }),
           (at = "function" == typeof st ? st.apply(e, rt) : st) === undefined ||
-            (t.exports = at);
+            (t.exports = at));
       },
       209: function (t, e, i) {
         var n, o, s;
@@ -3185,7 +3191,7 @@
          * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
          */ !(function (r) {
           "use strict";
-          (o = [i(669)]),
+          ((o = [i(669)]),
             (n = function (t) {
               var e = [],
                 i = [],
@@ -3201,7 +3207,7 @@
                   );
                 throw new Error("Couldn't cast `" + t + "` to a date object.");
               }
-              i.push(/^[0-9]*$/.source),
+              (i.push(/^[0-9]*$/.source),
                 i.push(
                   /([0-9]{1,2}\/){2}[0-9]{4}( [0-9]{1,2}(:[0-9]{2}){2})?/
                     .source,
@@ -3210,7 +3216,7 @@
                   /[0-9]{4}([\/\-][0-9]{1,2}){2}( [0-9]{1,2}(:[0-9]{2}){2})?/
                     .source,
                 ),
-                (i = new RegExp(i.join("|")));
+                (i = new RegExp(i.join("|"))));
               var s = {
                 Y: "years",
                 m: "months",
@@ -3240,12 +3246,12 @@
                         c = a[1] || "",
                         u = a[3] || "",
                         d = null;
-                      (a = a[2]),
+                      ((a = a[2]),
                         s.hasOwnProperty(a) && ((d = s[a]), (d = Number(t[d]))),
                         null !== d &&
                           ("!" === c && (d = h(u, d)),
                           "" === c && d < 10 && (d = "0" + d.toString()),
-                          (e = e.replace(l, d.toString())));
+                          (e = e.replace(l, d.toString()))));
                     }
                   return (e = e.replace(/%%/, "%"));
                 };
@@ -3262,7 +3268,7 @@
                 );
               }
               var l = function (i, o, s) {
-                (this.el = i),
+                ((this.el = i),
                   (this.$el = t(i)),
                   (this.interval = null),
                   (this.offset = {}),
@@ -3278,21 +3284,21 @@
                         this.$el.on("finish.countdown", s))
                       : (this.options = t.extend({}, n, s))),
                   this.setFinalDate(o),
-                  !1 === this.options.defer && this.start();
+                  !1 === this.options.defer && this.start());
               };
-              t.extend(l.prototype, {
+              (t.extend(l.prototype, {
                 start: function () {
                   null !== this.interval && clearInterval(this.interval);
                   var t = this;
-                  this.update(),
+                  (this.update(),
                     (this.interval = setInterval(function () {
                       t.update.call(t);
-                    }, this.options.precision));
+                    }, this.options.precision)));
                 },
                 stop: function () {
-                  clearInterval(this.interval),
+                  (clearInterval(this.interval),
                     (this.interval = null),
-                    this.dispatchEvent("stoped");
+                    this.dispatchEvent("stoped"));
                 },
                 toggle: function () {
                   this.interval ? this.stop() : this.start();
@@ -3304,9 +3310,9 @@
                   this.start();
                 },
                 remove: function () {
-                  this.stop.call(this),
+                  (this.stop.call(this),
                     (e[this.instanceNumber] = null),
-                    delete this.$el.data().countdownInstance;
+                    delete this.$el.data().countdownInstance);
                 },
                 setFinalDate: function (t) {
                   this.finalDate = o(t);
@@ -3315,7 +3321,7 @@
                   if (0 !== this.$el.closest("html").length) {
                     var t,
                       e = new Date();
-                    (t = this.finalDate.getTime() - e.getTime()),
+                    ((t = this.finalDate.getTime() - e.getTime()),
                       (t = Math.ceil(t / 1e3)),
                       (t = !this.options.elapse && t < 0 ? 0 : Math.abs(t)),
                       this.totalSecsLeft === t || this.firstTick
@@ -3358,16 +3364,16 @@
                           }),
                           this.options.elapse || 0 !== this.totalSecsLeft
                             ? this.dispatchEvent("update")
-                            : (this.stop(), this.dispatchEvent("finish")));
+                            : (this.stop(), this.dispatchEvent("finish"))));
                   } else this.remove();
                 },
                 dispatchEvent: function (e) {
                   var i = t.Event(e + ".countdown");
-                  (i.finalDate = this.finalDate),
+                  ((i.finalDate = this.finalDate),
                     (i.elapsed = this.elapsed),
                     (i.offset = t.extend({}, this.offset)),
                     (i.strftime = a(this.offset)),
-                    this.$el.trigger(i);
+                    this.$el.trigger(i));
                 },
               }),
                 (t.fn.theFinalCountdown = function () {
@@ -3389,10 +3395,10 @@
                             );
                     } else new l(this, i[0], i[1]);
                   });
-                });
+                }));
             }),
             (s = "function" == typeof n ? n.apply(e, o) : n) === undefined ||
-              (t.exports = s);
+              (t.exports = s));
         })();
       },
       828: function (t, e, i) {
@@ -3423,53 +3429,55 @@
            * @version 2.1.7
            **/
         }
-        (n = [i(669)]),
+        ((n = [i(669)]),
           (o = function (t) {
             return (function (t) {
               var e = function (t, e) {
                   var i,
                     n = document.createElement("canvas");
-                  t.appendChild(n),
+                  (t.appendChild(n),
                     "object" ==
                       ("undefined" == typeof G_vmlCanvasManager
                         ? "undefined"
                         : s(G_vmlCanvasManager)) &&
-                      G_vmlCanvasManager.initElement(n);
+                      G_vmlCanvasManager.initElement(n));
                   var o = n.getContext("2d");
                   n.width = n.height = e.size;
                   var r = 1;
-                  window.devicePixelRatio > 1 &&
+                  (window.devicePixelRatio > 1 &&
                     ((r = window.devicePixelRatio),
                     (n.style.width = n.style.height = [e.size, "px"].join("")),
                     (n.width = n.height = e.size * r),
                     o.scale(r, r)),
                     o.translate(e.size / 2, e.size / 2),
-                    o.rotate((e.rotate / 180 - 0.5) * Math.PI);
+                    o.rotate((e.rotate / 180 - 0.5) * Math.PI));
                   var a = (e.size - e.lineWidth) / 2;
-                  e.scaleColor && e.scaleLength && (a -= e.scaleLength + 2),
+                  (e.scaleColor && e.scaleLength && (a -= e.scaleLength + 2),
                     (Date.now =
                       Date.now ||
                       function () {
                         return +new Date();
-                      });
+                      }));
                   var h = function (t, e, i) {
                       var n = 0 >= (i = Math.min(Math.max(-1, i || 0), 1));
-                      o.beginPath(),
+                      (o.beginPath(),
                         o.arc(0, 0, a, 0, 2 * Math.PI * i, n),
                         (o.strokeStyle = t),
                         (o.lineWidth = e),
-                        o.stroke();
+                        o.stroke());
                     },
                     l = function () {
                       var t, i;
-                      (o.lineWidth = 1), (o.fillStyle = e.scaleColor), o.save();
+                      ((o.lineWidth = 1),
+                        (o.fillStyle = e.scaleColor),
+                        o.save());
                       for (var n = 24; n > 0; --n)
-                        n % 6 == 0
+                        (n % 6 == 0
                           ? ((i = e.scaleLength), (t = 0))
                           : ((i = 0.6 * e.scaleLength),
                             (t = e.scaleLength - i)),
                           o.fillRect(-e.size / 2 + t, 0, i, 1),
-                          o.rotate(Math.PI / 12);
+                          o.rotate(Math.PI / 12));
                       o.restore();
                     },
                     c =
@@ -3480,11 +3488,11 @@
                         window.setTimeout(t, 1e3 / 60);
                       },
                     u = function () {
-                      e.scaleColor && l(),
+                      (e.scaleColor && l(),
                         e.trackColor &&
-                          h(e.trackColor, e.trackWidth || e.lineWidth, 1);
+                          h(e.trackColor, e.trackWidth || e.lineWidth, 1));
                     };
-                  (this.getCanvas = function () {
+                  ((this.getCanvas = function () {
                     return n;
                   }),
                     (this.getCtx = function () {
@@ -3495,7 +3503,7 @@
                     }),
                     (this.draw = function (t) {
                       var n;
-                      e.scaleColor || e.trackColor
+                      (e.scaleColor || e.trackColor
                         ? o.getImageData && o.putImageData
                           ? i
                             ? o.putImageData(i, 0, 0)
@@ -3513,7 +3521,7 @@
                           "function" == typeof e.barColor
                             ? e.barColor(t)
                             : e.barColor),
-                        h(n, e.lineWidth, t / 100);
+                        h(n, e.lineWidth, t / 100));
                     }.bind(this)),
                     (this.animate = function (t, i) {
                       var n = Date.now();
@@ -3521,12 +3529,12 @@
                       var o = function () {
                         var s = Math.min(Date.now() - n, e.animate.duration),
                           r = e.easing(this, s, t, i - t, e.animate.duration);
-                        this.draw(r),
+                        (this.draw(r),
                           e.onStep(t, i, r),
-                          s >= e.animate.duration ? e.onStop(t, i) : c(o);
+                          s >= e.animate.duration ? e.onStop(t, i) : c(o));
                       }.bind(this);
                       c(o);
-                    }.bind(this));
+                    }.bind(this)));
                 },
                 i = function (t, i) {
                   var n = {
@@ -3566,7 +3574,7 @@
                             i && "undefined" != typeof i[e] ? i[e] : n[e]),
                           "function" == typeof o[e] &&
                             (o[e] = o[e].bind(this)));
-                      "string" == typeof o.easing &&
+                      ("string" == typeof o.easing &&
                       "undefined" != typeof jQuery &&
                       jQuery.isFunction(jQuery.easing[o.easing])
                         ? (o.easing = jQuery.easing[o.easing])
@@ -3584,9 +3592,9 @@
                             t.getAttribute("data-percent") &&
                             this.update(
                               parseFloat(t.getAttribute("data-percent")),
-                            );
+                            ));
                     }.bind(this);
-                  (this.update = function (t) {
+                  ((this.update = function (t) {
                     return (
                       (t = parseFloat(t)),
                       o.animate.enabled
@@ -3597,12 +3605,12 @@
                     );
                   }.bind(this)),
                     (this.disableAnimation = function () {
-                      return (o.animate.enabled = !1), this;
+                      return ((o.animate.enabled = !1), this);
                     }),
                     (this.enableAnimation = function () {
-                      return (o.animate.enabled = !0), this;
+                      return ((o.animate.enabled = !0), this);
                     }),
-                    r();
+                    r());
                 };
               t.fn.easyPieChart = function (e) {
                 return this.each(function () {
@@ -3614,11 +3622,11 @@
               };
             })(t);
           }.apply(e, n)),
-          o === undefined || (t.exports = o);
+          o === undefined || (t.exports = o));
       },
       213: function (t, e) {
         var i, n, o;
-        (n = []),
+        ((n = []),
           (i = function () {
             var t = Object.assign || (window.jQuery && jQuery.extend),
               e = 8,
@@ -3639,10 +3647,12 @@
                 e = e || { bubbles: !1, cancelable: !1, detail: undefined };
                 var i = document.createEvent("CustomEvent");
                 return (
-                  i.initCustomEvent(t, e.bubbles, e.cancelable, e.detail), i
+                  i.initCustomEvent(t, e.bubbles, e.cancelable, e.detail),
+                  i
                 );
               }
-              (t.prototype = window.Event.prototype), (window.CustomEvent = t);
+              ((t.prototype = window.Event.prototype),
+                (window.CustomEvent = t));
             })();
             var n = { textarea: !0, input: !0, select: !0, button: !0 },
               o = {
@@ -3669,8 +3679,8 @@
                 i(t, n);
               }
               for (; h--; )
-                (a[(s = e[h])] || (a[s] = [])).push([i, l]),
-                  t.addEventListener(s, l);
+                ((a[(s = e[h])] || (a[s] = [])).push([i, l]),
+                  t.addEventListener(s, l));
             }
             function d(t, e, i, n) {
               e = e.split(r);
@@ -3688,7 +3698,7 @@
             }
             function f(e, i, n) {
               var o = l(i);
-              n && t(o, n), e.dispatchEvent(o);
+              (n && t(o, n), e.dispatchEvent(o));
             }
             function p(t) {
               var e = t,
@@ -3697,8 +3707,8 @@
               function s(t) {
                 n ? (e(), i(s), (o = !0), (n = !1)) : (o = !1);
               }
-              (this.kick = function (t) {
-                (n = !0), o || s();
+              ((this.kick = function (t) {
+                ((n = !0), o || s());
               }),
                 (this.end = function (t) {
                   var i = e;
@@ -3706,12 +3716,12 @@
                     (o
                       ? ((e = n
                           ? function () {
-                              i(), t();
+                              (i(), t());
                             }
                           : t),
                         (n = !0))
                       : t());
-                });
+                }));
             }
             function m() {}
             function g(t) {
@@ -3745,7 +3755,7 @@
               C();
             }
             function C() {
-              d(document, o.move, x), d(document, o.cancel, E);
+              (d(document, o.move, x), d(document, o.cancel, E));
             }
             function S(t) {
               if (!n[t.target.tagName.toLowerCase()]) {
@@ -3762,8 +3772,8 @@
                       T(t, e);
                     },
                   };
-                u(document, s.move, i.touchmove, i),
-                  u(document, s.cancel, i.touchend, i);
+                (u(document, s.move, i.touchmove, i),
+                  u(document, s.cancel, i.touchend, i));
               }
             }
             function I(t, e) {
@@ -3774,8 +3784,8 @@
               _(t.changedTouches, e.identifier) && k(e);
             }
             function k(t) {
-              d(document, s.move, t.touchmove),
-                d(document, s.cancel, t.touchend);
+              (d(document, s.move, t.touchmove),
+                d(document, s.cancel, t.touchend));
             }
             function z(t, i, n, o) {
               var s = n.pageX - i.pageX,
@@ -3803,30 +3813,30 @@
                   targetTouches: r,
                   finger: r ? r.length : 1,
                   enableMove: function () {
-                    (this.moveEnabled = !0),
+                    ((this.moveEnabled = !0),
                       (this.enableMove = m),
-                      t.preventDefault();
+                      t.preventDefault());
                   },
                 };
-              f(e.target, "movestart", h), s(e);
+              (f(e.target, "movestart", h), s(e));
             }
             function O(t, e) {
               var i = e.timer;
-              (e.touch = t), (e.timeStamp = t.timeStamp), i.kick();
+              ((e.touch = t), (e.timeStamp = t.timeStamp), i.kick());
             }
             function P(t, e) {
               var i = e.target,
                 n = e.event,
                 o = e.timer;
-              M(),
+              (M(),
                 F(i, n, o, function () {
                   setTimeout(function () {
                     d(i, "click", g);
                   }, 0);
-                });
+                }));
             }
             function M() {
-              d(document, o.move, O), d(document, o.end, P);
+              (d(document, o.move, O), d(document, o.end, P));
             }
             function W(t, e) {
               var i = e.event,
@@ -3846,23 +3856,23 @@
               _(t.changedTouches, n.identifier) && (R(e), F(i, n, o));
             }
             function R(t) {
-              d(document, s.move, t.activeTouchmove),
-                d(document, s.end, t.activeTouchend);
+              (d(document, s.move, t.activeTouchmove),
+                d(document, s.end, t.activeTouchend));
             }
             function A(t, e, i) {
               var n = i - t.timeStamp;
-              (t.distX = e.pageX - t.startX),
+              ((t.distX = e.pageX - t.startX),
                 (t.distY = e.pageY - t.startY),
                 (t.deltaX = e.pageX - t.pageX),
                 (t.deltaY = e.pageY - t.pageY),
                 (t.velocityX = 0.3 * t.velocityX + (0.7 * t.deltaX) / n),
                 (t.velocityY = 0.3 * t.velocityY + (0.7 * t.deltaY) / n),
                 (t.pageX = e.pageX),
-                (t.pageY = e.pageY);
+                (t.pageY = e.pageY));
             }
             function F(t, e, i, n) {
               i.end(function () {
-                return f(t, "moveend", e), n && n();
+                return (f(t, "moveend", e), n && n());
               });
             }
             function B(t) {
@@ -3903,7 +3913,7 @@
                     u(document, s.end, i.activeTouchend, i));
               }
               function n(t) {
-                A(e, i.touch, i.timeStamp), f(i.target, "move", e);
+                (A(e, i.touch, i.timeStamp), f(i.target, "move", e));
               }
             }
             if (
@@ -3916,33 +3926,33 @@
                 "startX startY pageX pageY distX distY deltaX deltaY velocityX velocityY".split(
                   " ",
                 );
-              (jQuery.event.special.movestart = {
+              ((jQuery.event.special.movestart = {
                 setup: function () {
-                  return u(this, "movestart", N), !1;
+                  return (u(this, "movestart", N), !1);
                 },
                 teardown: function () {
-                  return d(this, "movestart", N), !1;
+                  return (d(this, "movestart", N), !1);
                 },
                 add: X,
               }),
                 (jQuery.event.special.move = {
                   setup: function () {
-                    return u(this, "movestart", Y), !1;
+                    return (u(this, "movestart", Y), !1);
                   },
                   teardown: function () {
-                    return d(this, "movestart", Y), !1;
+                    return (d(this, "movestart", Y), !1);
                   },
                   add: X,
                 }),
                 (jQuery.event.special.moveend = {
                   setup: function () {
-                    return u(this, "movestart", H), !1;
+                    return (u(this, "movestart", H), !1);
                   },
                   teardown: function () {
-                    return d(this, "movestart", H), !1;
+                    return (d(this, "movestart", H), !1);
                   },
                   add: X,
-                });
+                }));
             }
             function N(t) {
               t.enableMove();
@@ -3963,11 +3973,11 @@
             }
           }),
           (o = "function" == typeof i ? i.apply(e, n) : i) === undefined ||
-            (t.exports = o);
+            (t.exports = o));
       },
       491: function (t, e, i) {
         var n, o, s;
-        (o = [i(669)]),
+        ((o = [i(669)]),
           (n = function (t) {
             var e,
               i,
@@ -4003,11 +4013,11 @@
                 );
               },
               C = function (i, n) {
-                e.ev.triggerHandler(p + i, n),
+                (e.ev.triggerHandler(p + i, n),
                   e.st.callbacks &&
                     ((i = i.charAt(0).toLowerCase() + i.slice(1)),
                     e.st.callbacks[i] &&
-                      e.st.callbacks[i].apply(e, t.isArray(n) ? n : [n]));
+                      e.st.callbacks[i].apply(e, t.isArray(n) ? n : [n])));
               },
               S = function (i) {
                 return (
@@ -4030,11 +4040,11 @@
                 for (; e.length; ) if (e.pop() + "Transition" in t) return !0;
                 return !1;
               };
-            (_.prototype = {
+            ((_.prototype = {
               constructor: _,
               init: function () {
                 var i = navigator.appVersion;
-                (e.isLowIE = e.isIE8 =
+                ((e.isLowIE = e.isIE8 =
                   document.all && !document.addEventListener),
                   (e.isAndroid = /android/gi.test(i)),
                   (e.isIOS = /iphone|ipad|ipod/gi.test(i)),
@@ -4046,12 +4056,12 @@
                       navigator.userAgent,
                     )),
                   (n = t(document)),
-                  (e.popupsCache = {});
+                  (e.popupsCache = {}));
               },
               open: function (i) {
                 var o;
                 if (!1 === i.isObj) {
-                  (e.items = i.items.toArray()), (e.index = 0);
+                  ((e.items = i.items.toArray()), (e.index = 0));
                   var r,
                     a = i.items;
                   for (o = 0; o < a.length; o++)
@@ -4060,10 +4070,10 @@
                       break;
                     }
                 } else
-                  (e.items = t.isArray(i.items) ? i.items : [i.items]),
-                    (e.index = i.index || 0);
+                  ((e.items = t.isArray(i.items) ? i.items : [i.items]),
+                    (e.index = i.index || 0));
                 if (!e.isOpen) {
-                  (e.types = []),
+                  ((e.types = []),
                     (s = ""),
                     i.mainEl && i.mainEl.length
                       ? (e.ev = i.mainEl.eq(0))
@@ -4098,14 +4108,14 @@
                         "preloader",
                         e.container,
                         e.st.tLoading,
-                      ));
+                      )));
                   var h = t.magnificPopup.modules;
                   for (o = 0; o < h.length; o++) {
                     var l = h[o];
-                    (l = l.charAt(0).toUpperCase() + l.slice(1)),
-                      e["init" + l].call(e);
+                    ((l = l.charAt(0).toUpperCase() + l.slice(1)),
+                      e["init" + l].call(e));
                   }
-                  C("BeforeOpen"),
+                  (C("BeforeOpen"),
                     e.st.showCloseBtn &&
                       (e.st.closeBtnInside
                         ? (x(u, function (t, e, i, n) {
@@ -4138,7 +4148,7 @@
                       e.updateSize();
                     }),
                     e.st.closeOnContentClick || (s += " mfp-auto-cursor"),
-                    s && e.wrap.addClass(s);
+                    s && e.wrap.addClass(s));
                   var c = (e.wH = b.height()),
                     f = {};
                   if (e.fixedContentPos && e._hasScrollBar(c)) {
@@ -4161,10 +4171,10 @@
                       .prependTo(e.st.prependTo || t(document.body)),
                     (e._lastFocusedEl = document.activeElement),
                     setTimeout(function () {
-                      e.content
+                      (e.content
                         ? (e._addClassToMFP(g), e._setFocus())
                         : e.bgOverlay.addClass(g),
-                        n.on("focusin" + m, e._onFocusIn);
+                        n.on("focusin" + m, e._onFocusIn));
                     }, 16),
                     (e.isOpen = !0),
                     e.updateSize(c),
@@ -4197,12 +4207,12 @@
                   e.fixedContentPos)
                 ) {
                   var o = { marginRight: "" };
-                  e.isIE7
+                  (e.isIE7
                     ? t("body, html").css("overflow", "")
                     : (o.overflow = ""),
-                    t("html").css(o);
+                    t("html").css(o));
                 }
-                n.off("keyup" + m + " focusin" + m),
+                (n.off("keyup" + m + " focusin" + m),
                   e.ev.off(m),
                   e.wrap.attr("class", "mfp-wrap").removeAttr("style"),
                   e.bgOverlay.attr("class", "mfp-bg"),
@@ -4219,22 +4229,22 @@
                   (e.content = null),
                   (e.currTemplate = null),
                   (e.prevHeight = 0),
-                  C(l);
+                  C(l));
               },
               updateSize: function (t) {
                 if (e.isIOS) {
                   var i =
                       document.documentElement.clientWidth / window.innerWidth,
                     n = window.innerHeight * i;
-                  e.wrap.css("height", n), (e.wH = n);
+                  (e.wrap.css("height", n), (e.wH = n));
                 } else e.wH = t || b.height();
-                e.fixedContentPos || e.wrap.css("height", e.wH), C("Resize");
+                (e.fixedContentPos || e.wrap.css("height", e.wH), C("Resize"));
               },
               updateItemHTML: function () {
                 var i = e.items[e.index];
-                e.contentContainer.detach(),
+                (e.contentContainer.detach(),
                   e.content && e.content.detach(),
-                  i.parsed || (i = e.parseEl(e.index));
+                  i.parsed || (i = e.parseEl(e.index)));
                 var n = i.type;
                 if (
                   (C("BeforeChange", [e.currItem ? e.currItem.type : "", n]),
@@ -4242,7 +4252,7 @@
                   !e.currTemplate[n])
                 ) {
                   var s = !!e.st[n] && e.st[n].markup;
-                  C("FirstMarkupParse", s), (e.currTemplate[n] = !s || t(s));
+                  (C("FirstMarkupParse", s), (e.currTemplate[n] = !s || t(s)));
                 }
                 o &&
                   o !== i.type &&
@@ -4251,15 +4261,15 @@
                   i,
                   e.currTemplate[n],
                 );
-                e.appendContent(r, n),
+                (e.appendContent(r, n),
                   (i.preloaded = !0),
                   C(f, i),
                   (o = i.type),
                   e.container.prepend(e.contentContainer),
-                  C("AfterChange");
+                  C("AfterChange"));
               },
               appendContent: function (t, i) {
-                (e.content = t),
+                ((e.content = t),
                   t
                     ? e.st.showCloseBtn &&
                       e.st.closeBtnInside &&
@@ -4270,7 +4280,7 @@
                     : (e.content = ""),
                   C(c),
                   e.container.addClass("mfp-" + i + "-holder"),
-                  e.contentContainer.append(e.content);
+                  e.contentContainer.append(e.content));
               },
               parseEl: function (i) {
                 var n,
@@ -4286,8 +4296,8 @@
                       n = s[r];
                       break;
                     }
-                  (o.src = o.el.attr("data-mfp-src")),
-                    o.src || (o.src = o.el.attr("href"));
+                  ((o.src = o.el.attr("data-mfp-src")),
+                    o.src || (o.src = o.el.attr("href")));
                 }
                 return (
                   (o.type = n || e.st.type || "inline"),
@@ -4300,17 +4310,17 @@
               },
               addGroup: function (t, i) {
                 var n = function (n) {
-                  (n.mfpEl = this), e._openClick(n, t, i);
+                  ((n.mfpEl = this), e._openClick(n, t, i));
                 };
                 i || (i = {});
                 var o = "click.magnificPopup";
-                (i.mainEl = t),
+                ((i.mainEl = t),
                   i.items
                     ? ((i.isObj = !0), t.off(o).on(o, n))
                     : ((i.isObj = !1),
                       i.delegate
                         ? t.off(o).on(o, i.delegate, n)
-                        : ((i.items = t), t.off(o).on(o, n)));
+                        : ((i.items = t), t.off(o).on(o, n))));
               },
               _openClick: function (i, n, o) {
                 if (
@@ -4333,19 +4343,19 @@
                     if (t.isFunction(s)) {
                       if (!s.call(e)) return !0;
                     } else if (b.width() < s) return !0;
-                  i.type &&
+                  (i.type &&
                     (i.preventDefault(), e.isOpen && i.stopPropagation()),
                     (o.el = t(i.mfpEl)),
                     o.delegate && (o.items = n.find(o.delegate)),
-                    e.open(o);
+                    e.open(o));
                 }
               },
               updateStatus: function (t, n) {
                 if (e.preloader) {
-                  i !== t && e.container.removeClass("mfp-s-" + i),
-                    n || "loading" !== t || (n = e.st.tLoading);
+                  (i !== t && e.container.removeClass("mfp-s-" + i),
+                    n || "loading" !== t || (n = e.st.tLoading));
                   var o = { status: t, text: n };
-                  C("UpdateStatus", o),
+                  (C("UpdateStatus", o),
                     (t = o.status),
                     (n = o.text),
                     e.preloader.html(n),
@@ -4353,7 +4363,7 @@
                       t.stopImmediatePropagation();
                     }),
                     e.container.addClass("mfp-s-" + t),
-                    (i = t);
+                    (i = t));
                 }
               },
               _checkIfClose: function (i) {
@@ -4374,10 +4384,10 @@
                 }
               },
               _addClassToMFP: function (t) {
-                e.bgOverlay.addClass(t), e.wrap.addClass(t);
+                (e.bgOverlay.addClass(t), e.wrap.addClass(t));
               },
               _removeClassFromMFP: function (t) {
-                this.bgOverlay.removeClass(t), e.wrap.removeClass(t);
+                (this.bgOverlay.removeClass(t), e.wrap.removeClass(t));
               },
               _hasScrollBar: function (t) {
                 return (
@@ -4398,7 +4408,7 @@
               },
               _parseMarkup: function (e, i, n) {
                 var o;
-                n.data && (i = t.extend(n.data, i)),
+                (n.data && (i = t.extend(n.data, i)),
                   C(u, [e, i, n]),
                   t.each(i, function (i, n) {
                     if (void 0 === n || !1 === n) return !0;
@@ -4419,16 +4429,16 @@
                             : s.attr(o[1], n);
                       }
                     } else e.find(m + "-" + i).html(n);
-                  });
+                  }));
               },
               _getScrollbarSize: function () {
                 if (void 0 === e.scrollbarSize) {
                   var t = document.createElement("div");
-                  (t.style.cssText =
+                  ((t.style.cssText =
                     "width: 99px; height: 99px; overflow: scroll; position: absolute; top: -9999px;"),
                     document.body.appendChild(t),
                     (e.scrollbarSize = t.offsetWidth - t.clientWidth),
-                    document.body.removeChild(t);
+                    document.body.removeChild(t));
                 }
                 return e.scrollbarSize;
               },
@@ -4451,9 +4461,9 @@
                   );
                 },
                 registerModule: function (e, i) {
-                  i.options && (t.magnificPopup.defaults[e] = i.options),
+                  (i.options && (t.magnificPopup.defaults[e] = i.options),
                     t.extend(this.proto, i.proto),
-                    this.modules.push(e);
+                    this.modules.push(e));
                 },
                 defaults: {
                   disableOn: 0,
@@ -4489,21 +4499,21 @@
                     var o,
                       s = w ? n.data("magnificPopup") : n[0].magnificPopup,
                       r = parseInt(arguments[1], 10) || 0;
-                    s.items
+                    (s.items
                       ? (o = s.items[r])
                       : ((o = n),
                         s.delegate && (o = o.find(s.delegate)),
                         (o = o.eq(r))),
-                      e._openClick({ mfpEl: o }, n, s);
+                      e._openClick({ mfpEl: o }, n, s));
                   } else
                     e.isOpen &&
                       e[i].apply(e, Array.prototype.slice.call(arguments, 1));
                 else
-                  (i = t.extend(!0, {}, i)),
+                  ((i = t.extend(!0, {}, i)),
                     w ? n.data("magnificPopup", i) : (n[0].magnificPopup = i),
-                    e.addGroup(n, i);
+                    e.addGroup(n, i));
                 return n;
-              });
+              }));
             var k,
               z,
               L,
@@ -4519,10 +4529,10 @@
               },
               proto: {
                 initInline: function () {
-                  e.types.push(O),
+                  (e.types.push(O),
                     x(a + "." + O, function () {
                       P();
-                    });
+                    }));
                 },
                 getInline: function (i, n) {
                   if ((P(), i.src)) {
@@ -4530,17 +4540,17 @@
                       s = t(i.src);
                     if (s.length) {
                       var r = s[0].parentNode;
-                      r &&
+                      (r &&
                         r.tagName &&
                         (z ||
                           ((k = o.hiddenClass), (z = E(k)), (k = "mfp-" + k)),
                         (L = s.after(z).detach().removeClass(k))),
-                        e.updateStatus("ready");
+                        e.updateStatus("ready"));
                     } else
-                      e.updateStatus("error", o.tNotFound), (s = t("<div>"));
-                    return (i.inlineElement = s), s;
+                      (e.updateStatus("error", o.tNotFound), (s = t("<div>")));
+                    return ((i.inlineElement = s), s);
                   }
-                  return e.updateStatus("ready"), e._parseMarkup(n, {}, i), n;
+                  return (e.updateStatus("ready"), e._parseMarkup(n, {}, i), n);
                 },
               },
             });
@@ -4550,7 +4560,7 @@
                 M && t(document.body).removeClass(M);
               },
               R = function () {
-                D(), e.req && e.req.abort();
+                (D(), e.req && e.req.abort());
               };
             t.magnificPopup.registerModule(W, {
               options: {
@@ -4560,19 +4570,20 @@
               },
               proto: {
                 initAjax: function () {
-                  e.types.push(W),
+                  (e.types.push(W),
                     (M = e.st.ajax.cursor),
                     x(a + "." + W, R),
-                    x("BeforeChange." + W, R);
+                    x("BeforeChange." + W, R));
                 },
                 getAjax: function (i) {
-                  M && t(document.body).addClass(M), e.updateStatus("loading");
+                  (M && t(document.body).addClass(M),
+                    e.updateStatus("loading"));
                   var n = t.extend(
                     {
                       url: i.src,
                       success: function (n, o, s) {
                         var r = { data: n, xhr: s };
-                        C("ParseAjax", r),
+                        (C("ParseAjax", r),
                           e.appendContent(t(r.data), W),
                           (i.finished = !0),
                           D(),
@@ -4581,20 +4592,20 @@
                             e.wrap.addClass(g);
                           }, 16),
                           e.updateStatus("ready"),
-                          C("AjaxContentAdded");
+                          C("AjaxContentAdded"));
                       },
                       error: function () {
-                        D(),
+                        (D(),
                           (i.finished = i.loadError = !0),
                           e.updateStatus(
                             "error",
                             e.st.ajax.tError.replace("%url%", i.src),
-                          );
+                          ));
                       },
                     },
                     e.st.ajax.settings,
                   );
-                  return (e.req = t.ajax(n)), "";
+                  return ((e.req = t.ajax(n)), "");
                 },
               },
             });
@@ -4621,28 +4632,28 @@
                 initImage: function () {
                   var i = e.st.image,
                     n = ".image";
-                  e.types.push("image"),
+                  (e.types.push("image"),
                     x(d + n, function () {
                       "image" === e.currItem.type &&
                         i.cursor &&
                         t(document.body).addClass(i.cursor);
                     }),
                     x(a + n, function () {
-                      i.cursor && t(document.body).removeClass(i.cursor),
-                        b.off("resize" + m);
+                      (i.cursor && t(document.body).removeClass(i.cursor),
+                        b.off("resize" + m));
                     }),
                     x("Resize" + n, e.resizeImage),
-                    e.isLowIE && x("AfterChange", e.resizeImage);
+                    e.isLowIE && x("AfterChange", e.resizeImage));
                 },
                 resizeImage: function () {
                   var t = e.currItem;
                   if (t && t.img && e.st.image.verticalFit) {
                     var i = 0;
-                    e.isLowIE &&
+                    (e.isLowIE &&
                       (i =
                         parseInt(t.img.css("padding-top"), 10) +
                         parseInt(t.img.css("padding-bottom"), 10)),
-                      t.img.css("max-height", e.wH - i);
+                      t.img.css("max-height", e.wH - i));
                   }
                 },
                 _onImageHasSize: function (t) {
@@ -4659,7 +4670,7 @@
                   var i = 0,
                     n = t.img[0],
                     o = function (s) {
-                      A && clearInterval(A),
+                      (A && clearInterval(A),
                         (A = setInterval(function () {
                           return n.naturalWidth > 0
                             ? void e._onImageHasSize(t)
@@ -4669,7 +4680,7 @@
                                 : 40 === i
                                   ? o(50)
                                   : 100 === i && o(500)));
-                        }, s));
+                        }, s)));
                     };
                   o(1);
                 },
@@ -4705,7 +4716,7 @@
                     h = n.find(".mfp-img");
                   if (h.length) {
                     var l = document.createElement("img");
-                    (l.className = "mfp-img"),
+                    ((l.className = "mfp-img"),
                       i.el &&
                         i.el.find("img").length &&
                         (l.alt = i.el.find("img").attr("alt")),
@@ -4716,7 +4727,7 @@
                       h.is("img") && (i.img = i.img.clone()),
                       (l = i.img[0]).naturalWidth > 0
                         ? (i.hasSize = !0)
-                        : l.width || (i.hasSize = !1);
+                        : l.width || (i.hasSize = !1));
                   }
                   return (
                     e._parseMarkup(
@@ -4803,7 +4814,7 @@
                       c = function () {
                         e.content.css("visibility", "visible");
                       };
-                    x("BuildControls" + n, function () {
+                    (x("BuildControls" + n, function () {
                       if (e._allowZoom()) {
                         if (
                           (clearTimeout(o),
@@ -4811,19 +4822,19 @@
                           !(t = e._getItemToZoom()))
                         )
                           return void c();
-                        (s = l(t)).css(e._getOffset()),
+                        ((s = l(t)).css(e._getOffset()),
                           e.wrap.append(s),
                           (o = setTimeout(function () {
-                            s.css(e._getOffset(!0)),
+                            (s.css(e._getOffset(!0)),
                               (o = setTimeout(function () {
-                                c(),
+                                (c(),
                                   setTimeout(function () {
-                                    s.remove(),
+                                    (s.remove(),
                                       (t = s = null),
-                                      C("ZoomAnimationEnded");
-                                  }, 16);
-                              }, r));
-                          }, 16));
+                                      C("ZoomAnimationEnded"));
+                                  }, 16));
+                              }, r)));
+                          }, 16)));
                       }
                     }),
                       x(h + n, function () {
@@ -4832,17 +4843,17 @@
                             if (!(t = e._getItemToZoom())) return;
                             s = l(t);
                           }
-                          s.css(e._getOffset(!0)),
+                          (s.css(e._getOffset(!0)),
                             e.wrap.append(s),
                             e.content.css("visibility", "hidden"),
                             setTimeout(function () {
                               s.css(e._getOffset());
-                            }, 16);
+                            }, 16));
                         }
                       }),
                       x(a + n, function () {
                         e._allowZoom() && (c(), s && s.remove(), (t = null));
-                      });
+                      }));
                   }
                 },
                 _allowZoom: function () {
@@ -4904,13 +4915,13 @@
               },
               proto: {
                 initIframe: function () {
-                  e.types.push(N),
+                  (e.types.push(N),
                     x("BeforeChange", function (t, e, i) {
                       e !== i && (e === N ? H() : i === N && H(!0));
                     }),
                     x(a + "." + N, function () {
                       H();
-                    });
+                    }));
                 },
                 getIframe: function (i, n) {
                   var o = i.src,
@@ -4967,7 +4978,7 @@
                     !(!i || !i.enabled) &&
                       ((s += " mfp-gallery"),
                       x(d + o, function () {
-                        i.navigateByImgClick &&
+                        (i.navigateByImgClick &&
                           e.wrap.on("click" + o, ".mfp-img", function () {
                             return e.items.length > 1 ? (e.next(), !1) : void 0;
                           }),
@@ -4975,7 +4986,7 @@
                             37 === t.keyCode
                               ? e.prev()
                               : 39 === t.keyCode && e.next();
-                          });
+                          }));
                       }),
                       x("UpdateStatus" + o, function (t, i) {
                         i.text &&
@@ -5002,42 +5013,43 @@
                                 .replace(/%title%/gi, i.tNext)
                                 .replace(/%dir%/gi, "right"),
                             ).addClass(y));
-                          o.click(function () {
+                          (o.click(function () {
                             e.prev();
                           }),
                             s.click(function () {
                               e.next();
                             }),
-                            e.container.append(o.add(s));
+                            e.container.append(o.add(s)));
                         }
                       }),
                       x(f + o, function () {
-                        e._preloadTimeout && clearTimeout(e._preloadTimeout),
+                        (e._preloadTimeout && clearTimeout(e._preloadTimeout),
                           (e._preloadTimeout = setTimeout(function () {
-                            e.preloadNearbyImages(), (e._preloadTimeout = null);
-                          }, 16));
+                            (e.preloadNearbyImages(),
+                              (e._preloadTimeout = null));
+                          }, 16)));
                       }),
                       void x(a + o, function () {
-                        n.off(o),
+                        (n.off(o),
                           e.wrap.off("click" + o),
-                          (e.arrowRight = e.arrowLeft = null);
+                          (e.arrowRight = e.arrowLeft = null));
                       }))
                   );
                 },
                 next: function () {
-                  (e.direction = !0),
+                  ((e.direction = !0),
                     (e.index = X(e.index + 1)),
-                    e.updateItemHTML();
+                    e.updateItemHTML());
                 },
                 prev: function () {
-                  (e.direction = !1),
+                  ((e.direction = !1),
                     (e.index = X(e.index - 1)),
-                    e.updateItemHTML();
+                    e.updateItemHTML());
                 },
                 goTo: function (t) {
-                  (e.direction = t >= e.index),
+                  ((e.direction = t >= e.index),
                     (e.index = t),
-                    e.updateItemHTML();
+                    e.updateItemHTML());
                 },
                 preloadNearbyImages: function () {
                   var t,
@@ -5052,7 +5064,7 @@
                 _preloadItem: function (i) {
                   if (((i = X(i)), !e.items[i].preloaded)) {
                     var n = e.items[i];
-                    n.parsed || (n = e.parseEl(i)),
+                    (n.parsed || (n = e.parseEl(i)),
                       C("LazyLoad", n),
                       "image" === n.type &&
                         (n.img = t('<img class="mfp-img" />')
@@ -5060,18 +5072,18 @@
                             n.hasSize = !0;
                           })
                           .on("error.mfploader", function () {
-                            (n.hasSize = !0),
+                            ((n.hasSize = !0),
                               (n.loadError = !0),
-                              C("LazyLoadError", n);
+                              C("LazyLoadError", n));
                           })
                           .attr("src", n.src)),
-                      (n.preloaded = !0);
+                      (n.preloaded = !0));
                   }
                 },
               },
             });
             var q = "retina";
-            t.magnificPopup.registerModule(q, {
+            (t.magnificPopup.registerModule(q, {
               options: {
                 replaceSrc: function (t) {
                   return t.src.replace(/\.\w+$/, function (t) {
@@ -5099,10 +5111,10 @@
                 },
               },
             }),
-              I();
+              I());
           }),
           (s = "function" == typeof n ? n.apply(e, o) : n) === undefined ||
-            (t.exports = s);
+            (t.exports = s));
       },
       846: function () {
         !(function (t) {
@@ -5137,7 +5149,7 @@
               ) {
                 n.append("<div class='twentytwenty-overlay'></div>");
                 var a = n.find(".twentytwenty-overlay");
-                a.append(
+                (a.append(
                   "<div class='twentytwenty-before-label' data-content='" +
                     e.before_label +
                     "'></div>",
@@ -5146,17 +5158,17 @@
                     "<div class='twentytwenty-after-label' data-content='" +
                       e.after_label +
                       "'></div>",
-                  );
+                  ));
               }
               var h = n.find("img:first"),
                 l = n.find("img:last");
               n.append("<div class='twentytwenty-handle'></div>");
               var c = n.find(".twentytwenty-handle");
-              c.append("<span class='twentytwenty-" + s + "-arrow'></span>"),
+              (c.append("<span class='twentytwenty-" + s + "-arrow'></span>"),
                 c.append("<span class='twentytwenty-" + r + "-arrow'></span>"),
                 n.addClass("twentytwenty-container"),
                 h.addClass("twentytwenty-before"),
-                l.addClass("twentytwenty-after");
+                l.addClass("twentytwenty-after"));
               var u = function (t) {
                   var e,
                     i,
@@ -5171,12 +5183,12 @@
                         cw: e * i + "px",
                         ch: e * s + "px",
                       });
-                  c.css(
+                  (c.css(
                     "vertical" === o ? "top" : "left",
                     "vertical" === o ? r.ch : r.cw,
                   ),
                     (function (t) {
-                      "vertical" === o
+                      ("vertical" === o
                         ? (h.css("clip", "rect(0," + t.w + "," + t.ch + ",0)"),
                           l.css(
                             "clip",
@@ -5187,8 +5199,8 @@
                             "clip",
                             "rect(0," + t.w + "," + t.h + "," + t.cw + ")",
                           )),
-                        n.css("height", t.h);
-                    })(r);
+                        n.css("height", t.h));
+                    })(r));
                 },
                 d = function (t, e) {
                   var i, n, s;
@@ -5207,7 +5219,7 @@
                 m = 0,
                 g = 0,
                 v = function (t) {
-                  ((((t.distX > t.distY && t.distX < -t.distY) ||
+                  (((((t.distX > t.distY && t.distX < -t.distY) ||
                     (t.distX < t.distY && t.distX > -t.distY)) &&
                     "vertical" !== o) ||
                     (((t.distX < t.distY && t.distX < -t.distY) ||
@@ -5218,7 +5230,7 @@
                     (f = n.offset().left),
                     (p = n.offset().top),
                     (m = h.width()),
-                    (g = h.height());
+                    (g = h.height()));
                 },
                 y = function (t) {
                   n.hasClass("active") && ((i = d(t.pageX, t.pageY)), u(i));
@@ -5227,7 +5239,7 @@
                   n.removeClass("active");
                 },
                 w = e.move_with_handle_only ? c : n;
-              w.on("movestart", v),
+              (w.on("movestart", v),
                 w.on("move", y),
                 w.on("moveend", _),
                 e.move_slider_on_hover &&
@@ -5242,14 +5254,14 @@
                 }),
                 e.click_to_move &&
                   n.on("click", function (t) {
-                    (f = n.offset().left),
+                    ((f = n.offset().left),
                       (p = n.offset().top),
                       (m = h.width()),
                       (g = h.height()),
                       (i = d(t.pageX, t.pageY)),
-                      u(i);
+                      u(i));
                   }),
-                t(window).trigger("resize.twentytwenty");
+                t(window).trigger("resize.twentytwenty"));
             });
           };
         })(jQuery);
@@ -5320,7 +5332,7 @@
            * by David DeSandro
            */
         }
-        (x = window),
+        ((x = window),
           (w = [i(669)]),
           (b = function (t) {
             return (function (t, e) {
@@ -5380,7 +5392,7 @@
                     : function (t) {
                         s.error(t);
                       };
-              return n(e || t.jQuery), i;
+              return (n(e || t.jQuery), i);
             })(x, t);
           }.apply(e, w)),
           b === undefined || (t.exports = b),
@@ -5393,21 +5405,21 @@
                 if (t && e) {
                   var i = (this._events = this._events || {}),
                     n = (i[t] = i[t] || []);
-                  return -1 == n.indexOf(e) && n.push(e), this;
+                  return (-1 == n.indexOf(e) && n.push(e), this);
                 }
               }),
               (e.once = function (t, e) {
                 if (t && e) {
                   this.on(t, e);
                   var i = (this._onceEvents = this._onceEvents || {});
-                  return ((i[t] = i[t] || {})[e] = !0), this;
+                  return (((i[t] = i[t] || {})[e] = !0), this);
                 }
               }),
               (e.off = function (t, e) {
                 var i = this._events && this._events[t];
                 if (i && i.length) {
                   var n = i.indexOf(e);
-                  return -1 != n && i.splice(n, 1), this;
+                  return (-1 != n && i.splice(n, 1), this);
                 }
               }),
               (e.emitEvent = function (t, e) {
@@ -5418,9 +5430,9 @@
                   e = e || [];
                   for (var s = this._onceEvents && this._onceEvents[t]; o; ) {
                     var r = s && s[o];
-                    r && (this.off(t, o), delete s[o]),
+                    (r && (this.off(t, o), delete s[o]),
                       o.apply(this, e),
-                      (o = i[(n += r ? 0 : 1)]);
+                      (o = i[(n += r ? 0 : 1)]));
                   }
                   return this;
                 }
@@ -5436,7 +5448,7 @@
             : (n = o),
           (function (t, e) {
             "use strict";
-            (r = function () {
+            ((r = function () {
               return (function () {
                 function t(t) {
                   var e = parseFloat(t);
@@ -5477,16 +5489,16 @@
                   if (!c) {
                     c = !0;
                     var e = document.createElement("div");
-                    (e.style.width = "200px"),
+                    ((e.style.width = "200px"),
                       (e.style.padding = "1px 2px 3px 4px"),
                       (e.style.borderStyle = "solid"),
                       (e.style.borderWidth = "1px 2px 3px 4px"),
-                      (e.style.boxSizing = "border-box");
+                      (e.style.boxSizing = "border-box"));
                     var i = document.body || document.documentElement;
                     i.appendChild(e);
                     var o = n(e);
-                    (s.isBoxSizeOuter = r = 200 == t(o.width)),
-                      i.removeChild(e);
+                    ((s.isBoxSizeOuter = r = 200 == t(o.width)),
+                      i.removeChild(e));
                   }
                 }
                 function s(e) {
@@ -5498,7 +5510,7 @@
                     var s = n(e);
                     if ("none" == s.display) return i();
                     var a = {};
-                    (a.width = e.offsetWidth), (a.height = e.offsetHeight);
+                    ((a.width = e.offsetWidth), (a.height = e.offsetHeight));
                     for (
                       var c = (a.isBorderBox = "border-box" == s.boxSizing),
                         u = 0;
@@ -5556,11 +5568,11 @@
                 return s;
               })();
             }.apply((a = {}), (w = []))),
-              r !== undefined || (r = a);
+              r !== undefined || (r = a));
           })(window),
           (function (t, e) {
             "use strict";
-            (l = function () {
+            ((l = function () {
               var t = (function () {
                 var t = Element.prototype;
                 if (t.matches) return "matches";
@@ -5587,10 +5599,10 @@
                   (h = l.call(c.exports, i, c.exports, c)),
                   (c.loaded = !0),
                   h === undefined && (h = c.exports))
-                : (h = l);
+                : (h = l));
           })(window),
           (function (t, e) {
-            (u = function (e) {
+            ((u = function (e) {
               return (function (t, e) {
                 var i = {
                   extend: function (t, e) {
@@ -5613,7 +5625,7 @@
                     -1 != i && t.splice(i, 1);
                   },
                 };
-                (i.getParent = function (t, i) {
+                ((i.getParent = function (t, i) {
                   for (; t != document.body; )
                     if (((t = t.parentNode), e(t, i))) return t;
                 }),
@@ -5652,7 +5664,7 @@
                       var e = arguments,
                         s = this;
                       this[o] = setTimeout(function () {
-                        n.apply(s, e), delete s[o];
+                        (n.apply(s, e), delete s[o]);
                       }, i || 100);
                     };
                   }),
@@ -5668,7 +5680,7 @@
                         return e + "-" + i;
                       })
                       .toLowerCase();
-                  });
+                  }));
                 var n = t.console;
                 return (
                   (i.htmlInit = function (e, o) {
@@ -5707,7 +5719,7 @@
                 );
               })(t, e);
             }.apply((d = {}), (w = [h]))),
-              u !== undefined || (u = d);
+              u !== undefined || (u = d));
           })(window),
           window,
           (f = [n, r]),
@@ -5750,10 +5762,10 @@
                 transitionDelay: r + "Delay",
               },
               c = (n.prototype = Object.create(t.prototype));
-            (c.constructor = n),
+            ((c.constructor = n),
               (c._create = function () {
-                (this._transn = { ingProperties: {}, clean: {}, onEnd: {} }),
-                  this.css({ position: "absolute" });
+                ((this._transn = { ingProperties: {}, clean: {}, onEnd: {} }),
+                  this.css({ position: "absolute" }));
               }),
               (c.handleEvent = function (t) {
                 var e = "on" + t.type;
@@ -5781,12 +5793,12 @@
                     -1 != o.indexOf("%")
                       ? (parseFloat(o) / 100) * s.height
                       : parseInt(o, 10);
-                (r = isNaN(r) ? 0 : r),
+                ((r = isNaN(r) ? 0 : r),
                   (a = isNaN(a) ? 0 : a),
                   (r -= e ? s.paddingLeft : s.paddingRight),
                   (a -= i ? s.paddingTop : s.paddingBottom),
                   (this.position.x = r),
-                  (this.position.y = a);
+                  (this.position.y = a));
               }),
               (c.layoutPosition = function () {
                 var t = this.layout.size,
@@ -5797,15 +5809,15 @@
                   s = i ? "left" : "right",
                   r = i ? "right" : "left",
                   a = this.position.x + t[o];
-                (e[s] = this.getXValue(a)), (e[r] = "");
+                ((e[s] = this.getXValue(a)), (e[r] = ""));
                 var h = n ? "paddingTop" : "paddingBottom",
                   l = n ? "top" : "bottom",
                   c = n ? "bottom" : "top",
                   u = this.position.y + t[h];
-                (e[l] = this.getYValue(u)),
+                ((e[l] = this.getYValue(u)),
                   (e[c] = ""),
                   this.css(e),
-                  this.emitEvent("layout", [this]);
+                  this.emitEvent("layout", [this]));
               }),
               (c.getXValue = function (t) {
                 var e = this.layout._getOption("horizontal");
@@ -5830,12 +5842,12 @@
                   var a = t - i,
                     h = e - n,
                     l = {};
-                  (l.transform = this.getTranslate(a, h)),
+                  ((l.transform = this.getTranslate(a, h)),
                     this.transition({
                       to: l,
                       onTransitionEnd: { transform: this.layoutPosition },
                       isCleaning: !0,
-                    });
+                    }));
                 } else this.layoutPosition();
               }),
               (c.getTranslate = function (t, e) {
@@ -5848,12 +5860,12 @@
                 );
               }),
               (c.goTo = function (t, e) {
-                this.setPosition(t, e), this.layoutPosition();
+                (this.setPosition(t, e), this.layoutPosition());
               }),
               (c.moveTo = c._transitionTo),
               (c.setPosition = function (t, e) {
-                (this.position.x = parseInt(t, 10)),
-                  (this.position.y = parseInt(e, 10));
+                ((this.position.x = parseInt(t, 10)),
+                  (this.position.y = parseInt(e, 10)));
               }),
               (c._nonTransition = function (t) {
                 for (var e in (this.css(t.to),
@@ -5867,25 +5879,25 @@
                   for (var i in t.onTransitionEnd)
                     e.onEnd[i] = t.onTransitionEnd[i];
                   for (i in t.to)
-                    (e.ingProperties[i] = !0),
-                      t.isCleaning && (e.clean[i] = !0);
-                  t.from && (this.css(t.from), this.element.offsetHeight),
+                    ((e.ingProperties[i] = !0),
+                      t.isCleaning && (e.clean[i] = !0));
+                  (t.from && (this.css(t.from), this.element.offsetHeight),
                     this.enableTransition(t.to),
                     this.css(t.to),
-                    (this.isTransitioning = !0);
+                    (this.isTransitioning = !0));
                 } else this._nonTransition(t);
-              });
+              }));
             var u = "opacity," + o(a);
-            (c.enableTransition = function () {
+            ((c.enableTransition = function () {
               if (!this.isTransitioning) {
                 var t = this.layout.options.transitionDuration;
-                (t = "number" == typeof t ? t + "ms" : t),
+                ((t = "number" == typeof t ? t + "ms" : t),
                   this.css({
                     transitionProperty: u,
                     transitionDuration: t,
                     transitionDelay: this.staggerDelay || 0,
                   }),
-                  this.element.addEventListener(h, this, !1);
+                  this.element.addEventListener(h, this, !1));
               }
             }),
               (c.onwebkitTransitionEnd = function (t) {
@@ -5893,31 +5905,31 @@
               }),
               (c.onotransitionend = function (t) {
                 this.ontransitionend(t);
-              });
+              }));
             var d = { "-webkit-transform": "transform" };
-            (c.ontransitionend = function (t) {
+            ((c.ontransitionend = function (t) {
               if (t.target === this.element) {
                 var e = this._transn,
                   n = d[t.propertyName] || t.propertyName;
-                delete e.ingProperties[n],
+                (delete e.ingProperties[n],
                   i(e.ingProperties) && this.disableTransition(),
                   n in e.clean &&
                     ((this.element.style[t.propertyName] = ""),
                     delete e.clean[n]),
                   n in e.onEnd && (e.onEnd[n].call(this), delete e.onEnd[n]),
-                  this.emitEvent("transitionEnd", [this]);
+                  this.emitEvent("transitionEnd", [this]));
               }
             }),
               (c.disableTransition = function () {
-                this.removeTransitionStyles(),
+                (this.removeTransitionStyles(),
                   this.element.removeEventListener(h, this, !1),
-                  (this.isTransitioning = !1);
+                  (this.isTransitioning = !1));
               }),
               (c._removeStyles = function (t) {
                 var e = {};
                 for (var i in t) e[i] = "";
                 this.css(e);
-              });
+              }));
             var f = {
               transitionProperty: "",
               transitionDuration: "",
@@ -5928,12 +5940,12 @@
                 this.css(f);
               }),
               (c.stagger = function (t) {
-                (t = isNaN(t) ? 0 : t), (this.staggerDelay = t + "ms");
+                ((t = isNaN(t) ? 0 : t), (this.staggerDelay = t + "ms"));
               }),
               (c.removeElem = function () {
-                this.element.parentNode.removeChild(this.element),
+                (this.element.parentNode.removeChild(this.element),
                   this.css({ display: "" }),
-                  this.emitEvent("remove", [this]);
+                  this.emitEvent("remove", [this]));
               }),
               (c.remove = function () {
                 return r && parseFloat(this.layout.options.transitionDuration)
@@ -5944,17 +5956,17 @@
                   : void this.removeElem();
               }),
               (c.reveal = function () {
-                delete this.isHidden, this.css({ display: "" });
+                (delete this.isHidden, this.css({ display: "" }));
                 var t = this.layout.options,
                   e = {};
-                (e[this.getHideRevealTransitionEndProperty("visibleStyle")] =
+                ((e[this.getHideRevealTransitionEndProperty("visibleStyle")] =
                   this.onRevealTransitionEnd),
                   this.transition({
                     from: t.hiddenStyle,
                     to: t.visibleStyle,
                     isCleaning: !0,
                     onTransitionEnd: e,
-                  });
+                  }));
               }),
               (c.onRevealTransitionEnd = function () {
                 this.isHidden || this.emitEvent("reveal");
@@ -5965,17 +5977,17 @@
                 for (var i in e) return i;
               }),
               (c.hide = function () {
-                (this.isHidden = !0), this.css({ display: "" });
+                ((this.isHidden = !0), this.css({ display: "" }));
                 var t = this.layout.options,
                   e = {};
-                (e[this.getHideRevealTransitionEndProperty("hiddenStyle")] =
+                ((e[this.getHideRevealTransitionEndProperty("hiddenStyle")] =
                   this.onHideTransitionEnd),
                   this.transition({
                     from: t.visibleStyle,
                     to: t.hiddenStyle,
                     isCleaning: !0,
                     onTransitionEnd: e,
-                  });
+                  }));
               }),
               (c.onHideTransitionEnd = function () {
                 this.isHidden &&
@@ -6000,20 +6012,20 @@
             : (g = p),
           (function (t, e) {
             "use strict";
-            (v = function (e, i, n, o) {
+            ((v = function (e, i, n, o) {
               return (function (t, e, i, n, o) {
                 function s(t, e) {
                   var i = n.getQueryElement(t);
                   if (i) {
-                    (this.element = i),
+                    ((this.element = i),
                       l && (this.$element = l(this.element)),
                       (this.options = n.extend({}, this.constructor.defaults)),
-                      this.option(e);
+                      this.option(e));
                     var o = ++u;
-                    (this.element.outlayerGUID = o),
+                    ((this.element.outlayerGUID = o),
                       (d[o] = this),
                       this._create(),
-                      this._getOption("initLayout") && this.layout();
+                      this._getOption("initLayout") && this.layout());
                   } else
                     h &&
                       h.error(
@@ -6045,7 +6057,7 @@
                   c = function () {},
                   u = 0,
                   d = {};
-                (s.namespace = "outlayer"),
+                ((s.namespace = "outlayer"),
                   (s.Item = o),
                   (s.defaults = {
                     containerStyle: { position: "relative" },
@@ -6057,9 +6069,9 @@
                     transitionDuration: "0.4s",
                     hiddenStyle: { opacity: 0, transform: "scale(0.001)" },
                     visibleStyle: { opacity: 1, transform: "scale(1)" },
-                  });
+                  }));
                 var f = s.prototype;
-                n.extend(f, e.prototype),
+                (n.extend(f, e.prototype),
                   (f.option = function (t) {
                     n.extend(this.options, t);
                   }),
@@ -6079,11 +6091,11 @@
                     resizeContainer: "isResizingContainer",
                   }),
                   (f._create = function () {
-                    this.reloadItems(),
+                    (this.reloadItems(),
                       (this.stamps = []),
                       this.stamp(this.options.stamp),
                       n.extend(this.element.style, this.options.containerStyle),
-                      this._getOption("resize") && this.bindResize();
+                      this._getOption("resize") && this.bindResize());
                   }),
                   (f.reloadItems = function () {
                     this.items = this._itemize(this.element.children);
@@ -6111,11 +6123,11 @@
                     });
                   }),
                   (f.layout = function () {
-                    this._resetLayout(), this._manageStamps();
+                    (this._resetLayout(), this._manageStamps());
                     var t = this._getOption("layoutInstant"),
                       e = void 0 !== t ? t : !this._isLayoutInited;
-                    this.layoutItems(this.items, e),
-                      (this._isLayoutInited = !0);
+                    (this.layoutItems(this.items, e),
+                      (this._isLayoutInited = !0));
                   }),
                   (f._init = f.layout),
                   (f._resetLayout = function () {
@@ -6135,9 +6147,9 @@
                       : (this[t] = 0);
                   }),
                   (f.layoutItems = function (t, e) {
-                    (t = this._getItemsForLayout(t)),
+                    ((t = this._getItemsForLayout(t)),
                       this._layoutItems(t, e),
-                      this._postLayout();
+                      this._postLayout());
                   }),
                   (f._getItemsForLayout = function (t) {
                     return t.filter(function (t) {
@@ -6149,23 +6161,23 @@
                       (this._emitCompleteOnItems("layout", t), t && t.length)
                     ) {
                       var i = [];
-                      t.forEach(function (t) {
+                      (t.forEach(function (t) {
                         var n = this._getItemLayoutPosition(t);
-                        (n.item = t),
+                        ((n.item = t),
                           (n.isInstant = e || t.isLayoutInstant),
-                          i.push(n);
+                          i.push(n));
                       }, this),
-                        this._processLayoutQueue(i);
+                        this._processLayoutQueue(i));
                     }
                   }),
                   (f._getItemLayoutPosition = function () {
                     return { x: 0, y: 0 };
                   }),
                   (f._processLayoutQueue = function (t) {
-                    this.updateStagger(),
+                    (this.updateStagger(),
                       t.forEach(function (t, e) {
                         this._positionItem(t.item, t.x, t.y, t.isInstant, e);
-                      }, this);
+                      }, this));
                   }),
                   (f.updateStagger = function () {
                     var t = this.options.stagger;
@@ -6193,7 +6205,7 @@
                   (f._setContainerMeasure = function (t, e) {
                     if (void 0 !== t) {
                       var i = this.size;
-                      i.isBorderBox &&
+                      (i.isBorderBox &&
                         (t += e
                           ? i.paddingLeft +
                             i.paddingRight +
@@ -6204,7 +6216,8 @@
                             i.borderTopWidth +
                             i.borderBottomWidth),
                         (t = Math.max(t, 0)),
-                        (this.element.style[e ? "width" : "height"] = t + "px");
+                        (this.element.style[e ? "width" : "height"] =
+                          t + "px"));
                     }
                   }),
                   (f._emitCompleteOnItems = function (t, e) {
@@ -6230,7 +6243,7 @@
                         ((this.$element = this.$element || l(this.element)), e)
                       ) {
                         var o = l.Event(e);
-                        (o.type = t), this.$element.trigger(o, i);
+                        ((o.type = t), this.$element.trigger(o, i));
                       } else this.$element.trigger(t, i);
                   }),
                   (f.ignore = function (t) {
@@ -6249,7 +6262,7 @@
                   (f.unstamp = function (t) {
                     (t = this._find(t)) &&
                       t.forEach(function (t) {
-                        n.removeFrom(this.stamps, t), this.unignore(t);
+                        (n.removeFrom(this.stamps, t), this.unignore(t));
                       }, this);
                   }),
                   (f._find = function (t) {
@@ -6290,12 +6303,12 @@
                   }),
                   (f.handleEvent = n.handleEvent),
                   (f.bindResize = function () {
-                    t.addEventListener("resize", this),
-                      (this.isResizeBound = !0);
+                    (t.addEventListener("resize", this),
+                      (this.isResizeBound = !0));
                   }),
                   (f.unbindResize = function () {
-                    t.removeEventListener("resize", this),
-                      (this.isResizeBound = !1);
+                    (t.removeEventListener("resize", this),
+                      (this.isResizeBound = !1));
                   }),
                   (f.onresize = function () {
                     this.resize();
@@ -6314,7 +6327,7 @@
                   }),
                   (f.addItems = function (t) {
                     var e = this._itemize(t);
-                    return e.length && (this.items = this.items.concat(e)), e;
+                    return (e.length && (this.items = this.items.concat(e)), e);
                   }),
                   (f.appended = function (t) {
                     var e = this.addItems(t);
@@ -6324,12 +6337,12 @@
                     var e = this._itemize(t);
                     if (e.length) {
                       var i = this.items.slice(0);
-                      (this.items = e.concat(i)),
+                      ((this.items = e.concat(i)),
                         this._resetLayout(),
                         this._manageStamps(),
                         this.layoutItems(e, !0),
                         this.reveal(e),
-                        this.layoutItems(i);
+                        this.layoutItems(i));
                     }
                   }),
                   (f.reveal = function (t) {
@@ -6338,7 +6351,7 @@
                     ) {
                       var e = this.updateStagger();
                       t.forEach(function (t, i) {
-                        t.stagger(i * e), t.reveal();
+                        (t.stagger(i * e), t.reveal());
                       });
                     }
                   }),
@@ -6346,7 +6359,7 @@
                     if ((this._emitCompleteOnItems("hide", t), t && t.length)) {
                       var e = this.updateStagger();
                       t.forEach(function (t, i) {
-                        t.stagger(i * e), t.hide();
+                        (t.stagger(i * e), t.hide());
                       });
                     }
                   }),
@@ -6377,27 +6390,27 @@
                   }),
                   (f.remove = function (t) {
                     var e = this.getItems(t);
-                    this._emitCompleteOnItems("remove", e),
+                    (this._emitCompleteOnItems("remove", e),
                       e &&
                         e.length &&
                         e.forEach(function (t) {
-                          t.remove(), n.removeFrom(this.items, t);
-                        }, this);
+                          (t.remove(), n.removeFrom(this.items, t));
+                        }, this));
                   }),
                   (f.destroy = function () {
                     var t = this.element.style;
-                    (t.height = ""),
+                    ((t.height = ""),
                       (t.position = ""),
                       (t.width = ""),
                       this.items.forEach(function (t) {
                         t.destroy();
                       }),
-                      this.unbindResize();
+                      this.unbindResize());
                     var e = this.element.outlayerGUID;
-                    delete d[e],
+                    (delete d[e],
                       delete this.element.outlayerGUID,
                       l &&
-                        l.removeData(this.element, this.constructor.namespace);
+                        l.removeData(this.element, this.constructor.namespace));
                   }),
                   (s.data = function (t) {
                     var e = (t = n.getQueryElement(t)) && t.outlayerGUID;
@@ -6416,12 +6429,12 @@
                       l && l.bridget && l.bridget(t, i),
                       i
                     );
-                  });
+                  }));
                 var p = { ms: 1, s: 1e3 };
-                return (s.Item = o), s;
+                return ((s.Item = o), s);
               })(t, e, i, n, o);
             }.apply((y = {}), (w = [n, r, u, g]))),
-              v !== undefined || (v = y);
+              v !== undefined || (v = y));
           })(window),
           window,
           (w = [v, r]),
@@ -6430,11 +6443,11 @@
             return (
               (i.compatOptions.fitWidth = "isFitWidth"),
               (i.prototype._resetLayout = function () {
-                this.getSize(),
+                (this.getSize(),
                   this._getMeasurement("columnWidth", "outerWidth"),
                   this._getMeasurement("gutter", "outerWidth"),
                   this.measureColumns(),
-                  (this.colYs = []);
+                  (this.colYs = []));
                 for (var t = 0; t < this.cols; t++) this.colYs.push(0);
                 this.maxY = 0;
               }),
@@ -6449,8 +6462,8 @@
                   o = this.containerWidth + this.gutter,
                   s = o / n,
                   r = n - (o % n);
-                (s = Math[r && 1 > r ? "round" : "floor"](s)),
-                  (this.cols = Math.max(s, 1));
+                ((s = Math[r && 1 > r ? "round" : "floor"](s)),
+                  (this.cols = Math.max(s, 1)));
               }),
               (i.prototype.getContainerWidth = function () {
                 var t = this._getOption("fitWidth")
@@ -6496,8 +6509,8 @@
                   r = Math.floor(o / this.columnWidth);
                 r = Math.max(0, r);
                 var a = Math.floor(s / this.columnWidth);
-                (a -= s % this.columnWidth ? 0 : 1),
-                  (a = Math.min(this.cols - 1, a));
+                ((a -= s % this.columnWidth ? 0 : 1),
+                  (a = Math.min(this.cols - 1, a)));
                 for (
                   var h =
                       (this._getOption("originTop") ? n.top : n.bottom) +
@@ -6524,13 +6537,13 @@
               }),
               (i.prototype.needsResizeLayout = function () {
                 var t = this.containerWidth;
-                return this.getContainerWidth(), t != this.containerWidth;
+                return (this.getContainerWidth(), t != this.containerWidth);
               }),
               i
             );
           }),
           (b = "function" == typeof _ ? _.apply(e, w) : _) === undefined ||
-            (t.exports = b);
+            (t.exports = b));
       },
       827: function () {
         !(function (t) {
@@ -6540,7 +6553,7 @@
             function i(e, i, n) {
               t(document).on(e, i, n);
             }
-            (e = t(".elementskit-menu-container")),
+            ((e = t(".elementskit-menu-container")),
               t(e).each(function () {
                 var e = t(this);
                 "yes" != e.attr("ekit-dom-added") &&
@@ -6572,12 +6585,12 @@
                     .find(
                       ">.elementskit-dropdown, >.elementskit-megamenu-panel",
                     );
-                  o
+                  (o
                     .find(".elementskit-dropdown-open")
                     .removeClass("elementskit-dropdown-open"),
                     o.hasClass("elementskit-dropdown-open")
                       ? o.removeClass("elementskit-dropdown-open")
-                      : o.addClass("elementskit-dropdown-open");
+                      : o.addClass("elementskit-dropdown-open"));
                 }
               }),
               i("click", ".elementskit-menu-toggler", function (e) {
@@ -6609,7 +6622,7 @@
                       .find(".elementskit-menu-close")
                       .trigger("click");
                 }
-              });
+              }));
           });
         })(jQuery);
       },
@@ -6641,8 +6654,8 @@
               var i = t(this),
                 o = "";
               if (i.data("animated")) return !0;
-              i.data("animated", !0),
-                (o = n.text ? n.text.split("") : i.text().split(""));
+              (i.data("animated", !0),
+                (o = n.text ? n.text.split("") : i.text().split("")));
               for (var s = [], r = [], a = 0; a < o.length; a++) {
                 var h = o[a];
                 " " != h
@@ -6654,19 +6667,20 @@
                     r.push(a))
                   : (s[a] = "space");
               }
-              i.html(""),
+              (i.html(""),
                 (function l(t) {
                   var a,
                     h = r.length,
                     c = o.slice(0);
-                  if (t > h) return i.data("animated", !1), void n.callback(i);
+                  if (t > h)
+                    return (i.data("animated", !1), void n.callback(i));
                   for (a = Math.max(t, 0); a < h; a++)
                     a < t + n.step ? (c[r[a]] = e(s[r[a]])) : (c[r[a]] = "");
-                  i.text(c.join("")),
+                  (i.text(c.join("")),
                     setTimeout(function () {
                       l(t + 1);
-                    }, 1e3 / n.fps);
-                })(-n.step);
+                    }, 1e3 / n.fps));
+                })(-n.step));
             });
           };
         })(jQuery);
@@ -6693,7 +6707,7 @@
           );
         }
         "function" == typeof Symbol && r(Symbol.iterator);
-        (o = [i(669)]),
+        ((o = [i(669)]),
           (n = function (t) {
             return (
               (t.fn.tilt = function (e) {
@@ -6704,14 +6718,14 @@
                   },
                   n = function () {
                     var e = this;
-                    t(this).on("mousemove", a),
+                    (t(this).on("mousemove", a),
                       t(this).on("mouseenter", s),
                       this.settings.reset && t(this).on("mouseleave", h),
-                      this.settings.glare && t(window).on("resize", d.bind(e));
+                      this.settings.glare && t(window).on("resize", d.bind(e)));
                   },
                   o = function () {
                     var e = this;
-                    void 0 !== this.timeout && clearTimeout(this.timeout),
+                    (void 0 !== this.timeout && clearTimeout(this.timeout),
                       t(this).css({
                         transition:
                           this.settings.speed + "ms " + this.settings.easing,
@@ -6725,16 +6739,16 @@
                             this.settings.easing,
                         }),
                       (this.timeout = setTimeout(function () {
-                        t(e).css({ transition: "" }),
+                        (t(e).css({ transition: "" }),
                           e.settings.glare &&
-                            e.glareElement.css({ transition: "" });
-                      }, this.settings.speed));
+                            e.glareElement.css({ transition: "" }));
+                      }, this.settings.speed)));
                   },
                   s = function (e) {
-                    (this.ticking = !1),
+                    ((this.ticking = !1),
                       t(this).css({ "will-change": "transform" }),
                       o.call(this),
-                      t(this).trigger("tilt.mouseEnter");
+                      t(this).trigger("tilt.mouseEnter"));
                   },
                   r = function (e) {
                     return (
@@ -6749,13 +6763,13 @@
                     );
                   },
                   a = function (t) {
-                    (this.mousePositions = r(t)), i.call(this);
+                    ((this.mousePositions = r(t)), i.call(this));
                   },
                   h = function () {
-                    o.call(this),
+                    (o.call(this),
                       (this.reset = !0),
                       i.call(this),
-                      t(this).trigger("tilt.mouseLeave");
+                      t(this).trigger("tilt.mouseLeave"));
                   },
                   l = function () {
                     var e = t(this).outerWidth(),
@@ -6864,7 +6878,7 @@
                         width: "100%",
                         height: "100%",
                       };
-                      this.glareElementWrapper
+                      (this.glareElementWrapper
                         .css(i)
                         .css({ overflow: "hidden", "pointer-events": "none" }),
                         this.glareElement.css({
@@ -6878,7 +6892,7 @@
                           transform: "rotate(180deg) translate(-50%, -50%)",
                           "transform-origin": "0% 0%",
                           opacity: "0",
-                        });
+                        }));
                     }
                   },
                   d = function () {
@@ -6890,17 +6904,17 @@
                 return (
                   (t.fn.tilt.destroy = function () {
                     t(this).each(function () {
-                      t(this).find(".js-tilt-glare").remove(),
+                      (t(this).find(".js-tilt-glare").remove(),
                         t(this).css({ "will-change": "", transform: "" }),
-                        t(this).off("mousemove mouseenter mouseleave");
+                        t(this).off("mousemove mouseenter mouseleave"));
                     });
                   }),
                   (t.fn.tilt.getValues = function () {
                     var e = [];
                     return (
                       t(this).each(function () {
-                        (this.mousePositions = r.call(this)),
-                          e.push(l.call(this));
+                        ((this.mousePositions = r.call(this)),
+                          e.push(l.call(this)));
                       }),
                       e
                     );
@@ -6908,17 +6922,17 @@
                   (t.fn.tilt.reset = function () {
                     t(this).each(function () {
                       var e = this;
-                      (this.mousePositions = r.call(this)),
+                      ((this.mousePositions = r.call(this)),
                         (this.settings = t(this).data("settings")),
                         h.call(this),
                         setTimeout(function () {
                           e.reset = !1;
-                        }, this.settings.transition);
+                        }, this.settings.transition));
                     });
                   }),
                   this.each(function () {
                     var i = this;
-                    (this.settings = t.extend(
+                    ((this.settings = t.extend(
                       {
                         maxTilt: t(this).is("[data-tilt-max]")
                           ? t(this).data("tilt-max")
@@ -6962,11 +6976,11 @@
                         ),
                         (this.settings.disableAxis = this.settings.axis)),
                       (this.init = function () {
-                        t(i).data("settings", i.settings),
+                        (t(i).data("settings", i.settings),
                           i.settings.glare && u.call(i),
-                          n.call(i);
+                          n.call(i));
                       }),
-                      this.init();
+                      this.init());
                   })
                 );
               }),
@@ -6975,7 +6989,7 @@
             );
           }),
           (s = "function" == typeof n ? n.apply(e, o) : n) === undefined ||
-            (t.exports = s);
+            (t.exports = s));
       },
       244: function (t, e, i) {
         var n, o, s, r;
@@ -6997,19 +7011,19 @@
             a(t)
           );
         }
-        (r = function (t, e, i) {
+        ((r = function (t, e, i) {
           "use strict";
           function n(t, e) {
             for (var i = 0; i < e.length; i++) {
               var n = e[i];
-              (n.enumerable = n.enumerable || !1),
+              ((n.enumerable = n.enumerable || !1),
                 (n.configurable = !0),
                 "value" in n && (n.writable = !0),
-                Object.defineProperty(t, n.key, n);
+                Object.defineProperty(t, n.key, n));
             }
           }
           function o(t, e, i) {
-            return e && n(t.prototype, e), i && n(t, i), t;
+            return (e && n(t.prototype, e), i && n(t, i), t);
           }
           function s() {
             return (s =
@@ -7023,8 +7037,8 @@
                 return t;
               }).apply(this, arguments);
           }
-          (e = e && e.hasOwnProperty("default") ? e["default"] : e),
-            (i = i && i.hasOwnProperty("default") ? i["default"] : i);
+          ((e = e && e.hasOwnProperty("default") ? e["default"] : e),
+            (i = i && i.hasOwnProperty("default") ? i["default"] : i));
           var r = (function (t) {
               var e = !1,
                 i = {
@@ -7037,13 +7051,13 @@
                   },
                   getSelectorFromElement: function (e) {
                     var i = e.getAttribute("data-target");
-                    (i && "#" !== i) || (i = e.getAttribute("href") || ""),
+                    ((i && "#" !== i) || (i = e.getAttribute("href") || ""),
                       "#" === i.charAt(0) &&
                         (i = (function (e) {
                           return "function" == typeof t.escapeSelector
                             ? t.escapeSelector(e).substr(1)
                             : e.replace(/(:|\.|\[|\]|,|=|@)/g, "\\$1");
-                        })(i));
+                        })(i)));
                     try {
                       return t(document).find(i).length > 0 ? i : null;
                     } catch (t) {
@@ -7139,7 +7153,7 @@
                 b = '[data-ekit-toggle="collapse"]',
                 x = (function () {
                   function n(e, i) {
-                    (this._isTransitioning = !1),
+                    ((this._isTransitioning = !1),
                       (this._element = e),
                       (this._config = this._getConfig(i)),
                       (this._triggerArray = t.makeArray(
@@ -7150,7 +7164,7 @@
                             e.id +
                             '"]',
                         ),
-                      ));
+                      )));
                     for (var n = t(b), o = 0; o < n.length; o++) {
                       var s = n[o],
                         a = r.getSelectorFromElement(s);
@@ -7158,7 +7172,7 @@
                         t(a).filter(e).length > 0 &&
                         ((this._selector = a), this._triggerArray.push(s));
                     }
-                    (this._parent = this._config.parent
+                    ((this._parent = this._config.parent
                       ? this._getParent()
                       : null),
                       this._config.parent ||
@@ -7166,7 +7180,7 @@
                           this._element,
                           this._triggerArray,
                         ),
-                      this._config.toggle && this.toggle();
+                      this._config.toggle && this.toggle());
                   }
                   var p = n.prototype;
                   return (
@@ -7209,30 +7223,30 @@
                             ),
                             o || t(e).data(i, null));
                           var h = this._getDimension();
-                          t(this._element).removeClass(g).addClass(v),
+                          (t(this._element).removeClass(g).addClass(v),
                             (this._element.style[h] = 0),
                             this._triggerArray.length > 0 &&
                               t(this._triggerArray)
                                 .removeClass(y)
                                 .attr("aria-expanded", !0),
-                            this.setTransitioning(!0);
+                            this.setTransitioning(!0));
                           var l = function () {
-                            t(s._element)
+                            (t(s._element)
                               .removeClass(v)
                               .addClass(g)
                               .addClass(m),
                               (s._element.style[h] = ""),
                               s.setTransitioning(!1),
-                              t(s._element).trigger(u);
+                              t(s._element).trigger(u));
                           };
                           if (r.supportsTransitionEnd()) {
                             var d =
                               "scroll" + (h[0].toUpperCase() + h.slice(1));
-                            t(this._element)
+                            (t(this._element)
                               .one(r.TRANSITION_END, l)
                               .emulateTransitionEnd(600),
                               (this._element.style[h] =
-                                this._element[d] + "px");
+                                this._element[d] + "px"));
                           } else l();
                         }
                       }
@@ -7271,18 +7285,18 @@
                             }
                           this.setTransitioning(!0);
                           var h = function () {
-                            e.setTransitioning(!1),
+                            (e.setTransitioning(!1),
                               t(e._element)
                                 .removeClass(v)
                                 .addClass(g)
-                                .trigger(f);
+                                .trigger(f));
                           };
-                          (this._element.style[n] = ""),
+                          ((this._element.style[n] = ""),
                             r.supportsTransitionEnd()
                               ? t(this._element)
                                   .one(r.TRANSITION_END, h)
                                   .emulateTransitionEnd(600)
-                              : h();
+                              : h());
                         }
                       }
                     }),
@@ -7290,12 +7304,12 @@
                       this._isTransitioning = t;
                     }),
                     (p.dispose = function () {
-                      t.removeData(this._element, i),
+                      (t.removeData(this._element, i),
                         (this._config = null),
                         (this._parent = null),
                         (this._element = null),
                         (this._triggerArray = null),
-                        (this._isTransitioning = null);
+                        (this._isTransitioning = null));
                     }),
                     (p._getConfig = function (t) {
                       return (
@@ -7392,7 +7406,7 @@
                 (t.fn[e] = x._jQueryInterface),
                 (t.fn[e].Constructor = x),
                 (t.fn[e].noConflict = function () {
-                  return (t.fn[e] = n), x._jQueryInterface;
+                  return ((t.fn[e] = n), x._jQueryInterface);
                 }),
                 x
               );
@@ -7440,19 +7454,20 @@
                           t(this._element).trigger(g),
                           !g.isDefaultPrevented() && !m.isDefaultPrevented())
                         ) {
-                          f && (o = t(f)[0]), this._activate(this._element, c);
+                          (f && (o = t(f)[0]),
+                            this._activate(this._element, c));
                           var v = function () {
                             var i = t.Event(n, { relatedTarget: e._element }),
                               o = t.Event(a, { relatedTarget: h });
-                            t(h).trigger(i), t(e._element).trigger(o);
+                            (t(h).trigger(i), t(e._element).trigger(o));
                           };
                           o ? this._activate(o, o.parentNode, v) : v();
                         }
                       }
                     }),
                     (h.dispose = function () {
-                      t.removeData(this._element, "bs.tab"),
-                        (this._element = null);
+                      (t.removeData(this._element, "bs.tab"),
+                        (this._element = null));
                     }),
                     (h._activate = function (e, i, n) {
                       var o = this,
@@ -7479,9 +7494,9 @@
                         var o = t(i.parentNode).find(
                           "> .dropdown-menu .active",
                         )[0];
-                        o && t(o).removeClass(l),
+                        (o && t(o).removeClass(l),
                           "tab" === i.getAttribute("role") &&
-                            i.setAttribute("aria-selected", !1);
+                            i.setAttribute("aria-selected", !1));
                       }
                       if (
                         (t(e).addClass(l),
@@ -7493,8 +7508,8 @@
                           t(e.parentNode).hasClass("dropdown-menu"))
                       ) {
                         var s = t(e).closest(".dropdown")[0];
-                        s && t(s).find(".dropdown-toggle").addClass(l),
-                          e.setAttribute("aria-expanded", !0);
+                        (s && t(s).find(".dropdown-toggle").addClass(l),
+                          e.setAttribute("aria-expanded", !0));
                       }
                       n && n();
                     }),
@@ -7528,19 +7543,19 @@
                   h,
                   '[data-ekit-toggle="tab"], [data-ekit-toggle="pill"], [data-ekit-toggle="list"]',
                   function (e) {
-                    e.preventDefault(),
-                      f._jQueryInterface.call(t(this), "show");
+                    (e.preventDefault(),
+                      f._jQueryInterface.call(t(this), "show"));
                   },
                 ),
                 (t.fn.tab = f._jQueryInterface),
                 (t.fn.tab.Constructor = f),
                 (t.fn.tab.noConflict = function () {
-                  return (t.fn.tab = e), f._jQueryInterface;
+                  return ((t.fn.tab = e), f._jQueryInterface);
                 }),
                 f
               );
             })(e);
-          !(function (t) {
+          (!(function (t) {
             if (void 0 === t)
               throw new TypeError(
                 "Ekit Prefixed Bootstrap's JavaScript requires jQuery. jQuery must be included before Ekit Prefixed Bootstrap's JavaScript.",
@@ -7558,13 +7573,13 @@
             (t.Util = r),
             (t.Collapse = h),
             (t.Tab = l),
-            Object.defineProperty(t, "__esModule", { value: !0 });
+            Object.defineProperty(t, "__esModule", { value: !0 }));
         }),
           "object" == a(e)
             ? r(e, i(669))
             : ((o = [e, i(669)]),
               (s = "function" == typeof (n = r) ? n.apply(e, o) : n) ===
-                undefined || (t.exports = s));
+                undefined || (t.exports = s)));
       },
       669: function (t) {
         "use strict";
@@ -7576,9 +7591,9 @@
     var o = e[n];
     if (o !== undefined) return o.exports;
     var s = (e[n] = { exports: {} });
-    return t[n].call(s.exports, s, s.exports, i), s.exports;
+    return (t[n].call(s.exports, s, s.exports, i), s.exports);
   }
-  (i.n = function (t) {
+  ((i.n = function (t) {
     var e =
       t && t.__esModule
         ? function () {
@@ -7587,7 +7602,7 @@
         : function () {
             return t;
           };
-    return i.d(e, { a: e }), e;
+    return (i.d(e, { a: e }), e);
   }),
     (i.d = function (t, e) {
       for (var n in e)
@@ -7600,7 +7615,7 @@
     }),
     (function () {
       "use strict";
-      i(6),
+      (i(6),
         i(683),
         i(209),
         i(828),
@@ -7614,6 +7629,6 @@
         i(33),
         i(244),
         i(160),
-        i(444);
-    })();
+        i(444));
+    })());
 })();
