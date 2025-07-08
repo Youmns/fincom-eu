@@ -132,8 +132,8 @@
           } catch (e) {}
         }
         function p(e, t, n) {
-          e.clearRect(0, 0, e.canvas.width, e.canvas.height),
-            e.fillText(t, 0, 0);
+          (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+            e.fillText(t, 0, 0));
           var t = new Uint32Array(
               e.getImageData(0, 0, e.canvas.width, e.canvas.height).data,
             ),
@@ -192,7 +192,7 @@
         }
         function t(e) {
           var t = i.createElement("script");
-          (t.src = e), (t.defer = !0), i.head.appendChild(t);
+          ((t.src = e), (t.defer = !0), i.head.appendChild(t));
         }
         "undefined" != typeof Promise &&
           ((o = "wpEmojiSettingsSupports"),
@@ -237,7 +237,7 @@
                       name: "wpTestEmojiSupports",
                     });
                   return void (a.onmessage = function (e) {
-                    c((n = e.data)), a.terminate(), t(n);
+                    (c((n = e.data)), a.terminate(), t(n));
                   });
                 } catch (e) {}
               c((n = f(s, u, p)));
@@ -246,18 +246,18 @@
           })
             .then(function (e) {
               for (var t in e)
-                (n.supports[t] = e[t]),
+                ((n.supports[t] = e[t]),
                   (n.supports.everything =
                     n.supports.everything && n.supports[t]),
                   "flag" !== t &&
                     (n.supports.everythingExceptFlag =
-                      n.supports.everythingExceptFlag && n.supports[t]);
-              (n.supports.everythingExceptFlag =
+                      n.supports.everythingExceptFlag && n.supports[t]));
+              ((n.supports.everythingExceptFlag =
                 n.supports.everythingExceptFlag && !n.supports.flag),
                 (n.DOMReady = !1),
                 (n.readyCallback = function () {
                   n.DOMReady = !0;
-                });
+                }));
             })
             .then(function () {
               return e;
@@ -808,19 +808,15 @@
               <div
                 class="elementor-element elementor-element-4596fa4 e-flex e-con-boxed e-con e-parent"
                 data-element_type="container"
-                
               >
                 <div class="e-con-inner">
-
                   <div
                     class="elementor-element elementor-element-38dbf87 e-con-full e-flex e-con e-child"
                     data-element_type="container"
-                    
                   >
                     <div
                       class="elementor-element elementor-element-dfbe391 elementor-align-left elementor-widget__width-auto animated-fast elementor-invisible elementor-widget elementor-widget-elementskit-button"
                       data-element_type="widget"
-                      
                       data-widget_type="elementskit-button.default"
                     >
                       <div class="elementor-widget-container">
@@ -840,7 +836,6 @@
                     <div
                       class="elementor-element elementor-element-8f6b264 elementor-align-left elementor-widget__width-auto animated-fast elementor-invisible elementor-widget elementor-widget-elementskit-button"
                       data-element_type="widget"
-                      
                       data-widget_type="elementskit-button.default"
                     >
                       <div class="elementor-widget-container">
@@ -860,7 +855,6 @@
                     <div
                       class="elementor-element elementor-element-892b6e3 elementor-align-left elementor-widget__width-auto animated-fast elementor-invisible elementor-widget elementor-widget-elementskit-button"
                       data-element_type="widget"
-                      
                       data-widget_type="elementskit-button.default"
                     >
                       <div class="elementor-widget-container">
@@ -883,24 +877,20 @@
               <div
                 class="elementor-element elementor-element-4e456b3b e-flex e-con-boxed e-con e-parent"
                 data-element_type="container"
-                
               >
                 <div class="e-con-inner">
                   <div
                     class="elementor-element elementor-element-68e0879c e-flex e-con-boxed e-con e-child"
                     data-element_type="container"
-                    
                   >
                     <div class="e-con-inner">
                       <div
                         class="elementor-element elementor-element-7974dc91 e-con-full e-flex e-con e-child"
                         data-element_type="container"
-                        
                       >
                         <div
                           class="elementor-element elementor-element-468a93b4 elementor-widget elementor-widget-kd_site_logo"
                           data-element_type="widget"
-                          
                           data-widget_type="kd_site_logo.default"
                         >
                           <div class="elementor-widget-container">
@@ -930,12 +920,10 @@
                       <div
                         class="elementor-element elementor-element-df1de6 e-con-full e-flex e-con e-child"
                         data-element_type="container"
-                        
                       >
                         <div
                           class="elementor-element elementor-element-47323288 elementor-widget elementor-widget-ekit-nav-menu"
                           data-element_type="widget"
-                          
                           data-widget_type="ekit-nav-menu.default"
                         >
                           <div class="elementor-widget-container">
@@ -1364,7 +1352,6 @@
                         <div
                           class="elementor-element elementor-element-c911108 elementor-widget elementor-widget-elementskit-header-search"
                           data-element_type="widget"
-                          
                           data-widget_type="elementskit-header-search.default"
                         >
                           <button id="language-btn" class="language-btn">
@@ -1449,13 +1436,11 @@
             <div
               class="elementor-element elementor-element-ed88e15 e-flex e-con-boxed e-con e-parent"
               data-element_type="container"
-              
             >
               <div class="e-con-inner">
                 <div
                   class="elementor-element elementor-element-48518ae elementor-widget elementor-widget-heading"
                   data-element_type="widget"
-                  
                   data-widget_type="heading.default"
                 >
                   <div class="elementor-widget-container">
@@ -1468,7 +1453,6 @@
                 <div
                   class="elementor-element elementor-element-f22126a elementor-widget elementor-widget-elementskit-breadcrumb"
                   data-element_type="widget"
-                  
                   data-widget_type="elementskit-breadcrumb.default"
                 >
                   <div class="elementor-widget-container">
@@ -1493,13 +1477,11 @@
             <div
               class="elementor-element elementor-element-97c8491 e-flex e-con-boxed e-con e-parent"
               data-element_type="container"
-              
             >
               <div class="e-con-inner">
                 <div
                   class="elementor-element elementor-element-8353682 elementor-grid-3 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid"
                   data-element_type="widget"
-                  
                   data-widget_type="loop-grid.post"
                 >
                   <div class="elementor-widget-container">
@@ -1678,13 +1660,11 @@
                         <div
                           class="elementor-element elementor-element-1184282 e-flex e-con-boxed e-con e-parent"
                           data-element_type="container"
-                          
                         >
                           <div class="e-con-inner">
                             <div
                               class="elementor-element elementor-element-f8fa296 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-title.default"
                             >
                               <div class="elementor-widget-container">
@@ -1702,7 +1682,6 @@
                             <div
                               class="elementor-element elementor-element-f0b8e54 elementor-widget elementor-widget-post-info"
                               data-element_type="widget"
-                              
                               data-widget_type="post-info.default"
                             >
                               <div class="elementor-widget-container">
@@ -1733,7 +1712,6 @@
                             <div
                               class="elementor-element elementor-element-79edf94 elementor-widget elementor-widget-theme-post-excerpt"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-excerpt.default"
                             >
                               <div class="elementor-widget-container">
@@ -1748,7 +1726,6 @@
                             <div
                               class="elementor-element elementor-element-d63b66b elementor-widget elementor-widget-button"
                               data-element_type="widget"
-                              
                               data-widget_type="button.default"
                             >
                               <div class="elementor-widget-container">
@@ -1781,13 +1758,11 @@
                         <div
                           class="elementor-element elementor-element-1184282 e-flex e-con-boxed e-con e-parent"
                           data-element_type="container"
-                          
                         >
                           <div class="e-con-inner">
                             <div
                               class="elementor-element elementor-element-f8fa296 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-title.default"
                             >
                               <div class="elementor-widget-container">
@@ -1805,7 +1780,6 @@
                             <div
                               class="elementor-element elementor-element-f0b8e54 elementor-widget elementor-widget-post-info"
                               data-element_type="widget"
-                              
                               data-widget_type="post-info.default"
                             >
                               <div class="elementor-widget-container">
@@ -1836,7 +1810,6 @@
                             <div
                               class="elementor-element elementor-element-79edf94 elementor-widget elementor-widget-theme-post-excerpt"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-excerpt.default"
                             >
                               <div class="elementor-widget-container">
@@ -1851,7 +1824,6 @@
                             <div
                               class="elementor-element elementor-element-d63b66b elementor-widget elementor-widget-button"
                               data-element_type="widget"
-                              
                               data-widget_type="button.default"
                             >
                               <div class="elementor-widget-container">
@@ -1884,13 +1856,11 @@
                         <div
                           class="elementor-element elementor-element-1184282 e-flex e-con-boxed e-con e-parent"
                           data-element_type="container"
-                          
                         >
                           <div class="e-con-inner">
                             <div
                               class="elementor-element elementor-element-f8fa296 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-title.default"
                             >
                               <div class="elementor-widget-container">
@@ -1909,7 +1879,6 @@
                             <div
                               class="elementor-element elementor-element-f0b8e54 elementor-widget elementor-widget-post-info"
                               data-element_type="widget"
-                              
                               data-widget_type="post-info.default"
                             >
                               <div class="elementor-widget-container">
@@ -1940,7 +1909,6 @@
                             <div
                               class="elementor-element elementor-element-79edf94 elementor-widget elementor-widget-theme-post-excerpt"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-excerpt.default"
                             >
                               <div class="elementor-widget-container">
@@ -1954,7 +1922,6 @@
                             <div
                               class="elementor-element elementor-element-d63b66b elementor-widget elementor-widget-button"
                               data-element_type="widget"
-                              
                               data-widget_type="button.default"
                             >
                               <div class="elementor-widget-container">
@@ -1987,13 +1954,11 @@
                         <div
                           class="elementor-element elementor-element-1184282 e-flex e-con-boxed e-con e-parent"
                           data-element_type="container"
-                          
                         >
                           <div class="e-con-inner">
                             <div
                               class="elementor-element elementor-element-f8fa296 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-title.default"
                             >
                               <div class="elementor-widget-container">
@@ -2011,7 +1976,6 @@
                             <div
                               class="elementor-element elementor-element-f0b8e54 elementor-widget elementor-widget-post-info"
                               data-element_type="widget"
-                              
                               data-widget_type="post-info.default"
                             >
                               <div class="elementor-widget-container">
@@ -2042,7 +2006,6 @@
                             <div
                               class="elementor-element elementor-element-79edf94 elementor-widget elementor-widget-theme-post-excerpt"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-excerpt.default"
                             >
                               <div class="elementor-widget-container">
@@ -2057,7 +2020,6 @@
                             <div
                               class="elementor-element elementor-element-d63b66b elementor-widget elementor-widget-button"
                               data-element_type="widget"
-                              
                               data-widget_type="button.default"
                             >
                               <div class="elementor-widget-container">
@@ -2090,13 +2052,11 @@
                         <div
                           class="elementor-element elementor-element-1184282 e-flex e-con-boxed e-con e-parent"
                           data-element_type="container"
-                          
                         >
                           <div class="e-con-inner">
                             <div
                               class="elementor-element elementor-element-f8fa296 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-title.default"
                             >
                               <div class="elementor-widget-container">
@@ -2114,7 +2074,6 @@
                             <div
                               class="elementor-element elementor-element-f0b8e54 elementor-widget elementor-widget-post-info"
                               data-element_type="widget"
-                              
                               data-widget_type="post-info.default"
                             >
                               <div class="elementor-widget-container">
@@ -2145,7 +2104,6 @@
                             <div
                               class="elementor-element elementor-element-79edf94 elementor-widget elementor-widget-theme-post-excerpt"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-excerpt.default"
                             >
                               <div class="elementor-widget-container">
@@ -2160,7 +2118,6 @@
                             <div
                               class="elementor-element elementor-element-d63b66b elementor-widget elementor-widget-button"
                               data-element_type="widget"
-                              
                               data-widget_type="button.default"
                             >
                               <div class="elementor-widget-container">
@@ -2193,13 +2150,11 @@
                         <div
                           class="elementor-element elementor-element-1184282 e-flex e-con-boxed e-con e-parent"
                           data-element_type="container"
-                          
                         >
                           <div class="e-con-inner">
                             <div
                               class="elementor-element elementor-element-f8fa296 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-title.default"
                             >
                               <div class="elementor-widget-container">
@@ -2217,7 +2172,6 @@
                             <div
                               class="elementor-element elementor-element-f0b8e54 elementor-widget elementor-widget-post-info"
                               data-element_type="widget"
-                              
                               data-widget_type="post-info.default"
                             >
                               <div class="elementor-widget-container">
@@ -2248,7 +2202,6 @@
                             <div
                               class="elementor-element elementor-element-79edf94 elementor-widget elementor-widget-theme-post-excerpt"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-excerpt.default"
                             >
                               <div class="elementor-widget-container">
@@ -2262,7 +2215,6 @@
                             <div
                               class="elementor-element elementor-element-d63b66b elementor-widget elementor-widget-button"
                               data-element_type="widget"
-                              
                               data-widget_type="button.default"
                             >
                               <div class="elementor-widget-container">
@@ -2295,13 +2247,11 @@
                         <div
                           class="elementor-element elementor-element-1184282 e-flex e-con-boxed e-con e-parent"
                           data-element_type="container"
-                          
                         >
                           <div class="e-con-inner">
                             <div
                               class="elementor-element elementor-element-f8fa296 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-title.default"
                             >
                               <div class="elementor-widget-container">
@@ -2319,7 +2269,6 @@
                             <div
                               class="elementor-element elementor-element-f0b8e54 elementor-widget elementor-widget-post-info"
                               data-element_type="widget"
-                              
                               data-widget_type="post-info.default"
                             >
                               <div class="elementor-widget-container">
@@ -2350,7 +2299,6 @@
                             <div
                               class="elementor-element elementor-element-79edf94 elementor-widget elementor-widget-theme-post-excerpt"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-excerpt.default"
                             >
                               <div class="elementor-widget-container">
@@ -2364,7 +2312,6 @@
                             <div
                               class="elementor-element elementor-element-d63b66b elementor-widget elementor-widget-button"
                               data-element_type="widget"
-                              
                               data-widget_type="button.default"
                             >
                               <div class="elementor-widget-container">
@@ -2397,13 +2344,11 @@
                         <div
                           class="elementor-element elementor-element-1184282 e-flex e-con-boxed e-con e-parent"
                           data-element_type="container"
-                          
                         >
                           <div class="e-con-inner">
                             <div
                               class="elementor-element elementor-element-f8fa296 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-title.default"
                             >
                               <div class="elementor-widget-container">
@@ -2422,7 +2367,6 @@
                             <div
                               class="elementor-element elementor-element-f0b8e54 elementor-widget elementor-widget-post-info"
                               data-element_type="widget"
-                              
                               data-widget_type="post-info.default"
                             >
                               <div class="elementor-widget-container">
@@ -2453,7 +2397,6 @@
                             <div
                               class="elementor-element elementor-element-79edf94 elementor-widget elementor-widget-theme-post-excerpt"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-excerpt.default"
                             >
                               <div class="elementor-widget-container">
@@ -2468,7 +2411,6 @@
                             <div
                               class="elementor-element elementor-element-d63b66b elementor-widget elementor-widget-button"
                               data-element_type="widget"
-                              
                               data-widget_type="button.default"
                             >
                               <div class="elementor-widget-container">
@@ -2501,13 +2443,11 @@
                         <div
                           class="elementor-element elementor-element-1184282 e-flex e-con-boxed e-con e-parent"
                           data-element_type="container"
-                          
                         >
                           <div class="e-con-inner">
                             <div
                               class="elementor-element elementor-element-f8fa296 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-title.default"
                             >
                               <div class="elementor-widget-container">
@@ -2526,7 +2466,6 @@
                             <div
                               class="elementor-element elementor-element-f0b8e54 elementor-widget elementor-widget-post-info"
                               data-element_type="widget"
-                              
                               data-widget_type="post-info.default"
                             >
                               <div class="elementor-widget-container">
@@ -2557,7 +2496,6 @@
                             <div
                               class="elementor-element elementor-element-79edf94 elementor-widget elementor-widget-theme-post-excerpt"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-excerpt.default"
                             >
                               <div class="elementor-widget-container">
@@ -2571,7 +2509,6 @@
                             <div
                               class="elementor-element elementor-element-d63b66b elementor-widget elementor-widget-button"
                               data-element_type="widget"
-                              
                               data-widget_type="button.default"
                             >
                               <div class="elementor-widget-container">
@@ -2604,13 +2541,11 @@
                         <div
                           class="elementor-element elementor-element-1184282 e-flex e-con-boxed e-con e-parent"
                           data-element_type="container"
-                          
                         >
                           <div class="e-con-inner">
                             <div
                               class="elementor-element elementor-element-f8fa296 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-title.default"
                             >
                               <div class="elementor-widget-container">
@@ -2629,7 +2564,6 @@
                             <div
                               class="elementor-element elementor-element-f0b8e54 elementor-widget elementor-widget-post-info"
                               data-element_type="widget"
-                              
                               data-widget_type="post-info.default"
                             >
                               <div class="elementor-widget-container">
@@ -2660,7 +2594,6 @@
                             <div
                               class="elementor-element elementor-element-79edf94 elementor-widget elementor-widget-theme-post-excerpt"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-excerpt.default"
                             >
                               <div class="elementor-widget-container">
@@ -2675,7 +2608,6 @@
                             <div
                               class="elementor-element elementor-element-d63b66b elementor-widget elementor-widget-button"
                               data-element_type="widget"
-                              
                               data-widget_type="button.default"
                             >
                               <div class="elementor-widget-container">
@@ -2708,13 +2640,11 @@
                         <div
                           class="elementor-element elementor-element-1184282 e-flex e-con-boxed e-con e-parent"
                           data-element_type="container"
-                          
                         >
                           <div class="e-con-inner">
                             <div
                               class="elementor-element elementor-element-f8fa296 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-title.default"
                             >
                               <div class="elementor-widget-container">
@@ -2732,7 +2662,6 @@
                             <div
                               class="elementor-element elementor-element-f0b8e54 elementor-widget elementor-widget-post-info"
                               data-element_type="widget"
-                              
                               data-widget_type="post-info.default"
                             >
                               <div class="elementor-widget-container">
@@ -2763,7 +2692,6 @@
                             <div
                               class="elementor-element elementor-element-79edf94 elementor-widget elementor-widget-theme-post-excerpt"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-excerpt.default"
                             >
                               <div class="elementor-widget-container">
@@ -2778,7 +2706,6 @@
                             <div
                               class="elementor-element elementor-element-d63b66b elementor-widget elementor-widget-button"
                               data-element_type="widget"
-                              
                               data-widget_type="button.default"
                             >
                               <div class="elementor-widget-container">
@@ -2811,13 +2738,11 @@
                         <div
                           class="elementor-element elementor-element-1184282 e-flex e-con-boxed e-con e-parent"
                           data-element_type="container"
-                          
                         >
                           <div class="e-con-inner">
                             <div
                               class="elementor-element elementor-element-f8fa296 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-title.default"
                             >
                               <div class="elementor-widget-container">
@@ -2836,7 +2761,6 @@
                             <div
                               class="elementor-element elementor-element-f0b8e54 elementor-widget elementor-widget-post-info"
                               data-element_type="widget"
-                              
                               data-widget_type="post-info.default"
                             >
                               <div class="elementor-widget-container">
@@ -2867,7 +2791,6 @@
                             <div
                               class="elementor-element elementor-element-79edf94 elementor-widget elementor-widget-theme-post-excerpt"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-excerpt.default"
                             >
                               <div class="elementor-widget-container">
@@ -2882,7 +2805,6 @@
                             <div
                               class="elementor-element elementor-element-d63b66b elementor-widget elementor-widget-button"
                               data-element_type="widget"
-                              
                               data-widget_type="button.default"
                             >
                               <div class="elementor-widget-container">
@@ -2915,13 +2837,11 @@
                         <div
                           class="elementor-element elementor-element-1184282 e-flex e-con-boxed e-con e-parent"
                           data-element_type="container"
-                          
                         >
                           <div class="e-con-inner">
                             <div
                               class="elementor-element elementor-element-f8fa296 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-title.default"
                             >
                               <div class="elementor-widget-container">
@@ -2939,7 +2859,6 @@
                             <div
                               class="elementor-element elementor-element-f0b8e54 elementor-widget elementor-widget-post-info"
                               data-element_type="widget"
-                              
                               data-widget_type="post-info.default"
                             >
                               <div class="elementor-widget-container">
@@ -2970,7 +2889,6 @@
                             <div
                               class="elementor-element elementor-element-79edf94 elementor-widget elementor-widget-theme-post-excerpt"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-excerpt.default"
                             >
                               <div class="elementor-widget-container">
@@ -2985,7 +2903,6 @@
                             <div
                               class="elementor-element elementor-element-d63b66b elementor-widget elementor-widget-button"
                               data-element_type="widget"
-                              
                               data-widget_type="button.default"
                             >
                               <div class="elementor-widget-container">
@@ -3018,13 +2935,11 @@
                         <div
                           class="elementor-element elementor-element-1184282 e-flex e-con-boxed e-con e-parent"
                           data-element_type="container"
-                          
                         >
                           <div class="e-con-inner">
                             <div
                               class="elementor-element elementor-element-f8fa296 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-title.default"
                             >
                               <div class="elementor-widget-container">
@@ -3042,7 +2957,6 @@
                             <div
                               class="elementor-element elementor-element-f0b8e54 elementor-widget elementor-widget-post-info"
                               data-element_type="widget"
-                              
                               data-widget_type="post-info.default"
                             >
                               <div class="elementor-widget-container">
@@ -3073,7 +2987,6 @@
                             <div
                               class="elementor-element elementor-element-79edf94 elementor-widget elementor-widget-theme-post-excerpt"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-excerpt.default"
                             >
                               <div class="elementor-widget-container">
@@ -3088,7 +3001,6 @@
                             <div
                               class="elementor-element elementor-element-d63b66b elementor-widget elementor-widget-button"
                               data-element_type="widget"
-                              
                               data-widget_type="button.default"
                             >
                               <div class="elementor-widget-container">
@@ -3121,13 +3033,11 @@
                         <div
                           class="elementor-element elementor-element-1184282 e-flex e-con-boxed e-con e-parent"
                           data-element_type="container"
-                          
                         >
                           <div class="e-con-inner">
                             <div
                               class="elementor-element elementor-element-f8fa296 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-title.default"
                             >
                               <div class="elementor-widget-container">
@@ -3145,7 +3055,6 @@
                             <div
                               class="elementor-element elementor-element-f0b8e54 elementor-widget elementor-widget-post-info"
                               data-element_type="widget"
-                              
                               data-widget_type="post-info.default"
                             >
                               <div class="elementor-widget-container">
@@ -3176,7 +3085,6 @@
                             <div
                               class="elementor-element elementor-element-79edf94 elementor-widget elementor-widget-theme-post-excerpt"
                               data-element_type="widget"
-                              
                               data-widget_type="theme-post-excerpt.default"
                             >
                               <div class="elementor-widget-container">
@@ -3191,7 +3099,6 @@
                             <div
                               class="elementor-element elementor-element-d63b66b elementor-widget elementor-widget-button"
                               data-element_type="widget"
-                              
                               data-widget_type="button.default"
                             >
                               <div class="elementor-widget-container">
@@ -3243,7 +3150,6 @@
                 <div
                   class="elementor-element elementor-element-6597158 elementor-widget elementor-widget-spacer"
                   data-element_type="widget"
-                  
                   data-widget_type="spacer.default"
                 >
                   <div class="elementor-widget-container">
@@ -3275,28 +3181,23 @@
             <div
               class="elementor-element elementor-element-573213b8 e-flex e-con-boxed e-con e-parent"
               data-element_type="container"
-              
             >
               <div class="e-con-inner">
                 <div
                   class="elementor-element elementor-element-d3fb197 e-con-full e-flex e-con e-child"
                   data-element_type="container"
-                  
                 >
                   <div
                     class="elementor-element elementor-element-572f0beb e-con-full e-flex e-con e-child"
                     data-element_type="container"
-                    
                   >
                     <div
                       class="elementor-element elementor-element-685f65b8 e-con-full e-flex e-con e-child"
                       data-element_type="container"
-                      
                     >
                       <div
                         class="elementor-element elementor-element-e730c57 elementor-widget elementor-widget-heading"
                         data-element_type="widget"
-                        
                         data-widget_type="heading.default"
                       >
                         <div class="elementor-widget-container">
@@ -3310,7 +3211,6 @@
                       <div
                         class="elementor-element elementor-element-45cf5347 elementor-widget__width-initial elementor-widget elementor-widget-heading"
                         data-element_type="widget"
-                        
                         data-widget_type="heading.default"
                       >
                         <div class="elementor-widget-container">
@@ -3325,12 +3225,10 @@
                       <div
                         class="elementor-element elementor-element-4f448f1 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                         data-element_type="widget"
-                        
                         data-widget_type="icon-list.default"
                       >
                         <div class="elementor-widget-container">
                           <ul class="elementor-icon-list-items">
-                            
                             <li class="elementor-icon-list-item">
                               <a
                                 href="mailto:contact@financialcommission.io"
@@ -3343,9 +3241,7 @@
                                   ></i>
                                 </span>
                                 <span class="elementor-icon-list-text"
-                                  ><span
-                                    class="__cf_email__"
-                                    
+                                  ><span class="__cf_email__"
                                     >contact@financialcommission.io</span
                                   ></span
                                 >
@@ -3354,17 +3250,14 @@
                           </ul>
                         </div>
                       </div>
-
                     </div>
                     <div
                       class="elementor-element elementor-element-298e3dd8 e-con-full e-flex e-con e-child"
                       data-element_type="container"
-                      
                     >
                       <div
                         class="elementor-element elementor-element-57a698d elementor-widget elementor-widget-heading"
                         data-element_type="widget"
-                        
                         data-widget_type="heading.default"
                       >
                         <div class="elementor-widget-container">
@@ -3378,7 +3271,6 @@
                       <div
                         class="elementor-element elementor-element-7fb99314 elementor-list-item-link-inline elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list"
                         data-element_type="widget"
-                        
                         data-widget_type="icon-list.default"
                       >
                         <div class="elementor-widget-container">
@@ -3430,12 +3322,10 @@
                     <div
                       class="elementor-element elementor-element-46af6e08 e-con-full e-flex e-con e-child"
                       data-element_type="container"
-                      
                     >
                       <div
                         class="elementor-element elementor-element-53071a29 elementor-widget elementor-widget-heading"
                         data-element_type="widget"
-                        
                         data-widget_type="heading.default"
                       >
                         <div class="elementor-widget-container">
@@ -3449,7 +3339,6 @@
                       <div
                         class="elementor-element elementor-element-5661f4ac elementor-list-item-link-inline elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list"
                         data-element_type="widget"
-                        
                         data-widget_type="icon-list.default"
                       >
                         <div class="elementor-widget-container">
@@ -3490,12 +3379,10 @@
                     <div
                       class="elementor-element elementor-element-3b7ea538 e-con-full e-flex e-con e-child"
                       data-element_type="container"
-                      
                     >
                       <div
                         class="elementor-element elementor-element-5f3f4ad1 elementor-widget elementor-widget-heading"
                         data-element_type="widget"
-                        
                         data-widget_type="heading.default"
                       >
                         <div class="elementor-widget-container">
@@ -3509,7 +3396,6 @@
                       <div
                         class="elementor-element elementor-element-45bfaae elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                         data-element_type="widget"
-                        
                         data-widget_type="icon-list.default"
                       >
                         <div class="elementor-widget-container">
@@ -3532,7 +3418,6 @@
                       <div
                         class="elementor-element elementor-element-b386c03 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
                         data-element_type="widget"
-                        
                         data-widget_type="divider.default"
                       >
                         <div class="elementor-widget-container">
@@ -3544,7 +3429,6 @@
                       <div
                         class="elementor-element elementor-element-39cb48b elementor-widget elementor-widget-heading"
                         data-element_type="widget"
-                        
                         data-widget_type="heading.default"
                       >
                         <div class="elementor-widget-container">
@@ -3558,7 +3442,6 @@
                       <div
                         class="elementor-element elementor-element-aebb325 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                         data-element_type="widget"
-                        
                         data-widget_type="icon-list.default"
                       >
                         <div class="elementor-widget-container">
@@ -3583,17 +3466,14 @@
                   <div
                     class="elementor-element elementor-element-9a4eee4 e-con-full e-flex e-con e-child"
                     data-element_type="container"
-                    
                   >
                     <div
                       class="elementor-element elementor-element-9e72ae8 e-con-full e-flex e-con e-child"
                       data-element_type="container"
-                      
                     >
                       <div
                         class="elementor-element elementor-element-57784b08 elementor-widget elementor-widget-text-editor"
                         data-element_type="widget"
-                        
                         data-widget_type="text-editor.default"
                       >
                         <div class="elementor-widget-container">
@@ -3617,12 +3497,10 @@
                     <div
                       class="elementor-element elementor-element-8b3c766 e-con-full e-flex e-con e-child"
                       data-element_type="container"
-                      
                     >
                       <div
                         class="elementor-element elementor-element-1ab1e03f elementor-mobile-align-left elementor-icon-list--layout-inline elementor-align-right elementor-tablet-align-right elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                         data-element_type="widget"
-                        
                         data-widget_type="icon-list.default"
                       >
                         <div class="elementor-widget-container">
@@ -4052,8 +3930,7 @@
             "https:\/\/financialcommission.io/ru\/wp-content\/plugins\/elementor\/assets\/",
           ajaxurl:
             "https:\/\/financialcommission.io/ru\/wp-admin\/admin-ajax.php",
-          uploadUrl:
-            "https:\/\/financialcommission.io/ru\/wp-content\/uploads",
+          uploadUrl: "https:\/\/financialcommission.io/ru\/wp-content\/uploads",
         },
         nonces: { floatingButtonsClickTracking: "942b1faeb3" },
         swiperClass: "swiper",
