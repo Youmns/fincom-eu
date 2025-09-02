@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->isSMTP();
             $mail->Host = 'smtp.hostinger.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'contact@financialcommission.io';
+            $mail->Username = 'contact@financialcommission.com.co';
             $mail->Password = 'Aizv8zhe!';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
